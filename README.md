@@ -1,91 +1,110 @@
-# 🏠 Rental Monitor — São Bento do Sul SC
+# Rental Monitor — São Bento do Sul SC
 
-Agente que raspa anúncios de aluguel das principais plataformas e publica um dashboard HTML atualizado automaticamente via GitHub Actions + GitHub Pages.
+Agente de monitoramento de aluguéis para **São Bento do Sul, SC**.
+Raspa anúncios das principais plataformas a cada 6h e publica dashboard HTML via GitHub Actions + GitHub Pages.
+
+**Dashboard:** https://andrebatistatech.github.io/proj-aluguel
+
+---
 
 ## Fontes monitoradas
-- OLX
-- ZAP Imóveis
-- Viva Real
-- Imovelweb
 
-## Como fazer o deploy (passo a passo)
+| Fonte | Estratégia | Status |
+|---|---|---|
+| OLX | `__NEXT_DATA__` JSON | ativo |
+| Imovelweb | seletores HTML `data-qa` | ativo |
+| ZAP Imóveis | interceptação `glue-api` | ativo (SBS tem ~0–1 anúncio) |
+| Viva Real | interceptação `glue-api` | ativo (SBS tem ~0–1 anúncio) |
 
-### 1. Criar repositório no GitHub
-1. Acesse https://github.com/new
-2. Nome sugerido: `rental-monitor-sbs`
-3. Marque **Private** se quiser manter os dados privados
-4. Clique em **Create repository**
+Todos os anúncios filtrados para **São Bento do Sul, SC** — sem resultados de outras cidades.
 
-### 2. Subir este código
+---
+
+## Dashboard
+
+### Aba Anúncios
+- Grid responsivo com foto, fonte, preço, área, quartos, banheiros, bairro
+- Badge **NOVO** em anúncios da última execução
+- Campos sem informação exibem **NA** (pontilhado)
+- Sem imagem exibe ícone de casa + "Sem imagem"
+- Filtros: fonte, quartos (mín.), preço máx (slider), **bairro**, apenas novos
+
+### Aba Ranking de Bairros
+- 8 bairros avaliados com scores 0–100 em 4 critérios
+- Sliders de peso para personalizar em tempo real
+- Clique no bairro filtra anúncios da Aba 1
+
+---
+
+## Deploy
+
+### 1. Fork / clone e push
 ```bash
-git init
-git add .
-git commit -m "feat: rental monitor inicial"
-git remote add origin https://github.com/SEU_USUARIO/rental-monitor-sbs.git
+git clone https://github.com/andrebatistatech/proj-aluguel.git
+cd proj-aluguel
+git remote set-url origin https://github.com/SEU_USUARIO/SEU_REPO.git
 git push -u origin main
 ```
 
-### 3. Ativar GitHub Pages
-1. Acesse **Settings → Pages**
-2. Em **Source**, selecione **GitHub Actions**
-3. Salve
+### 2. Ativar GitHub Pages
+Settings → Pages → Source: **GitHub Actions**
 
-### 4. Personalizar os filtros (opcional)
-Acesse **Settings → Variables → Actions** e crie as variáveis:
+### 3. Filtros opcionais
+Settings → Variables → Actions:
 
-| Variável    | Padrão | Descrição               |
-|-------------|--------|-------------------------|
-| `MAX_PRICE` | 3000   | Preço máximo (R$)        |
-| `MIN_PRICE` | 500    | Preço mínimo (R$)        |
-| `MIN_AREA`  | 30     | Área mínima (m²)         |
-| `BEDROOMS`  | 0      | Nº mínimo de quartos (0=qualquer) |
+| Variável | Padrão | Descrição |
+|---|---|---|
+| `MAX_PRICE` | 3000 | Preço máximo (R$) |
+| `MIN_PRICE` | 500 | Preço mínimo (R$) |
+| `MIN_AREA` | 30 | Área mínima (m²) |
+| `BEDROOMS` | 0 | Quartos mínimos (0 = qualquer) |
 
-### 5. Rodar manualmente
-Acesse a aba **Actions → Monitoramento Aluguel → Run workflow**
+### 4. Rodar manualmente
+Actions → Monitoramento Aluguel → **Run workflow**
 
-### 6. Acessar o dashboard
-Após a primeira execução, acesse:
-```
-https://SEU_USUARIO.github.io/rental-monitor-sbs/
-```
+---
 
-## Frequência de execução
-O workflow roda automaticamente a cada **6 horas** (configurável no `monitor.yml`).
+## Executar localmente
 
-Para mudar para a cada hora:
-```yaml
-cron: "0 * * * *"
-```
-
-## Estrutura do projeto
-```
-.
-├── .github/
-│   └── workflows/
-│       └── monitor.yml      # Agendamento GitHub Actions
-├── scraper/
-│   └── scraper.py           # Scraping das 4 fontes
-├── dashboard/
-│   ├── build_dashboard.py   # Gerador do HTML
-│   └── index.html           # Dashboard gerado (não editar)
-├── data/
-│   ├── listings.json        # Histórico de anúncios
-│   └── seen_ids.json        # IDs já vistos (dedup)
-└── requirements.txt
-```
-
-## Funcionamento interno
-1. O scraper acessa cada fonte e extrai título, preço, área, quartos, bairro e URL
-2. Aplica filtros de preço e área
-3. Deduplica por hash da URL (evita repetições entre execuções)
-4. Salva em `data/listings.json` (últimos 500 anúncios)
-5. O gerador lê o JSON e produz `dashboard/index.html`
-6. O GitHub Actions faz commit dos dados e publica no Pages
-
-## Rodando localmente
 ```bash
+# instalar dependências
 pip install -r requirements.txt
+playwright install chromium
+
+# scraping
 python scraper/scraper.py
+
+# gerar dashboard
 python dashboard/build_dashboard.py
-open dashboard/index.html
+
+# abrir
+start dashboard/index.html    # Windows
+open dashboard/index.html     # macOS
 ```
+
+---
+
+## Estrutura
+
+```
+proj-aluguel/
+├── .github/workflows/monitor.yml   # cron 6h + deploy Pages
+├── scraper/scraper.py              # scraping 4 fontes + filtros + dedup
+├── dashboard/
+│   ├── build_dashboard.py          # gera index.html a partir do JSON
+│   └── index.html                  # dashboard final (gerado — não editar)
+├── data/
+│   ├── listings.json               # histórico (máx 500)
+│   └── seen_ids.json               # IDs vistos para dedup
+├── requirements.txt
+├── prod.md                         # contexto técnico completo
+└── README.md
+```
+
+---
+
+## Frequência
+
+Cron: `0 */6 * * *` — roda às 00h, 06h, 12h, 18h UTC.
+
+Para rodar de hora em hora: `cron: "0 * * * *"`
