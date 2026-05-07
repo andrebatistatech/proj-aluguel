@@ -1,0 +1,68 @@
+name: Monitoramento Aluguel — São Bento do Sul
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"   # a cada 6 horas
+  workflow_dispatch:         # permite rodar manualmente pelo GitHub UI
+
+permissions:
+  contents: write            # para fazer commit dos dados
+  pages: write               # para publicar no GitHub Pages
+  id-token: write
+
+jobs:
+  scrape-and-publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Instalar dependências
+        run: |
+          pip install -r requirements.txt
+          playwright install chromium --with-deps
+
+      - name: Rodar scraper
+        env:
+          MAX_PRICE: ${{ vars.MAX_PRICE || '3000' }}
+          MIN_PRICE: ${{ vars.MIN_PRICE || '500' }}
+          MIN_AREA:  ${{ vars.MIN_AREA  || '30'  }}
+          BEDROOMS:  ${{ vars.BEDROOMS  || '0'   }}
+        run: python scraper/scraper.py
+
+      - name: Gerar dashboard
+        run: python dashboard/build_dashboard.py
+
+      - name: Commit dados atualizados
+        run: |
+          git config user.name  "rental-bot"
+          git config user.email "rental-bot@users.noreply.github.com"
+          git add data/ dashboard/index.html
+          git diff --staged --quiet || git commit -m "chore: atualiza anúncios $(date +'%Y-%m-%d %H:%M')"
+          git push
+
+      - name: Upload artifact para Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dashboard/
+
+  deploy-pages:
+    needs: scrape-and-publish
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy no GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
