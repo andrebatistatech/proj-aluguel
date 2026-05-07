@@ -123,6 +123,19 @@ def scrape_vivareal(page, ctx):
         "glue-api.vivareal.com", "https://www.vivareal.com.br", "Viva Real")
     log.info("Viva Real — %d", len(out)); return out
 
+def _parse_imovelweb_features(text):
+    """Parse 'X m² tot.\nN quartos\nN banheiro\nN vaga' → (area, beds, baths)"""
+    area = beds = baths = None
+    for line in text.split("\n"):
+        line = line.strip()
+        if "m²" in line or "m2" in line.lower():
+            area = extract_int(line)
+        elif "quarto" in line.lower():
+            beds = extract_int(line)
+        elif "ban" in line.lower():
+            baths = extract_int(line)
+    return area, beds, baths
+
 def scrape_imovelweb(page):
     log.info("Imovelweb — scraping...")
     out = []
@@ -131,19 +144,22 @@ def scrape_imovelweb(page):
                   wait_until="domcontentloaded", timeout=30_000)
         page.wait_for_selector("div[data-qa='posting PROPERTY']", timeout=20_000)
         for card in page.query_selector_all("div[data-qa='posting PROPERTY']"):
-            def g(sel): el=card.query_selector(sel); return el.inner_text().strip() if el else ""
-            location = g("div[data-qa='LOCATION']")
-            if location and "São Bento do Sul" not in location and "Sao Bento do Sul" not in location:
+            def g(qa): el=card.query_selector(f"[data-qa='{qa}']"); return el.inner_text().strip() if el else ""
+            location = g("POSTING_CARD_LOCATION")
+            # obrigatório: só aceita se confirmar São Bento do Sul
+            if not location or "São Bento do Sul" not in location:
                 continue
+            neighborhood = location.split(",")[0].strip() if "," in location else None
+            price_txt = g("POSTING_CARD_PRICE")
+            features  = g("POSTING_CARD_FEATURES")
+            desc      = g("POSTING_CARD_DESCRIPTION")
+            area, beds, baths = _parse_imovelweb_features(features)
             link_el = card.query_selector("a")
             link = "https://www.imovelweb.com.br" + (link_el.get_attribute("href") if link_el else "")
             img  = card.query_selector("img")
-            out.append(Listing(make_id("imovelweb",link),"Imovelweb",g("h2"),
-                extract_int(g("div[data-qa='PRICE']")),
-                extract_int(g("span[data-qa='SURFACE_COVERED']")),
-                extract_int(g("span[data-qa='BEDROOMS']")),
-                extract_int(g("span[data-qa='BATHROOMS']")),
-                location or None, link,
+            out.append(Listing(make_id("imovelweb",link),"Imovelweb",desc,
+                extract_int(price_txt), area, beds, baths,
+                neighborhood, link,
                 [img.get_attribute("src")] if img else [],datetime.now().isoformat()))
     except Exception as exc:
         log.error("Imovelweb: %s", exc)

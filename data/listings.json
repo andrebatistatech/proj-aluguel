@@ -1,5 +1,53 @@
 [
   {
+    "id": "9105ec60f9ee",
+    "source": "Imovelweb",
+    "title": "Casa para alugar – serra alta, são bento do sul/sc. Casa espaçosa e funcional, ideal para quem busca conforto e praticidade em uma excelente localização no bairro Serra Alta. Detalhes do Imóvel: Área construída: 66, 37 m² 2 quartos. Sala e cozinha. Banheiro. Lavanderia. Sacada. Jardim. 1 vaga de garagem coberta. Outras Informações: Localização privilegiada no bairro. Unidade disponível para financiamento. Entre em contato para mais informações e agende uma visita. As informações estão sujeitas a alterações. Consulte o corretor responsável. Chave do anúncio: lsafW0TmJpezexQ6",
+    "price": 1750,
+    "area": 200,
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "neighborhood": "Serra Alta",
+    "url": "https://www.imovelweb.com.br/propriedades/casa-para-alugar-no-bairro-serra-alta-sao-bento-do-3032367166.html?n_src=Listado&n_pills=Varanda&n_pg=1&n_pos=3",
+    "images": [
+      "https://imgbr.imovelwebcdn.com/avisos/2/30/32/36/71/66/360x266/6478807552.jpg?isFirstImage=true"
+    ],
+    "scraped_at": "2026-05-07T18:13:15.105808",
+    "is_new": true
+  },
+  {
+    "id": "9abb5914c288",
+    "source": "Imovelweb",
+    "title": "Apartamento novo locação - bairro boehmerwald. Edifício Floresta Negra. Semimobiliado (planejados na cozinha, lavanderia e banheiros) Contendo: 2 dormitórios sendo 1 suíte, 2 banheiros, sala/copa/cozinha, lavanderia, sacada com churrasqueira e 1 vaga de garagem. R$ 2. 000, 00 + água, luz, seguro, iptu e codomínio. Condomínio Completo: - Elevador. - Espaço Infantil. - Academia. Rua Raulino Guido Hastreiter nº 141 - aoto 404 - vaga 36 - 4º Andar. #locação. #aluguel. #alugase. #imovel. #apartamento. #disponivel. #imobiliaria. #saobentodosul. visitas E informações: (47) Ver dados. bruna schmidt imóveis creci 5407J. Bruna Schmidt - Corretora de Imóveis creci 31. 655F",
+    "price": 2000,
+    "area": 100,
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "neighborhood": "Boehmerwald",
+    "url": "https://www.imovelweb.com.br/propriedades/apartamento-novo-locacao-bairro-boehmerwald-em-sao-3009046282.html?n_src=Listado&n_pills=Churrasqueira&n_pg=1&n_pos=4",
+    "images": [
+      "https://imgbr.imovelwebcdn.com/avisos/2/30/09/04/62/82/360x266/4978920138.jpg?isFirstImage=true"
+    ],
+    "scraped_at": "2026-05-07T18:13:15.271897",
+    "is_new": true
+  },
+  {
+    "id": "914f4f9e033d",
+    "source": "Imovelweb",
+    "title": "Apartamento 31C para locação no 3º andar do Edifício Carlos Zipperer. Localizado no bairro Schramm, próximo ao Fort Atacadista. Com 73, 59m² de área privativa composto por sala, varanda com churrasqueira a carvão, cozinha, banheiro social, 2 dormitórios, área de serviço separada e 1 vaga de garagem estendida coberta. O condomínio oferece espaço externo ajardinado com gramado e salão de festas. Valor R$ 1. 650, 00 incluso Iptu. Condomínio R$ 407, 00 incluso água. Valor sujeito a alteração sem aviso prévio. Entre em contato e agende visita. Imóveis Eliane Creci 6335J. Corretora Eliane Pscheidt Creci Ver dadosF. Telefone/Whatsapp (47) Ver dados. Email: Ver dados - 07/04/2026",
+    "price": 1650,
+    "area": 73,
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "neighborhood": "Schramm",
+    "url": "https://www.imovelweb.com.br/propriedades/apartamento-amplo-para-locacao-com-2-dormitorios-em-3029281413.html?n_src=Listado&n_pills=Churrasqueira&n_pg=1&n_pos=5",
+    "images": [
+      "https://imgbr.imovelwebcdn.com/avisos/2/30/29/28/14/13/360x266/6192039631.jpg?isFirstImage=true"
+    ],
+    "scraped_at": "2026-05-07T18:13:15.799536",
+    "is_new": true
+  },
+  {
     "id": "f66c6b814d14",
     "source": "Imovelweb",
     "title": "R$ 2.000",
@@ -492,7 +540,7 @@
   {
     "id": "1f5934b531d3",
     "source": "OLX",
-    "title": "Kitnet 2 quartos em BiguaÃ§u .",
+    "title": "Kitnet 2 quartos em BiguaÃƒÂ§u .",
     "price": 1700,
     "area": 53,
     "bedrooms": 2,
@@ -541,7 +589,7 @@
     "price": 1800,
     "area": null,
     "bedrooms": 1,
-    "neighborhood": "SÃ£o JoÃ£o do Rio Vermelho",
+    "neighborhood": "SÃƒÂ£o JoÃƒÂ£o do Rio Vermelho",
     "url": "https://sc.olx.com.br/florianopolis-e-regiao/imoveis/alugo-loft-1498093910",
     "images": [
       "https://img.olx.com.br/images/36/364645632097717.jpg"
@@ -567,11 +615,11 @@
   {
     "id": "87885f6bd3b5",
     "source": "OLX",
-    "title": "Aluguel apartamento com uma suÃ­te e linda vista para o mar - Saco dos LimÃµes, Floripa",
+    "title": "Aluguel apartamento com uma suÃƒÂ­te e linda vista para o mar - Saco dos LimÃƒÂµes, Floripa",
     "price": 2450,
     "area": 30,
     "bedrooms": 1,
-    "neighborhood": "Saco dos LimÃµes",
+    "neighborhood": "Saco dos LimÃƒÂµes",
     "url": "https://sc.olx.com.br/florianopolis-e-regiao/imoveis/aluguel-apartamento-com-uma-suite-e-linda-vista-para-o-mar-saco-dos-limoes-floripa-1498549788",
     "images": [
       "https://img.olx.com.br/images/88/881674644860998.jpg"
@@ -612,7 +660,7 @@
   {
     "id": "aa0883cb52a8",
     "source": "OLX",
-    "title": "Apartamento com 2 quartos, Areias - SÃ£o JosÃ©",
+    "title": "Apartamento com 2 quartos, Areias - SÃƒÂ£o JosÃƒÂ©",
     "price": 2000,
     "area": 57,
     "bedrooms": 2,
@@ -627,11 +675,11 @@
   {
     "id": "81c3a2c6d26e",
     "source": "OLX",
-    "title": "  Venha morar na pousada -QUARTOS INDIVIDUAIS - MENSAL | LAGOA DA CONCEIÃ‡ÃƒO",
+    "title": "  Venha morar na pousada -QUARTOS INDIVIDUAIS - MENSAL | LAGOA DA CONCEIÃƒâ€¡ÃƒÆ’O",
     "price": 1400,
     "area": null,
     "bedrooms": null,
-    "neighborhood": "Lagoa da ConceiÃ§Ã£o",
+    "neighborhood": "Lagoa da ConceiÃƒÂ§ÃƒÂ£o",
     "url": "https://sc.olx.com.br/florianopolis-e-regiao/imoveis/venha-morar-na-pousada-quartos-individuais-mensal-lagoa-da-conceicao-1483330638",
     "images": [
       "https://img.olx.com.br/images/49/497614264333540.jpg"
@@ -657,7 +705,7 @@
   {
     "id": "78e4608d620b",
     "source": "OLX",
-    "title": "Apartamento de um dormitÃ³rio em Pinheira",
+    "title": "Apartamento de um dormitÃƒÂ³rio em Pinheira",
     "price": 2100,
     "area": 50,
     "bedrooms": 1,
@@ -702,7 +750,7 @@
   {
     "id": "e04c986a08bc",
     "source": "OLX",
-    "title": "LocaÃ§Ã£o anual ou temporada - Praia de Ibiraquera - Imbituba/SC",
+    "title": "LocaÃƒÂ§ÃƒÂ£o anual ou temporada - Praia de Ibiraquera - Imbituba/SC",
     "price": 2000,
     "area": 60,
     "bedrooms": 1,
@@ -717,11 +765,11 @@
   {
     "id": "2ea26a475699",
     "source": "OLX",
-    "title": "Alugo Anual Apto 1 Dorm Semi mobiliado p/ Casal ou MoÃ§a - Bairro NaÃ§Ãµes",
+    "title": "Alugo Anual Apto 1 Dorm Semi mobiliado p/ Casal ou MoÃƒÂ§a - Bairro NaÃƒÂ§ÃƒÂµes",
     "price": 1890,
     "area": 32,
     "bedrooms": 1,
-    "neighborhood": "NaÃ§Ãµes",
+    "neighborhood": "NaÃƒÂ§ÃƒÂµes",
     "url": "https://sc.olx.com.br/norte-de-santa-catarina/imoveis/alugo-anual-apto-1-dorm-semi-mobiliado-p-casal-ou-moca-bairro-nacoes-1500161555",
     "images": [
       "https://img.olx.com.br/images/11/115631649845870.jpg"
@@ -781,7 +829,7 @@
     "price": 900,
     "area": null,
     "bedrooms": null,
-    "neighborhood": "Guarda do CubatÃ£o",
+    "neighborhood": "Guarda do CubatÃƒÂ£o",
     "url": "https://sc.olx.com.br/florianopolis-e-regiao/imoveis/quarto-mobiliado-1500159193",
     "images": [
       "https://img.olx.com.br/images/50/502652402120822.jpg"
@@ -1644,7 +1692,7 @@
   },
   {
     "id": "def456",
-    "source": "ZAP ImÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â³veis",
+    "source": "ZAP ImÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â³veis",
     "title": "Casa 3 quartos bairro Oxford",
     "price": 2400,
     "area": 90,
@@ -1671,7 +1719,7 @@
   {
     "id": "jkl012",
     "source": "Imovelweb",
-    "title": "Casa espaÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â§osa bairro Colonial, 3 dormitÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â³rios, garagem",
+    "title": "Casa espaÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â§osa bairro Colonial, 3 dormitÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â³rios, garagem",
     "price": 2800,
     "area": 110,
     "bedrooms": 3,
