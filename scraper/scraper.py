@@ -49,7 +49,7 @@ def get_next_data(page, url, timeout=30_000):
 
 def scrape_olx(page):
     log.info("OLX — scraping...")
-    url = "https://www.olx.com.br/imoveis/aluguel/casas-e-apartamentos/estado-sc/sao-bento-do-sul"
+    url = "https://www.olx.com.br/imoveis/aluguel/estado-sc/norte-de-santa-catarina/sao-bento-do-sul"
     data = get_next_data(page, url)
     ads  = data.get("props", {}).get("pageProps", {}).get("ads", [])
     out  = []
@@ -216,6 +216,57 @@ def scrape_chavesnamao(page):
         log.error("Chaves na Mão: %s", exc)
     log.info("Chaves na Mão — %d", len(out)); return out
 
+def scrape_mgf(page):
+    log.info("MGF Imóveis — scraping...")
+    out = []
+    seen_hrefs = set()
+    try:
+        page.goto("https://www.mgfimoveis.com.br/aluguel/casa/sc-sao-bento-do-sul",
+                  wait_until="domcontentloaded", timeout=30_000)
+        page.wait_for_timeout(4_000)
+        for card in page.query_selector_all("a[href*='sc.mgfimoveis.com.br']"):
+            href = card.get_attribute("href") or ""
+            if not href or href in seen_hrefs:
+                continue
+            seen_hrefs.add(href)
+            text = card.inner_text().strip()
+            text_norm = text.lower().replace("ã","a").replace("é","e").replace("ô","o")
+            if "sao bento do sul" not in text_norm:
+                continue
+            lines = [l.strip() for l in text.split("\n") if l.strip()]
+            title = lines[1] if len(lines) > 1 else lines[0] if lines else ""
+            # skip "para venda" listings that appear mixed in
+            title_low = title.lower()
+            if "venda" in title_low and "aluguel" not in title_low and "locacao" not in title_low.replace("ç","c"):
+                continue
+            price_line = lines[0] if lines else ""
+            price = extract_int(re.sub(r"[Aa]luguel", "", price_line))
+            neighborhood = None
+            area = beds = baths = None
+            for line in lines:
+                ln = line.lower()
+                if "sao bento do sul" in ln.replace("ã","a").replace("é","e"):
+                    neighborhood = line.split(",")[0].strip()
+                elif "m²" in line:
+                    area = extract_int(line)
+                # features line may be "3 Dormitórios3 Banheiros2 Vagas" — parse each independently
+                beds_m = re.search(r"(\d+)\s*[Dd]ormit", line)
+                if not beds_m:
+                    beds_m = re.search(r"(\d+)\s*[Qq]uarto", line)
+                if beds_m:
+                    beds = int(beds_m.group(1))
+                baths_m = re.search(r"(\d+)\s*[Bb]anheiro", line)
+                if baths_m:
+                    baths = int(baths_m.group(1))
+            img_el = card.query_selector("img")
+            img = img_el.get_attribute("src") or "" if img_el else ""
+            out.append(Listing(make_id("mgf", href), "MGF Imóveis", title,
+                price, area, beds, baths, neighborhood, href,
+                [img] if img else [], datetime.now().isoformat()))
+    except Exception as exc:
+        log.error("MGF Imóveis: %s", exc)
+    log.info("MGF Imóveis — %d", len(out)); return out
+
 def load_seen():
     return set(json.load(open(SEEN_FILE))) if os.path.exists(SEEN_FILE) else set()
 
@@ -261,6 +312,7 @@ def run():
             (scrape_vivareal,    (page, ctx)),
             (scrape_imovelweb,   (page,)),
             (scrape_chavesnamao, (page,)),
+            (scrape_mgf,         (page,)),
         ]
         for fn, args in scrapers:
             try: all_listings.extend(fn(*args))
