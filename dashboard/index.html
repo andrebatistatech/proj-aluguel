@@ -37,8 +37,11 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:.9rem;padding:0 2rem 2rem}
 .listing-card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.08);transition:transform .15s,box-shadow .15s}
 .listing-card:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,.12)}
-.lc-img{height:150px;background:#e4e4e7;overflow:hidden}
+.lc-img{height:150px;background:#e4e4e7;overflow:hidden;display:flex;align-items:center;justify-content:center}
 .lc-img img{width:100%;height:100%;object-fit:cover}
+.lc-img.no-img{background:#f4f4f5;flex-direction:column;gap:6px}
+.lc-img.no-img::before{content:"";display:block;width:48px;height:48px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 24 24' fill='none' stroke='%23a1a1aa' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z'/%3E%3Cpolyline points='9 22 9 12 15 12 15 22'/%3E%3C/svg%3E");background-repeat:no-repeat;background-size:contain}
+.lc-img.no-img::after{content:"Sem imagem";font-size:.65rem;color:#a1a1aa}
 .lc-body{padding:.85rem .95rem}
 .lc-top{display:flex;align-items:center;gap:5px;margin-bottom:5px}
 .src-badge{font-size:.62rem;font-weight:600;color:#fff;padding:2px 7px;border-radius:20px;text-transform:uppercase;letter-spacing:.04em}
@@ -48,6 +51,8 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
 .per-mo{font-size:.68rem;font-weight:400;color:#71717a;margin-left:2px}
 .lc-meta{display:flex;gap:6px;flex-wrap:wrap;margin-top:5px}
 .lc-meta span{font-size:.72rem;color:#52525b;background:#f4f4f5;padding:2px 7px;border-radius:20px}
+.lc-meta span.lc-na{color:#a1a1aa;background:#fafafa;border:1px dashed #e4e4e7}
+.lc-price--na{color:#a1a1aa!important;font-size:.9rem!important}
 .lc-footer{display:flex;justify-content:space-between;align-items:center;margin-top:9px;padding-top:7px;border-top:1px solid #f4f4f5}
 .lc-date{font-size:.68rem;color:#a1a1aa}
 .lc-footer a{font-size:.77rem;color:#6d28d9;text-decoration:none;font-weight:500}
@@ -101,7 +106,7 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
 
 <header>
   <h1>Aluguel Monitor — São Bento do Sul, SC</h1>
-  <span class="updated">Atualizado: 07/05/2026 20:40</span>
+  <span class="updated">Atualizado: 07/05/2026 17:59</span>
 </header>
 
 <div class="tabs">
@@ -113,8 +118,8 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
 <div class="tab-panel active" id="panel-listings">
 
   <div class="stats">
-    <div class="stat"><div class="stat-label">Total</div><div class="stat-value">86</div></div>
-    <div class="stat"><div class="stat-label">Novos</div><div class="stat-value green">78</div></div>
+    <div class="stat"><div class="stat-label">Total</div><div class="stat-value">111</div></div>
+    <div class="stat"><div class="stat-label">Novos</div><div class="stat-value green">103</div></div>
     <div class="stat"><div class="stat-label">Preço médio</div><div class="stat-value">R$ 2.067</div></div>
     <div class="stat"><div class="stat-label">Menor preço</div><div class="stat-value">R$ 900</div></div>
   </div>
@@ -125,7 +130,7 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
       <select id="f-source"><option value="">Todas</option><option value="Imovelweb">Imovelweb</option>
 <option value="OLX">OLX</option>
 <option value="Viva Real">Viva Real</option>
-<option value="ZAP ImÃƒÆ’Ã‚Â³veis">ZAP ImÃƒÆ’Ã‚Â³veis</option></select>
+<option value="ZAP ImÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â³veis">ZAP ImÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â³veis</option></select>
     </div>
     <div class="fg">
       <label>Quartos (mín.)</label>
@@ -141,24 +146,694 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
       <input type="range" id="f-price" min="500" max="5000" step="100" value="5000">
     </div>
     <div class="fg">
+      <label>Bairro</label>
+      <select id="f-neigh"><option value="">Todos</option><option value="areias">Areias</option>
+<option value="barra">Barra</option>
+<option value="bom viver">Bom Viver</option>
+<option value="bucarein">Bucarein</option>
+<option value="caminho novo">Caminho Novo</option>
+<option value="campeche">Campeche</option>
+<option value="centro">Centro</option>
+<option value="colonial">Colonial</option>
+<option value="cruzeiro">Cruzeiro</option>
+<option value="forquilhas">Forquilhas</option>
+<option value="guarda do cubatã£o">Guarda do CubatÃ£o</option>
+<option value="imbituba - ddd 48">Imbituba - DDD 48</option>
+<option value="ingleses do rio vermelho">Ingleses do Rio Vermelho</option>
+<option value="lagoa da conceiã§ã£o">Lagoa da ConceiÃ§Ã£o</option>
+<option value="naã§ãµes">NaÃ§Ãµes</option>
+<option value="oxford">Oxford</option>
+<option value="pinheira">Pinheira</option>
+<option value="praia comprida">Praia Comprida</option>
+<option value="saco dos limãµes">Saco dos LimÃµes</option>
+<option value="serraria">Serraria</option>
+<option value="sã£o joã£o do rio vermelho">SÃ£o JoÃ£o do Rio Vermelho</option></select>
+    </div>
+    <div class="fg">
       <label>Apenas novos</label>
       <select id="f-new"><option value="">Todos</option><option value="true">Somente novos</option></select>
     </div>
-    <span class="filter-badge" id="neigh-badge">
-      <span id="neigh-badge-text"></span>
-      <button id="neigh-clear" title="Remover filtro">×</button>
-    </span>
     <button id="reset-btn">Limpar filtros</button>
   </div>
 
   <div class="grid" id="grid">
     <div class="listing-card"
+     data-price="0"
+     data-source="Imovelweb"
+     data-bedrooms="0"
+     data-new="true"
+     data-neighborhood="">
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/09/04/62/82/360x266/4978920138.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
+  <div class="lc-body">
+    <div class="lc-top">
+      <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
+      <span class="badge-new">NOVO</span>
+    </div>
+    <div class="lc-title">R$ 2.000</div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
+    <div class="lc-meta">
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+    </div>
+    <div class="lc-footer">
+      <span class="lc-date">2026-05-07</span>
+      <a href="https://www.imovelweb.com.br/propriedades/apartamento-novo-locacao-bairro-boehmerwald-em-sao-3009046282.html?n_src=Listado&n_pills=Permite+animais&n_pg=1&n_pos=3" target="_blank" rel="noopener">Ver anúncio →</a>
+    </div>
+  </div>
+</div>
+<div class="listing-card"
+     data-price="0"
+     data-source="Imovelweb"
+     data-bedrooms="0"
+     data-new="true"
+     data-neighborhood="">
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/30/70/68/48/360x266/6346052621.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
+  <div class="lc-body">
+    <div class="lc-top">
+      <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
+      <span class="badge-new">NOVO</span>
+    </div>
+    <div class="lc-title">R$ 2.000</div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
+    <div class="lc-meta">
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+    </div>
+    <div class="lc-footer">
+      <span class="lc-date">2026-05-07</span>
+      <a href="https://www.imovelweb.com.br/propriedades/central-park-residence-3030706848.html?n_src=Listado&n_pills=Varanda&n_pg=1&n_pos=1" target="_blank" rel="noopener">Ver anúncio →</a>
+    </div>
+  </div>
+</div>
+<div class="listing-card"
+     data-price="0"
+     data-source="Imovelweb"
+     data-bedrooms="0"
+     data-new="true"
+     data-neighborhood="">
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/31/41/62/53/360x266/6467665201.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
+  <div class="lc-body">
+    <div class="lc-top">
+      <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
+      <span class="badge-new">NOVO</span>
+    </div>
+    <div class="lc-title">R$ 2.450</div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
+    <div class="lc-meta">
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+    </div>
+    <div class="lc-footer">
+      <span class="lc-date">2026-05-07</span>
+      <a href="https://www.imovelweb.com.br/propriedades/excelente-apartamento-proximo-ao-supermercados-condor-3031416253.html?n_src=Listado&n_pills=%C3%81rea+verde&n_pg=1&n_pos=2" target="_blank" rel="noopener">Ver anúncio →</a>
+    </div>
+  </div>
+</div>
+<div class="listing-card"
+     data-price="0"
+     data-source="Imovelweb"
+     data-bedrooms="0"
+     data-new="true"
+     data-neighborhood="">
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/15/07/20/96/360x266/5304762033.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
+  <div class="lc-body">
+    <div class="lc-top">
+      <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
+      <span class="badge-new">NOVO</span>
+    </div>
+    <div class="lc-title">R$ 1.300</div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
+    <div class="lc-meta">
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+    </div>
+    <div class="lc-footer">
+      <span class="lc-date">2026-05-07</span>
+      <a href="https://www.imovelweb.com.br/propriedades/residencial-fenix-3015072096.html?n_src=Listado&n_pills=Varanda&n_pg=1&n_pos=3" target="_blank" rel="noopener">Ver anúncio →</a>
+    </div>
+  </div>
+</div>
+<div class="listing-card"
+     data-price="0"
+     data-source="Imovelweb"
+     data-bedrooms="0"
+     data-new="true"
+     data-neighborhood="">
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/20/72/94/42/360x266/5646406683.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
+  <div class="lc-body">
+    <div class="lc-top">
+      <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
+      <span class="badge-new">NOVO</span>
+    </div>
+    <div class="lc-title">R$ 10.000</div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
+    <div class="lc-meta">
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+    </div>
+    <div class="lc-footer">
+      <span class="lc-date">2026-05-07</span>
+      <a href="https://www.imovelweb.com.br/propriedades/-x1f3e2--aluga-se-ponto-comercial-na-sc-108-vila-3020729442.html?n_src=Listado&n_pg=1&n_pos=4" target="_blank" rel="noopener">Ver anúncio →</a>
+    </div>
+  </div>
+</div>
+<div class="listing-card"
+     data-price="0"
+     data-source="Imovelweb"
+     data-bedrooms="0"
+     data-new="true"
+     data-neighborhood="">
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/29/45/34/74/92/360x266/3733813652.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
+  <div class="lc-body">
+    <div class="lc-top">
+      <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
+      <span class="badge-new">NOVO</span>
+    </div>
+    <div class="lc-title">R$ 1.850</div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
+    <div class="lc-meta">
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+    </div>
+    <div class="lc-footer">
+      <span class="lc-date">2026-05-07</span>
+      <a href="https://www.imovelweb.com.br/propriedades/spazio-jardim-de-nice-2945347492.html?n_src=Listado&n_pills=Varanda&n_pg=1&n_pos=5" target="_blank" rel="noopener">Ver anúncio →</a>
+    </div>
+  </div>
+</div>
+<div class="listing-card"
+     data-price="0"
+     data-source="Imovelweb"
+     data-bedrooms="0"
+     data-new="true"
+     data-neighborhood="">
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/33/30/11/40/360x266/6581575061.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
+  <div class="lc-body">
+    <div class="lc-top">
+      <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
+      <span class="badge-new">NOVO</span>
+    </div>
+    <div class="lc-title">R$ 12.000</div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
+    <div class="lc-meta">
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+    </div>
+    <div class="lc-footer">
+      <span class="lc-date">2026-05-07</span>
+      <a href="https://www.imovelweb.com.br/propriedades/casa-comercial-para-alugar-com-310-m-por-r$-3033301140.html?n_src=Listado&n_pg=1&n_pos=6" target="_blank" rel="noopener">Ver anúncio →</a>
+    </div>
+  </div>
+</div>
+<div class="listing-card"
+     data-price="0"
+     data-source="Imovelweb"
+     data-bedrooms="0"
+     data-new="true"
+     data-neighborhood="">
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/29/53/76/76/56/360x266/6329949187.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
+  <div class="lc-body">
+    <div class="lc-top">
+      <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
+      <span class="badge-new">NOVO</span>
+    </div>
+    <div class="lc-title">R$ 1.700</div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
+    <div class="lc-meta">
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+    </div>
+    <div class="lc-footer">
+      <span class="lc-date">2026-05-07</span>
+      <a href="https://www.imovelweb.com.br/propriedades/apartamento-com-1-dormitorio-39-m-venda-por-r$-2953767656.html?n_src=Listado&n_pills=Ar+condicionado&n_pg=1&n_pos=7" target="_blank" rel="noopener">Ver anúncio →</a>
+    </div>
+  </div>
+</div>
+<div class="listing-card"
+     data-price="0"
+     data-source="Imovelweb"
+     data-bedrooms="0"
+     data-new="true"
+     data-neighborhood="">
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/29/34/75/71/72/360x266/6541936965.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
+  <div class="lc-body">
+    <div class="lc-top">
+      <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
+      <span class="badge-new">NOVO</span>
+    </div>
+    <div class="lc-title">R$ 1.700</div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
+    <div class="lc-meta">
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+    </div>
+    <div class="lc-footer">
+      <span class="lc-date">2026-05-07</span>
+      <a href="https://www.imovelweb.com.br/propriedades/helbor-dual-offices-2934757172.html?n_src=Listado&n_pg=1&n_pos=8" target="_blank" rel="noopener">Ver anúncio →</a>
+    </div>
+  </div>
+</div>
+<div class="listing-card"
+     data-price="0"
+     data-source="Imovelweb"
+     data-bedrooms="0"
+     data-new="true"
+     data-neighborhood="">
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/29/38/61/42/23/360x266/2613756690.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
+  <div class="lc-body">
+    <div class="lc-top">
+      <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
+      <span class="badge-new">NOVO</span>
+    </div>
+    <div class="lc-title">R$ 3.000</div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
+    <div class="lc-meta">
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+    </div>
+    <div class="lc-footer">
+      <span class="lc-date">2026-05-07</span>
+      <a href="https://www.imovelweb.com.br/propriedades/ilha-da-madeira-america-2938614223.html?n_src=Listado&n_pills=Mobiliado&n_pg=1&n_pos=9" target="_blank" rel="noopener">Ver anúncio →</a>
+    </div>
+  </div>
+</div>
+<div class="listing-card"
+     data-price="0"
+     data-source="Imovelweb"
+     data-bedrooms="0"
+     data-new="true"
+     data-neighborhood="">
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/34/43/03/90/360x266/6646914444.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
+  <div class="lc-body">
+    <div class="lc-top">
+      <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
+      <span class="badge-new">NOVO</span>
+    </div>
+    <div class="lc-title">R$ 30.600</div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
+    <div class="lc-meta">
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+    </div>
+    <div class="lc-footer">
+      <span class="lc-date">2026-05-07</span>
+      <a href="https://www.imovelweb.com.br/propriedades/galpao-industrial-e-logistico-3034430390.html?n_src=Listado&n_pg=1&n_pos=10" target="_blank" rel="noopener">Ver anúncio →</a>
+    </div>
+  </div>
+</div>
+<div class="listing-card"
+     data-price="0"
+     data-source="Imovelweb"
+     data-bedrooms="0"
+     data-new="true"
+     data-neighborhood="">
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/16/77/86/76/360x266/6260518116.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
+  <div class="lc-body">
+    <div class="lc-top">
+      <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
+      <span class="badge-new">NOVO</span>
+    </div>
+    <div class="lc-title">R$ 4.100</div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
+    <div class="lc-meta">
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+    </div>
+    <div class="lc-footer">
+      <span class="lc-date">2026-05-07</span>
+      <a href="https://www.imovelweb.com.br/propriedades/mont-blanc-3016778676.html?n_src=Listado&n_pills=Churrasqueira&n_pg=1&n_pos=11" target="_blank" rel="noopener">Ver anúncio →</a>
+    </div>
+  </div>
+</div>
+<div class="listing-card"
+     data-price="0"
+     data-source="Imovelweb"
+     data-bedrooms="0"
+     data-new="true"
+     data-neighborhood="">
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/33/23/30/63/360x266/6550946017.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
+  <div class="lc-body">
+    <div class="lc-top">
+      <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
+      <span class="badge-new">NOVO</span>
+    </div>
+    <div class="lc-title">R$ 2.800</div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
+    <div class="lc-meta">
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+    </div>
+    <div class="lc-footer">
+      <span class="lc-date">2026-05-07</span>
+      <a href="https://www.imovelweb.com.br/propriedades/casa-com-2-dormitorios-para-alugar-120-m-por-r$-3033233063.html?n_src=Listado&n_pills=Varanda&n_pg=1&n_pos=12" target="_blank" rel="noopener">Ver anúncio →</a>
+    </div>
+  </div>
+</div>
+<div class="listing-card"
+     data-price="0"
+     data-source="Imovelweb"
+     data-bedrooms="0"
+     data-new="true"
+     data-neighborhood="">
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/34/01/02/06/360x266/6623785917.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
+  <div class="lc-body">
+    <div class="lc-top">
+      <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
+      <span class="badge-new">NOVO</span>
+    </div>
+    <div class="lc-title">R$ 87.500</div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
+    <div class="lc-meta">
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+    </div>
+    <div class="lc-footer">
+      <span class="lc-date">2026-05-07</span>
+      <a href="https://www.imovelweb.com.br/propriedades/galpao-industrial-e-logistico-3034010206.html?n_src=Listado&n_pg=1&n_pos=13" target="_blank" rel="noopener">Ver anúncio →</a>
+    </div>
+  </div>
+</div>
+<div class="listing-card"
+     data-price="0"
+     data-source="Imovelweb"
+     data-bedrooms="0"
+     data-new="true"
+     data-neighborhood="">
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/20/13/96/89/360x266/5614228833.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
+  <div class="lc-body">
+    <div class="lc-top">
+      <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
+      <span class="badge-new">NOVO</span>
+    </div>
+    <div class="lc-title">R$ 3.000</div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
+    <div class="lc-meta">
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+    </div>
+    <div class="lc-footer">
+      <span class="lc-date">2026-05-07</span>
+      <a href="https://www.imovelweb.com.br/propriedades/sala-3020139689.html?n_src=Listado&n_pg=1&n_pos=14" target="_blank" rel="noopener">Ver anúncio →</a>
+    </div>
+  </div>
+</div>
+<div class="listing-card"
+     data-price="0"
+     data-source="Imovelweb"
+     data-bedrooms="0"
+     data-new="true"
+     data-neighborhood="">
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/07/37/42/34/360x266/4914237174.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
+  <div class="lc-body">
+    <div class="lc-top">
+      <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
+      <span class="badge-new">NOVO</span>
+    </div>
+    <div class="lc-title">R$ 2.300</div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
+    <div class="lc-meta">
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+    </div>
+    <div class="lc-footer">
+      <span class="lc-date">2026-05-07</span>
+      <a href="https://www.imovelweb.com.br/propriedades/apartamento-com-2-dormitorios-para-alugar-68-m-por-3007374234.html?n_src=Listado&n_pills=Churrasqueira&n_pg=1&n_pos=15" target="_blank" rel="noopener">Ver anúncio →</a>
+    </div>
+  </div>
+</div>
+<div class="listing-card"
+     data-price="0"
+     data-source="Imovelweb"
+     data-bedrooms="0"
+     data-new="true"
+     data-neighborhood="">
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/31/90/25/53/360x266/6445578954.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
+  <div class="lc-body">
+    <div class="lc-top">
+      <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
+      <span class="badge-new">NOVO</span>
+    </div>
+    <div class="lc-title">R$ 1.980</div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
+    <div class="lc-meta">
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+    </div>
+    <div class="lc-footer">
+      <span class="lc-date">2026-05-07</span>
+      <a href="https://www.imovelweb.com.br/propriedades/residencial-madrid-3031902553.html?n_src=Listado&n_pills=Churrasqueira&n_pg=1&n_pos=16" target="_blank" rel="noopener">Ver anúncio →</a>
+    </div>
+  </div>
+</div>
+<div class="listing-card"
+     data-price="0"
+     data-source="Imovelweb"
+     data-bedrooms="0"
+     data-new="true"
+     data-neighborhood="">
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/29/58/45/32/33/360x266/6218725251.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
+  <div class="lc-body">
+    <div class="lc-top">
+      <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
+      <span class="badge-new">NOVO</span>
+    </div>
+    <div class="lc-title">R$ 3.400</div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
+    <div class="lc-meta">
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+    </div>
+    <div class="lc-footer">
+      <span class="lc-date">2026-05-07</span>
+      <a href="https://www.imovelweb.com.br/propriedades/apartamento-com-3-dormitorios-para-alugar-92-m-por-2958453233.html?n_src=Listado&n_pills=Piscina&n_pg=1&n_pos=17" target="_blank" rel="noopener">Ver anúncio →</a>
+    </div>
+  </div>
+</div>
+<div class="listing-card"
+     data-price="0"
+     data-source="Imovelweb"
+     data-bedrooms="0"
+     data-new="true"
+     data-neighborhood="">
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/29/65/13/11/31/360x266/2643761644.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
+  <div class="lc-body">
+    <div class="lc-top">
+      <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
+      <span class="badge-new">NOVO</span>
+    </div>
+    <div class="lc-title">R$ 1.350</div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
+    <div class="lc-meta">
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+    </div>
+    <div class="lc-footer">
+      <span class="lc-date">2026-05-07</span>
+      <a href="https://www.imovelweb.com.br/propriedades/rubi-2965131131.html?n_src=Listado&n_pg=1&n_pos=18" target="_blank" rel="noopener">Ver anúncio →</a>
+    </div>
+  </div>
+</div>
+<div class="listing-card"
+     data-price="0"
+     data-source="Imovelweb"
+     data-bedrooms="0"
+     data-new="true"
+     data-neighborhood="">
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/26/54/56/09/360x266/5994598968.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
+  <div class="lc-body">
+    <div class="lc-top">
+      <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
+      <span class="badge-new">NOVO</span>
+    </div>
+    <div class="lc-title">R$ 2.750</div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
+    <div class="lc-meta">
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+    </div>
+    <div class="lc-footer">
+      <span class="lc-date">2026-05-07</span>
+      <a href="https://www.imovelweb.com.br/propriedades/apartamento-3026545609.html?n_src=Listado&n_pg=1&n_pos=19" target="_blank" rel="noopener">Ver anúncio →</a>
+    </div>
+  </div>
+</div>
+<div class="listing-card"
+     data-price="0"
+     data-source="Imovelweb"
+     data-bedrooms="0"
+     data-new="true"
+     data-neighborhood="">
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/20/69/79/15/360x266/5700658611.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
+  <div class="lc-body">
+    <div class="lc-top">
+      <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
+      <span class="badge-new">NOVO</span>
+    </div>
+    <div class="lc-title">R$ 15.000</div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
+    <div class="lc-meta">
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+    </div>
+    <div class="lc-footer">
+      <span class="lc-date">2026-05-07</span>
+      <a href="https://www.imovelweb.com.br/propriedades/imovel-comercial-3020697915.html?n_src=Listado&n_pg=1&n_pos=20" target="_blank" rel="noopener">Ver anúncio →</a>
+    </div>
+  </div>
+</div>
+<div class="listing-card"
+     data-price="0"
+     data-source="Imovelweb"
+     data-bedrooms="0"
+     data-new="true"
+     data-neighborhood="">
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/29/49/13/56/83/360x266/6496894350.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
+  <div class="lc-body">
+    <div class="lc-top">
+      <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
+      <span class="badge-new">NOVO</span>
+    </div>
+    <div class="lc-title">R$ 3.300</div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
+    <div class="lc-meta">
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+    </div>
+    <div class="lc-footer">
+      <span class="lc-date">2026-05-07</span>
+      <a href="https://www.imovelweb.com.br/propriedades/apartamento-com-2-dormitorios-para-alugar-72-m-por-2949135683.html?n_src=Listado&n_pills=Ar+condicionado&n_pg=1&n_pos=21" target="_blank" rel="noopener">Ver anúncio →</a>
+    </div>
+  </div>
+</div>
+<div class="listing-card"
+     data-price="0"
+     data-source="Imovelweb"
+     data-bedrooms="0"
+     data-new="true"
+     data-neighborhood="">
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/29/40/49/67/46/360x266/4806606983.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
+  <div class="lc-body">
+    <div class="lc-top">
+      <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
+      <span class="badge-new">NOVO</span>
+    </div>
+    <div class="lc-title">R$ 5.900</div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
+    <div class="lc-meta">
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+    </div>
+    <div class="lc-footer">
+      <span class="lc-date">2026-05-07</span>
+      <a href="https://www.imovelweb.com.br/propriedades/rio-loire-2940496746.html?n_src=Listado&n_pills=Piscina&n_pg=1&n_pos=22" target="_blank" rel="noopener">Ver anúncio →</a>
+    </div>
+  </div>
+</div>
+<div class="listing-card"
+     data-price="0"
+     data-source="Imovelweb"
+     data-bedrooms="0"
+     data-new="true"
+     data-neighborhood="">
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/33/11/72/01/360x266/6542967362.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
+  <div class="lc-body">
+    <div class="lc-top">
+      <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
+      <span class="badge-new">NOVO</span>
+    </div>
+    <div class="lc-title">R$ 3.680</div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
+    <div class="lc-meta">
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+    </div>
+    <div class="lc-footer">
+      <span class="lc-date">2026-05-07</span>
+      <a href="https://www.imovelweb.com.br/propriedades/sobrado-com-3-dormitorios-para-alugar-97-m-por-r$-3033117201.html?n_src=Listado&n_pg=1&n_pos=23" target="_blank" rel="noopener">Ver anúncio →</a>
+    </div>
+  </div>
+</div>
+<div class="listing-card"
+     data-price="0"
+     data-source="Imovelweb"
+     data-bedrooms="0"
+     data-new="true"
+     data-neighborhood="">
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/29/97/44/71/360x266/6280474909.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
+  <div class="lc-body">
+    <div class="lc-top">
+      <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
+      <span class="badge-new">NOVO</span>
+    </div>
+    <div class="lc-title">R$ 1.300</div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
+    <div class="lc-meta">
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+    </div>
+    <div class="lc-footer">
+      <span class="lc-date">2026-05-07</span>
+      <a href="https://www.imovelweb.com.br/propriedades/apartamento-com-2-dormitorios-para-alugar-50-m-por-3029974471.html?n_src=Listado&n_pills=Churrasqueira&n_pg=1&n_pos=24" target="_blank" rel="noopener">Ver anúncio →</a>
+    </div>
+  </div>
+</div>
+<div class="listing-card"
      data-price="2200"
      data-source="OLX"
      data-bedrooms="2"
      data-new="true"
      data-neighborhood="forquilhas">
-  <div class="lc-img"><img src="https://img.olx.com.br/images/48/486676768287237.jpg" alt="foto" onerror="this.style.display='none'"></div>
+  <div class="lc-img"><img src="https://img.olx.com.br/images/48/486676768287237.jpg" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#6d28d9">OLX</span>
@@ -169,6 +844,7 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
     <div class="lc-meta">
       <span>64 m²</span>
       <span>2 qtos</span>
+      <span class="lc-na">NA</span>
       <span>Forquilhas</span>
     </div>
     <div class="lc-footer">
@@ -183,7 +859,7 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
      data-bedrooms="2"
      data-new="true"
      data-neighborhood="serraria">
-  <div class="lc-img"><img src="https://img.olx.com.br/images/61/616671162491223.jpg" alt="foto" onerror="this.style.display='none'"></div>
+  <div class="lc-img"><img src="https://img.olx.com.br/images/61/616671162491223.jpg" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#6d28d9">OLX</span>
@@ -194,6 +870,7 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
     <div class="lc-meta">
       <span>57 m²</span>
       <span>2 qtos</span>
+      <span class="lc-na">NA</span>
       <span>Serraria</span>
     </div>
     <div class="lc-footer">
@@ -208,7 +885,7 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
      data-bedrooms="3"
      data-new="true"
      data-neighborhood="caminho novo">
-  <div class="lc-img"><img src="https://img.olx.com.br/images/26/261686409067127.jpg" alt="foto" onerror="this.style.display='none'"></div>
+  <div class="lc-img"><img src="https://img.olx.com.br/images/26/261686409067127.jpg" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#6d28d9">OLX</span>
@@ -219,6 +896,7 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
     <div class="lc-meta">
       <span>75 m²</span>
       <span>3 qtos</span>
+      <span class="lc-na">NA</span>
       <span>Caminho Novo</span>
     </div>
     <div class="lc-footer">
@@ -228,37 +906,12 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
   </div>
 </div>
 <div class="listing-card"
-     data-price="0"
-     data-source="OLX"
-     data-bedrooms="0"
-     data-new="true"
-     data-neighborhood="">
-  <div class="lc-img"><img src="" alt="foto" onerror="this.style.display='none'"></div>
-  <div class="lc-body">
-    <div class="lc-top">
-      <span class="src-badge" style="background:#6d28d9">OLX</span>
-      <span class="badge-new">NOVO</span>
-    </div>
-    <div class="lc-title"></div>
-    <div class="lc-price">—<span class="per-mo">/mês</span></div>
-    <div class="lc-meta">
-      
-      
-      
-    </div>
-    <div class="lc-footer">
-      <span class="lc-date">2026-05-07</span>
-      <a href="" target="_blank" rel="noopener">Ver anúncio →</a>
-    </div>
-  </div>
-</div>
-<div class="listing-card"
      data-price="2200"
      data-source="OLX"
      data-bedrooms="1"
      data-new="true"
      data-neighborhood="campeche">
-  <div class="lc-img"><img src="https://img.olx.com.br/images/46/466672265802289.jpg" alt="foto" onerror="this.style.display='none'"></div>
+  <div class="lc-img"><img src="https://img.olx.com.br/images/46/466672265802289.jpg" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#6d28d9">OLX</span>
@@ -267,8 +920,9 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
     <div class="lc-title">Apto Mobiliado na rua da casa di praia layback, Novo Campeche</div>
     <div class="lc-price">R$ 2.200<span class="per-mo">/mês</span></div>
     <div class="lc-meta">
-      
+      <span class="lc-na">NA</span>
       <span>1 qto</span>
+      <span class="lc-na">NA</span>
       <span>Campeche</span>
     </div>
     <div class="lc-footer">
@@ -283,7 +937,7 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
      data-bedrooms="2"
      data-new="true"
      data-neighborhood="areias">
-  <div class="lc-img"><img src="https://img.olx.com.br/images/75/751653402760502.jpg" alt="foto" onerror="this.style.display='none'"></div>
+  <div class="lc-img"><img src="https://img.olx.com.br/images/75/751653402760502.jpg" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#6d28d9">OLX</span>
@@ -294,6 +948,7 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
     <div class="lc-meta">
       <span>70 m²</span>
       <span>2 qtos</span>
+      <span class="lc-na">NA</span>
       <span>Areias</span>
     </div>
     <div class="lc-footer">
@@ -308,17 +963,18 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
      data-bedrooms="2"
      data-new="true"
      data-neighborhood="bom viver">
-  <div class="lc-img"><img src="https://img.olx.com.br/images/20/209641282150974.jpg" alt="foto" onerror="this.style.display='none'"></div>
+  <div class="lc-img"><img src="https://img.olx.com.br/images/20/209641282150974.jpg" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#6d28d9">OLX</span>
       <span class="badge-new">NOVO</span>
     </div>
-    <div class="lc-title">Kitnet 2 quartos em Biguaçu .</div>
+    <div class="lc-title">Kitnet 2 quartos em BiguaÃ§u .</div>
     <div class="lc-price">R$ 1.700<span class="per-mo">/mês</span></div>
     <div class="lc-meta">
       <span>53 m²</span>
       <span>2 qtos</span>
+      <span class="lc-na">NA</span>
       <span>Bom Viver</span>
     </div>
     <div class="lc-footer">
@@ -328,37 +984,12 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
   </div>
 </div>
 <div class="listing-card"
-     data-price="0"
-     data-source="OLX"
-     data-bedrooms="0"
-     data-new="false"
-     data-neighborhood="">
-  <div class="lc-img"><img src="" alt="foto" onerror="this.style.display='none'"></div>
-  <div class="lc-body">
-    <div class="lc-top">
-      <span class="src-badge" style="background:#6d28d9">OLX</span>
-      
-    </div>
-    <div class="lc-title"></div>
-    <div class="lc-price">—<span class="per-mo">/mês</span></div>
-    <div class="lc-meta">
-      
-      
-      
-    </div>
-    <div class="lc-footer">
-      <span class="lc-date">2026-05-07</span>
-      <a href="" target="_blank" rel="noopener">Ver anúncio →</a>
-    </div>
-  </div>
-</div>
-<div class="listing-card"
      data-price="2500"
      data-source="OLX"
      data-bedrooms="1"
      data-new="true"
      data-neighborhood="barra">
-  <div class="lc-img"><img src="https://img.olx.com.br/images/11/118622769464887.jpg" alt="foto" onerror="this.style.display='none'"></div>
+  <div class="lc-img"><img src="https://img.olx.com.br/images/11/118622769464887.jpg" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#6d28d9">OLX</span>
@@ -369,6 +1000,7 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
     <div class="lc-meta">
       <span>50 m²</span>
       <span>1 qto</span>
+      <span class="lc-na">NA</span>
       <span>Barra</span>
     </div>
     <div class="lc-footer">
@@ -382,8 +1014,8 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
      data-source="OLX"
      data-bedrooms="1"
      data-new="true"
-     data-neighborhood="são joão do rio vermelho">
-  <div class="lc-img"><img src="https://img.olx.com.br/images/36/364645632097717.jpg" alt="foto" onerror="this.style.display='none'"></div>
+     data-neighborhood="sã£o joã£o do rio vermelho">
+  <div class="lc-img"><img src="https://img.olx.com.br/images/36/364645632097717.jpg" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#6d28d9">OLX</span>
@@ -392,9 +1024,10 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
     <div class="lc-title">ALUGO LOFT</div>
     <div class="lc-price">R$ 1.800<span class="per-mo">/mês</span></div>
     <div class="lc-meta">
-      
+      <span class="lc-na">NA</span>
       <span>1 qto</span>
-      <span>São João do Rio Vermelho</span>
+      <span class="lc-na">NA</span>
+      <span>SÃ£o JoÃ£o do Rio Vermelho</span>
     </div>
     <div class="lc-footer">
       <span class="lc-date">2026-05-07</span>
@@ -403,77 +1036,28 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
   </div>
 </div>
 <div class="listing-card"
-     data-price="0"
-     data-source="OLX"
-     data-bedrooms="0"
-     data-new="false"
-     data-neighborhood="">
-  <div class="lc-img"><img src="" alt="foto" onerror="this.style.display='none'"></div>
-  <div class="lc-body">
-    <div class="lc-top">
-      <span class="src-badge" style="background:#6d28d9">OLX</span>
-      
-    </div>
-    <div class="lc-title"></div>
-    <div class="lc-price">—<span class="per-mo">/mês</span></div>
-    <div class="lc-meta">
-      
-      
-      
-    </div>
-    <div class="lc-footer">
-      <span class="lc-date">2026-05-07</span>
-      <a href="" target="_blank" rel="noopener">Ver anúncio →</a>
-    </div>
-  </div>
-</div>
-<div class="listing-card"
      data-price="2450"
      data-source="OLX"
      data-bedrooms="1"
      data-new="true"
-     data-neighborhood="saco dos limões">
-  <div class="lc-img"><img src="https://img.olx.com.br/images/88/881674644860998.jpg" alt="foto" onerror="this.style.display='none'"></div>
+     data-neighborhood="saco dos limãµes">
+  <div class="lc-img"><img src="https://img.olx.com.br/images/88/881674644860998.jpg" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#6d28d9">OLX</span>
       <span class="badge-new">NOVO</span>
     </div>
-    <div class="lc-title">Aluguel apartamento com uma suíte e linda vista para o mar - Saco dos Limões, Floripa</div>
+    <div class="lc-title">Aluguel apartamento com uma suÃ­te e linda vista para o mar - Saco dos LimÃµes, Floripa</div>
     <div class="lc-price">R$ 2.450<span class="per-mo">/mês</span></div>
     <div class="lc-meta">
       <span>30 m²</span>
       <span>1 qto</span>
-      <span>Saco dos Limões</span>
+      <span class="lc-na">NA</span>
+      <span>Saco dos LimÃµes</span>
     </div>
     <div class="lc-footer">
       <span class="lc-date">2026-05-07</span>
       <a href="https://sc.olx.com.br/florianopolis-e-regiao/imoveis/aluguel-apartamento-com-uma-suite-e-linda-vista-para-o-mar-saco-dos-limoes-floripa-1498549788" target="_blank" rel="noopener">Ver anúncio →</a>
-    </div>
-  </div>
-</div>
-<div class="listing-card"
-     data-price="0"
-     data-source="OLX"
-     data-bedrooms="0"
-     data-new="false"
-     data-neighborhood="">
-  <div class="lc-img"><img src="" alt="foto" onerror="this.style.display='none'"></div>
-  <div class="lc-body">
-    <div class="lc-top">
-      <span class="src-badge" style="background:#6d28d9">OLX</span>
-      
-    </div>
-    <div class="lc-title"></div>
-    <div class="lc-price">—<span class="per-mo">/mês</span></div>
-    <div class="lc-meta">
-      
-      
-      
-    </div>
-    <div class="lc-footer">
-      <span class="lc-date">2026-05-07</span>
-      <a href="" target="_blank" rel="noopener">Ver anúncio →</a>
     </div>
   </div>
 </div>
@@ -483,7 +1067,7 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
      data-bedrooms="2"
      data-new="true"
      data-neighborhood="praia comprida">
-  <div class="lc-img"><img src="https://img.olx.com.br/images/58/588678169406223.jpg" alt="foto" onerror="this.style.display='none'"></div>
+  <div class="lc-img"><img src="https://img.olx.com.br/images/58/588678169406223.jpg" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#6d28d9">OLX</span>
@@ -494,6 +1078,7 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
     <div class="lc-meta">
       <span>55 m²</span>
       <span>2 qtos</span>
+      <span class="lc-na">NA</span>
       <span>Praia Comprida</span>
     </div>
     <div class="lc-footer">
@@ -508,17 +1093,18 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
      data-bedrooms="2"
      data-new="true"
      data-neighborhood="areias">
-  <div class="lc-img"><img src="https://img.olx.com.br/images/81/819618766027324.jpg" alt="foto" onerror="this.style.display='none'"></div>
+  <div class="lc-img"><img src="https://img.olx.com.br/images/81/819618766027324.jpg" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#6d28d9">OLX</span>
       <span class="badge-new">NOVO</span>
     </div>
-    <div class="lc-title">Apartamento com 2 quartos, Areias - São José</div>
+    <div class="lc-title">Apartamento com 2 quartos, Areias - SÃ£o JosÃ©</div>
     <div class="lc-price">R$ 2.000<span class="per-mo">/mês</span></div>
     <div class="lc-meta">
       <span>57 m²</span>
       <span>2 qtos</span>
+      <span class="lc-na">NA</span>
       <span>Areias</span>
     </div>
     <div class="lc-footer">
@@ -532,48 +1118,24 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
      data-source="OLX"
      data-bedrooms="0"
      data-new="true"
-     data-neighborhood="lagoa da conceição">
-  <div class="lc-img"><img src="https://img.olx.com.br/images/49/497614264333540.jpg" alt="foto" onerror="this.style.display='none'"></div>
+     data-neighborhood="lagoa da conceiã§ã£o">
+  <div class="lc-img"><img src="https://img.olx.com.br/images/49/497614264333540.jpg" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#6d28d9">OLX</span>
       <span class="badge-new">NOVO</span>
     </div>
-    <div class="lc-title">  Venha morar na pousada -QUARTOS INDIVIDUAIS - MENSAL | LAGOA DA CONCEIÇÃO</div>
+    <div class="lc-title">Venha morar na pousada -QUARTOS INDIVIDUAIS - MENSAL | LAGOA DA CONCEIÃ‡ÃƒO</div>
     <div class="lc-price">R$ 1.400<span class="per-mo">/mês</span></div>
     <div class="lc-meta">
-      
-      
-      <span>Lagoa da Conceição</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span>Lagoa da ConceiÃ§Ã£o</span>
     </div>
     <div class="lc-footer">
       <span class="lc-date">2026-05-07</span>
       <a href="https://sc.olx.com.br/florianopolis-e-regiao/imoveis/venha-morar-na-pousada-quartos-individuais-mensal-lagoa-da-conceicao-1483330638" target="_blank" rel="noopener">Ver anúncio →</a>
-    </div>
-  </div>
-</div>
-<div class="listing-card"
-     data-price="0"
-     data-source="OLX"
-     data-bedrooms="0"
-     data-new="false"
-     data-neighborhood="">
-  <div class="lc-img"><img src="" alt="foto" onerror="this.style.display='none'"></div>
-  <div class="lc-body">
-    <div class="lc-top">
-      <span class="src-badge" style="background:#6d28d9">OLX</span>
-      
-    </div>
-    <div class="lc-title"></div>
-    <div class="lc-price">—<span class="per-mo">/mês</span></div>
-    <div class="lc-meta">
-      
-      
-      
-    </div>
-    <div class="lc-footer">
-      <span class="lc-date">2026-05-07</span>
-      <a href="" target="_blank" rel="noopener">Ver anúncio →</a>
     </div>
   </div>
 </div>
@@ -583,17 +1145,18 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
      data-bedrooms="1"
      data-new="true"
      data-neighborhood="pinheira">
-  <div class="lc-img"><img src="https://img.olx.com.br/images/14/140656633149500.jpg" alt="foto" onerror="this.style.display='none'"></div>
+  <div class="lc-img"><img src="https://img.olx.com.br/images/14/140656633149500.jpg" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#6d28d9">OLX</span>
       <span class="badge-new">NOVO</span>
     </div>
-    <div class="lc-title">Apartamento de um dormitório em Pinheira</div>
+    <div class="lc-title">Apartamento de um dormitÃ³rio em Pinheira</div>
     <div class="lc-price">R$ 2.100<span class="per-mo">/mês</span></div>
     <div class="lc-meta">
       <span>50 m²</span>
       <span>1 qto</span>
+      <span class="lc-na">NA</span>
       <span>Pinheira</span>
     </div>
     <div class="lc-footer">
@@ -603,37 +1166,12 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
   </div>
 </div>
 <div class="listing-card"
-     data-price="0"
-     data-source="OLX"
-     data-bedrooms="0"
-     data-new="false"
-     data-neighborhood="">
-  <div class="lc-img"><img src="" alt="foto" onerror="this.style.display='none'"></div>
-  <div class="lc-body">
-    <div class="lc-top">
-      <span class="src-badge" style="background:#6d28d9">OLX</span>
-      
-    </div>
-    <div class="lc-title"></div>
-    <div class="lc-price">—<span class="per-mo">/mês</span></div>
-    <div class="lc-meta">
-      
-      
-      
-    </div>
-    <div class="lc-footer">
-      <span class="lc-date">2026-05-07</span>
-      <a href="" target="_blank" rel="noopener">Ver anúncio →</a>
-    </div>
-  </div>
-</div>
-<div class="listing-card"
      data-price="3000"
      data-source="OLX"
      data-bedrooms="1"
      data-new="true"
      data-neighborhood="ingleses do rio vermelho">
-  <div class="lc-img"><img src="https://img.olx.com.br/images/89/891671049923980.jpg" alt="foto" onerror="this.style.display='none'"></div>
+  <div class="lc-img"><img src="https://img.olx.com.br/images/89/891671049923980.jpg" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#6d28d9">OLX</span>
@@ -642,8 +1180,9 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
     <div class="lc-title">Apartamento 1 quarto 5min da praia</div>
     <div class="lc-price">R$ 3.000<span class="per-mo">/mês</span></div>
     <div class="lc-meta">
-      
+      <span class="lc-na">NA</span>
       <span>1 qto</span>
+      <span class="lc-na">NA</span>
       <span>Ingleses do Rio Vermelho</span>
     </div>
     <div class="lc-footer">
@@ -658,17 +1197,18 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
      data-bedrooms="1"
      data-new="true"
      data-neighborhood="imbituba - ddd 48">
-  <div class="lc-img"><img src="https://img.olx.com.br/images/24/245630161794741.jpg" alt="foto" onerror="this.style.display='none'"></div>
+  <div class="lc-img"><img src="https://img.olx.com.br/images/24/245630161794741.jpg" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#6d28d9">OLX</span>
       <span class="badge-new">NOVO</span>
     </div>
-    <div class="lc-title">Locação anual ou temporada - Praia de Ibiraquera - Imbituba/SC</div>
+    <div class="lc-title">LocaÃ§Ã£o anual ou temporada - Praia de Ibiraquera - Imbituba/SC</div>
     <div class="lc-price">R$ 2.000<span class="per-mo">/mês</span></div>
     <div class="lc-meta">
       <span>60 m²</span>
       <span>1 qto</span>
+      <span class="lc-na">NA</span>
       <span>Imbituba - DDD 48</span>
     </div>
     <div class="lc-footer">
@@ -682,48 +1222,24 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
      data-source="OLX"
      data-bedrooms="1"
      data-new="true"
-     data-neighborhood="nações">
-  <div class="lc-img"><img src="https://img.olx.com.br/images/11/115631649845870.jpg" alt="foto" onerror="this.style.display='none'"></div>
+     data-neighborhood="naã§ãµes">
+  <div class="lc-img"><img src="https://img.olx.com.br/images/11/115631649845870.jpg" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#6d28d9">OLX</span>
       <span class="badge-new">NOVO</span>
     </div>
-    <div class="lc-title">Alugo Anual Apto 1 Dorm Semi mobiliado p/ Casal ou Moça - Bairro Nações</div>
+    <div class="lc-title">Alugo Anual Apto 1 Dorm Semi mobiliado p/ Casal ou MoÃ§a - Bairro NaÃ§Ãµes</div>
     <div class="lc-price">R$ 1.890<span class="per-mo">/mês</span></div>
     <div class="lc-meta">
       <span>32 m²</span>
       <span>1 qto</span>
-      <span>Nações</span>
+      <span class="lc-na">NA</span>
+      <span>NaÃ§Ãµes</span>
     </div>
     <div class="lc-footer">
       <span class="lc-date">2026-05-07</span>
       <a href="https://sc.olx.com.br/norte-de-santa-catarina/imoveis/alugo-anual-apto-1-dorm-semi-mobiliado-p-casal-ou-moca-bairro-nacoes-1500161555" target="_blank" rel="noopener">Ver anúncio →</a>
-    </div>
-  </div>
-</div>
-<div class="listing-card"
-     data-price="0"
-     data-source="OLX"
-     data-bedrooms="0"
-     data-new="false"
-     data-neighborhood="">
-  <div class="lc-img"><img src="" alt="foto" onerror="this.style.display='none'"></div>
-  <div class="lc-body">
-    <div class="lc-top">
-      <span class="src-badge" style="background:#6d28d9">OLX</span>
-      
-    </div>
-    <div class="lc-title"></div>
-    <div class="lc-price">—<span class="per-mo">/mês</span></div>
-    <div class="lc-meta">
-      
-      
-      
-    </div>
-    <div class="lc-footer">
-      <span class="lc-date">2026-05-07</span>
-      <a href="" target="_blank" rel="noopener">Ver anúncio →</a>
     </div>
   </div>
 </div>
@@ -733,7 +1249,7 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
      data-bedrooms="1"
      data-new="true"
      data-neighborhood="bucarein">
-  <div class="lc-img"><img src="https://img.olx.com.br/images/87/876678641168583.jpg" alt="foto" onerror="this.style.display='none'"></div>
+  <div class="lc-img"><img src="https://img.olx.com.br/images/87/876678641168583.jpg" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#6d28d9">OLX</span>
@@ -744,6 +1260,7 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
     <div class="lc-meta">
       <span>40 m²</span>
       <span>1 qto</span>
+      <span class="lc-na">NA</span>
       <span>Bucarein</span>
     </div>
     <div class="lc-footer">
@@ -758,7 +1275,7 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
      data-bedrooms="2"
      data-new="true"
      data-neighborhood="ingleses do rio vermelho">
-  <div class="lc-img"><img src="https://img.olx.com.br/images/90/900613760979984.jpg" alt="foto" onerror="this.style.display='none'"></div>
+  <div class="lc-img"><img src="https://img.olx.com.br/images/90/900613760979984.jpg" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#6d28d9">OLX</span>
@@ -769,6 +1286,7 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
     <div class="lc-meta">
       <span>72 m²</span>
       <span>2 qtos</span>
+      <span class="lc-na">NA</span>
       <span>Ingleses do Rio Vermelho</span>
     </div>
     <div class="lc-footer">
@@ -782,19 +1300,20 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
      data-source="OLX"
      data-bedrooms="0"
      data-new="true"
-     data-neighborhood="guarda do cubatão">
-  <div class="lc-img"><img src="https://img.olx.com.br/images/50/502652402120822.jpg" alt="foto" onerror="this.style.display='none'"></div>
+     data-neighborhood="guarda do cubatã£o">
+  <div class="lc-img"><img src="https://img.olx.com.br/images/50/502652402120822.jpg" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#6d28d9">OLX</span>
       <span class="badge-new">NOVO</span>
     </div>
-    <div class="lc-title">Quarto mobiliado </div>
+    <div class="lc-title">Quarto mobiliado</div>
     <div class="lc-price">R$ 900<span class="per-mo">/mês</span></div>
     <div class="lc-meta">
-      
-      
-      <span>Guarda do Cubatão</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span>Guarda do CubatÃ£o</span>
     </div>
     <div class="lc-footer">
       <span class="lc-date">2026-05-07</span>
@@ -808,18 +1327,19 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
      data-bedrooms="0"
      data-new="true"
      data-neighborhood="">
-  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/09/04/62/82/360x266/4978920138.jpg?isFirstImage=true" alt="foto" onerror="this.style.display='none'"></div>
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/09/04/62/82/360x266/4978920138.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
       <span class="badge-new">NOVO</span>
     </div>
     <div class="lc-title">R$ 2.000</div>
-    <div class="lc-price">—<span class="per-mo">/mês</span></div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
     <div class="lc-meta">
-      
-      
-      
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
     </div>
     <div class="lc-footer">
       <span class="lc-date">2026-05-07</span>
@@ -833,18 +1353,19 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
      data-bedrooms="0"
      data-new="true"
      data-neighborhood="">
-  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/29/28/14/13/360x266/6192039631.jpg?isFirstImage=true" alt="foto" onerror="this.style.display='none'"></div>
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/29/28/14/13/360x266/6192039631.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
       <span class="badge-new">NOVO</span>
     </div>
     <div class="lc-title">R$ 1.650</div>
-    <div class="lc-price">—<span class="per-mo">/mês</span></div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
     <div class="lc-meta">
-      
-      
-      
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
     </div>
     <div class="lc-footer">
       <span class="lc-date">2026-05-07</span>
@@ -858,18 +1379,19 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
      data-bedrooms="0"
      data-new="true"
      data-neighborhood="">
-  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/29/34/65/14/05/360x266/4666932620.jpg?isFirstImage=true" alt="foto" onerror="this.style.display='none'"></div>
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/29/34/65/14/05/360x266/4666932620.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
       <span class="badge-new">NOVO</span>
     </div>
     <div class="lc-title">R$ 1.600</div>
-    <div class="lc-price">—<span class="per-mo">/mês</span></div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
     <div class="lc-meta">
-      
-      
-      
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
     </div>
     <div class="lc-footer">
       <span class="lc-date">2026-05-07</span>
@@ -883,18 +1405,19 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
      data-bedrooms="0"
      data-new="true"
      data-neighborhood="">
-  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/33/23/30/63/360x266/6550946017.jpg?isFirstImage=true" alt="foto" onerror="this.style.display='none'"></div>
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/33/23/30/63/360x266/6550946017.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
       <span class="badge-new">NOVO</span>
     </div>
     <div class="lc-title">R$ 2.800</div>
-    <div class="lc-price">—<span class="per-mo">/mês</span></div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
     <div class="lc-meta">
-      
-      
-      
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
     </div>
     <div class="lc-footer">
       <span class="lc-date">2026-05-07</span>
@@ -908,18 +1431,19 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
      data-bedrooms="0"
      data-new="true"
      data-neighborhood="">
-  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/20/13/96/89/360x266/5614228833.jpg?isFirstImage=true" alt="foto" onerror="this.style.display='none'"></div>
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/20/13/96/89/360x266/5614228833.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
       <span class="badge-new">NOVO</span>
     </div>
     <div class="lc-title">R$ 3.000</div>
-    <div class="lc-price">—<span class="per-mo">/mês</span></div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
     <div class="lc-meta">
-      
-      
-      
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
     </div>
     <div class="lc-footer">
       <span class="lc-date">2026-05-07</span>
@@ -933,18 +1457,19 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
      data-bedrooms="0"
      data-new="true"
      data-neighborhood="">
-  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/33/84/83/57/360x266/6616034615.jpg?isFirstImage=true" alt="foto" onerror="this.style.display='none'"></div>
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/33/84/83/57/360x266/6616034615.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
       <span class="badge-new">NOVO</span>
     </div>
     <div class="lc-title">R$ 68.000</div>
-    <div class="lc-price">—<span class="per-mo">/mês</span></div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
     <div class="lc-meta">
-      
-      
-      
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
     </div>
     <div class="lc-footer">
       <span class="lc-date">2026-05-07</span>
@@ -958,18 +1483,19 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
      data-bedrooms="0"
      data-new="true"
      data-neighborhood="">
-  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/22/50/11/70/360x266/5761193684.jpg?isFirstImage=true" alt="foto" onerror="this.style.display='none'"></div>
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/22/50/11/70/360x266/5761193684.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
       <span class="badge-new">NOVO</span>
     </div>
     <div class="lc-title">R$ 5.500</div>
-    <div class="lc-price">—<span class="per-mo">/mês</span></div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
     <div class="lc-meta">
-      
-      
-      
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
     </div>
     <div class="lc-footer">
       <span class="lc-date">2026-05-07</span>
@@ -983,18 +1509,19 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
      data-bedrooms="0"
      data-new="true"
      data-neighborhood="">
-  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/34/61/64/61/360x266/6654739097.jpg?isFirstImage=true" alt="foto" onerror="this.style.display='none'"></div>
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/34/61/64/61/360x266/6654739097.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
       <span class="badge-new">NOVO</span>
     </div>
     <div class="lc-title">R$ 2.880</div>
-    <div class="lc-price">—<span class="per-mo">/mês</span></div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
     <div class="lc-meta">
-      
-      
-      
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
     </div>
     <div class="lc-footer">
       <span class="lc-date">2026-05-07</span>
@@ -1008,18 +1535,19 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
      data-bedrooms="0"
      data-new="true"
      data-neighborhood="">
-  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/31/90/24/82/360x266/6445550830.jpg?isFirstImage=true" alt="foto" onerror="this.style.display='none'"></div>
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/31/90/24/82/360x266/6445550830.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
       <span class="badge-new">NOVO</span>
     </div>
     <div class="lc-title">R$ 2.500</div>
-    <div class="lc-price">—<span class="per-mo">/mês</span></div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
     <div class="lc-meta">
-      
-      
-      
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
     </div>
     <div class="lc-footer">
       <span class="lc-date">2026-05-07</span>
@@ -1033,18 +1561,19 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
      data-bedrooms="0"
      data-new="true"
      data-neighborhood="">
-  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/01/31/28/78/360x266/4564254193.jpg?isFirstImage=true" alt="foto" onerror="this.style.display='none'"></div>
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/01/31/28/78/360x266/4564254193.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
       <span class="badge-new">NOVO</span>
     </div>
     <div class="lc-title">R$ 2.500</div>
-    <div class="lc-price">—<span class="per-mo">/mês</span></div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
     <div class="lc-meta">
-      
-      
-      
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
     </div>
     <div class="lc-footer">
       <span class="lc-date">2026-05-07</span>
@@ -1058,18 +1587,19 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
      data-bedrooms="0"
      data-new="true"
      data-neighborhood="">
-  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/26/54/56/09/360x266/5994598968.jpg?isFirstImage=true" alt="foto" onerror="this.style.display='none'"></div>
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/26/54/56/09/360x266/5994598968.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
       <span class="badge-new">NOVO</span>
     </div>
     <div class="lc-title">R$ 2.750</div>
-    <div class="lc-price">—<span class="per-mo">/mês</span></div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
     <div class="lc-meta">
-      
-      
-      
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
     </div>
     <div class="lc-footer">
       <span class="lc-date">2026-05-07</span>
@@ -1083,18 +1613,19 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
      data-bedrooms="0"
      data-new="true"
      data-neighborhood="">
-  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/29/53/76/76/56/360x266/6329949187.jpg?isFirstImage=true" alt="foto" onerror="this.style.display='none'"></div>
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/29/53/76/76/56/360x266/6329949187.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
       <span class="badge-new">NOVO</span>
     </div>
     <div class="lc-title">R$ 1.700</div>
-    <div class="lc-price">—<span class="per-mo">/mês</span></div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
     <div class="lc-meta">
-      
-      
-      
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
     </div>
     <div class="lc-footer">
       <span class="lc-date">2026-05-07</span>
@@ -1108,18 +1639,19 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
      data-bedrooms="0"
      data-new="true"
      data-neighborhood="">
-  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/34/01/02/06/360x266/6623785917.jpg?isFirstImage=true" alt="foto" onerror="this.style.display='none'"></div>
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/34/01/02/06/360x266/6623785917.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
       <span class="badge-new">NOVO</span>
     </div>
     <div class="lc-title">R$ 87.500</div>
-    <div class="lc-price">—<span class="per-mo">/mês</span></div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
     <div class="lc-meta">
-      
-      
-      
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
     </div>
     <div class="lc-footer">
       <span class="lc-date">2026-05-07</span>
@@ -1133,18 +1665,19 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
      data-bedrooms="0"
      data-new="true"
      data-neighborhood="">
-  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/00/24/25/17/360x266/4682994558.jpg?isFirstImage=true" alt="foto" onerror="this.style.display='none'"></div>
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/00/24/25/17/360x266/4682994558.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
       <span class="badge-new">NOVO</span>
     </div>
     <div class="lc-title">R$ 1.550</div>
-    <div class="lc-price">—<span class="per-mo">/mês</span></div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
     <div class="lc-meta">
-      
-      
-      
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
     </div>
     <div class="lc-footer">
       <span class="lc-date">2026-05-07</span>
@@ -1158,18 +1691,19 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
      data-bedrooms="0"
      data-new="true"
      data-neighborhood="">
-  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/29/34/86/11/48/360x266/3989608529.jpg?isFirstImage=true" alt="foto" onerror="this.style.display='none'"></div>
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/29/34/86/11/48/360x266/3989608529.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
       <span class="badge-new">NOVO</span>
     </div>
     <div class="lc-title">R$ 2.600</div>
-    <div class="lc-price">—<span class="per-mo">/mês</span></div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
     <div class="lc-meta">
-      
-      
-      
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
     </div>
     <div class="lc-footer">
       <span class="lc-date">2026-05-07</span>
@@ -1183,18 +1717,19 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
      data-bedrooms="0"
      data-new="true"
      data-neighborhood="">
-  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/16/77/86/76/360x266/6260518116.jpg?isFirstImage=true" alt="foto" onerror="this.style.display='none'"></div>
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/16/77/86/76/360x266/6260518116.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
       <span class="badge-new">NOVO</span>
     </div>
     <div class="lc-title">R$ 4.100</div>
-    <div class="lc-price">—<span class="per-mo">/mês</span></div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
     <div class="lc-meta">
-      
-      
-      
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
     </div>
     <div class="lc-footer">
       <span class="lc-date">2026-05-07</span>
@@ -1208,18 +1743,19 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
      data-bedrooms="0"
      data-new="true"
      data-neighborhood="">
-  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/34/65/62/12/360x266/6657283146.jpg?isFirstImage=true" alt="foto" onerror="this.style.display='none'"></div>
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/34/65/62/12/360x266/6657283146.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
       <span class="badge-new">NOVO</span>
     </div>
     <div class="lc-title">R$ 1.500</div>
-    <div class="lc-price">—<span class="per-mo">/mês</span></div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
     <div class="lc-meta">
-      
-      
-      
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
     </div>
     <div class="lc-footer">
       <span class="lc-date">2026-05-07</span>
@@ -1233,18 +1769,19 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
      data-bedrooms="0"
      data-new="true"
      data-neighborhood="">
-  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/33/30/11/40/360x266/6581575061.jpg?isFirstImage=true" alt="foto" onerror="this.style.display='none'"></div>
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/33/30/11/40/360x266/6581575061.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
       <span class="badge-new">NOVO</span>
     </div>
     <div class="lc-title">R$ 12.000</div>
-    <div class="lc-price">—<span class="per-mo">/mês</span></div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
     <div class="lc-meta">
-      
-      
-      
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
     </div>
     <div class="lc-footer">
       <span class="lc-date">2026-05-07</span>
@@ -1258,18 +1795,19 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
      data-bedrooms="0"
      data-new="true"
      data-neighborhood="">
-  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/15/89/73/08/360x266/5350275614.jpg?isFirstImage=true" alt="foto" onerror="this.style.display='none'"></div>
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/15/89/73/08/360x266/5350275614.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
       <span class="badge-new">NOVO</span>
     </div>
     <div class="lc-title">R$ 4.500</div>
-    <div class="lc-price">—<span class="per-mo">/mês</span></div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
     <div class="lc-meta">
-      
-      
-      
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
     </div>
     <div class="lc-footer">
       <span class="lc-date">2026-05-07</span>
@@ -1283,18 +1821,19 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
      data-bedrooms="0"
      data-new="true"
      data-neighborhood="">
-  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/29/97/44/71/360x266/6280474909.jpg?isFirstImage=true" alt="foto" onerror="this.style.display='none'"></div>
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/29/97/44/71/360x266/6280474909.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
       <span class="badge-new">NOVO</span>
     </div>
     <div class="lc-title">R$ 1.300</div>
-    <div class="lc-price">—<span class="per-mo">/mês</span></div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
     <div class="lc-meta">
-      
-      
-      
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
     </div>
     <div class="lc-footer">
       <span class="lc-date">2026-05-07</span>
@@ -1308,18 +1847,19 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
      data-bedrooms="0"
      data-new="true"
      data-neighborhood="">
-  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/20/72/94/42/360x266/5646406683.jpg?isFirstImage=true" alt="foto" onerror="this.style.display='none'"></div>
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/20/72/94/42/360x266/5646406683.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
       <span class="badge-new">NOVO</span>
     </div>
     <div class="lc-title">R$ 10.000</div>
-    <div class="lc-price">—<span class="per-mo">/mês</span></div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
     <div class="lc-meta">
-      
-      
-      
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
     </div>
     <div class="lc-footer">
       <span class="lc-date">2026-05-07</span>
@@ -1333,18 +1873,19 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
      data-bedrooms="0"
      data-new="true"
      data-neighborhood="">
-  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/33/84/82/52/360x266/6615977074.jpg?isFirstImage=true" alt="foto" onerror="this.style.display='none'"></div>
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/33/84/82/52/360x266/6615977074.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
       <span class="badge-new">NOVO</span>
     </div>
     <div class="lc-title">R$ 26.000</div>
-    <div class="lc-price">—<span class="per-mo">/mês</span></div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
     <div class="lc-meta">
-      
-      
-      
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
     </div>
     <div class="lc-footer">
       <span class="lc-date">2026-05-07</span>
@@ -1358,18 +1899,19 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
      data-bedrooms="0"
      data-new="true"
      data-neighborhood="">
-  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/30/70/68/48/360x266/6346052621.jpg?isFirstImage=true" alt="foto" onerror="this.style.display='none'"></div>
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/30/70/68/48/360x266/6346052621.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
       <span class="badge-new">NOVO</span>
     </div>
     <div class="lc-title">R$ 2.000</div>
-    <div class="lc-price">—<span class="per-mo">/mês</span></div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
     <div class="lc-meta">
-      
-      
-      
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
     </div>
     <div class="lc-footer">
       <span class="lc-date">2026-05-07</span>
@@ -1383,18 +1925,19 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
      data-bedrooms="0"
      data-new="true"
      data-neighborhood="">
-  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/34/43/03/90/360x266/6646914444.jpg?isFirstImage=true" alt="foto" onerror="this.style.display='none'"></div>
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/34/43/03/90/360x266/6646914444.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
       <span class="badge-new">NOVO</span>
     </div>
     <div class="lc-title">R$ 30.600</div>
-    <div class="lc-price">—<span class="per-mo">/mês</span></div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
     <div class="lc-meta">
-      
-      
-      
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
     </div>
     <div class="lc-footer">
       <span class="lc-date">2026-05-07</span>
@@ -1408,18 +1951,19 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
      data-bedrooms="0"
      data-new="true"
      data-neighborhood="">
-  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/33/43/68/53/360x266/6580385102.jpg?isFirstImage=true" alt="foto" onerror="this.style.display='none'"></div>
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/33/43/68/53/360x266/6580385102.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
       <span class="badge-new">NOVO</span>
     </div>
     <div class="lc-title">R$ 4.200</div>
-    <div class="lc-price">—<span class="per-mo">/mês</span></div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
     <div class="lc-meta">
-      
-      
-      
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
     </div>
     <div class="lc-footer">
       <span class="lc-date">2026-05-07</span>
@@ -1433,18 +1977,19 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
      data-bedrooms="0"
      data-new="true"
      data-neighborhood="">
-  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/29/40/49/67/46/360x266/4806606983.jpg?isFirstImage=true" alt="foto" onerror="this.style.display='none'"></div>
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/29/40/49/67/46/360x266/4806606983.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
       <span class="badge-new">NOVO</span>
     </div>
     <div class="lc-title">R$ 5.900</div>
-    <div class="lc-price">—<span class="per-mo">/mês</span></div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
     <div class="lc-meta">
-      
-      
-      
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
     </div>
     <div class="lc-footer">
       <span class="lc-date">2026-05-07</span>
@@ -1458,18 +2003,19 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
      data-bedrooms="0"
      data-new="true"
      data-neighborhood="">
-  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/12/93/11/63/360x266/5189953497.jpg?isFirstImage=true" alt="foto" onerror="this.style.display='none'"></div>
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/12/93/11/63/360x266/5189953497.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
       <span class="badge-new">NOVO</span>
     </div>
     <div class="lc-title">R$ 12</div>
-    <div class="lc-price">—<span class="per-mo">/mês</span></div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
     <div class="lc-meta">
-      
-      
-      
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
     </div>
     <div class="lc-footer">
       <span class="lc-date">2026-05-07</span>
@@ -1483,18 +2029,19 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
      data-bedrooms="0"
      data-new="true"
      data-neighborhood="">
-  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/03/09/93/14/360x266/4962992515.jpg?isFirstImage=true" alt="foto" onerror="this.style.display='none'"></div>
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/03/09/93/14/360x266/4962992515.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
       <span class="badge-new">NOVO</span>
     </div>
     <div class="lc-title">R$ 1.900</div>
-    <div class="lc-price">—<span class="per-mo">/mês</span></div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
     <div class="lc-meta">
-      
-      
-      
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
     </div>
     <div class="lc-footer">
       <span class="lc-date">2026-05-07</span>
@@ -1508,18 +2055,19 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
      data-bedrooms="0"
      data-new="true"
      data-neighborhood="">
-  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/29/28/14/13/360x266/6192039631.jpg?isFirstImage=true" alt="foto" onerror="this.style.display='none'"></div>
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/29/28/14/13/360x266/6192039631.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
       <span class="badge-new">NOVO</span>
     </div>
     <div class="lc-title">R$ 1.650</div>
-    <div class="lc-price">—<span class="per-mo">/mês</span></div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
     <div class="lc-meta">
-      
-      
-      
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
     </div>
     <div class="lc-footer">
       <span class="lc-date">2026-05-07</span>
@@ -1533,18 +2081,19 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
      data-bedrooms="0"
      data-new="true"
      data-neighborhood="">
-  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/32/36/71/66/360x266/6478807552.jpg?isFirstImage=true" alt="foto" onerror="this.style.display='none'"></div>
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/32/36/71/66/360x266/6478807552.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
       <span class="badge-new">NOVO</span>
     </div>
     <div class="lc-title">R$ 1.750</div>
-    <div class="lc-price">—<span class="per-mo">/mês</span></div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
     <div class="lc-meta">
-      
-      
-      
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
     </div>
     <div class="lc-footer">
       <span class="lc-date">2026-05-07</span>
@@ -1558,18 +2107,19 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
      data-bedrooms="0"
      data-new="true"
      data-neighborhood="">
-  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/09/04/62/82/360x266/4978920138.jpg?isFirstImage=true" alt="foto" onerror="this.style.display='none'"></div>
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/09/04/62/82/360x266/4978920138.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
       <span class="badge-new">NOVO</span>
     </div>
     <div class="lc-title">R$ 2.000</div>
-    <div class="lc-price">—<span class="per-mo">/mês</span></div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
     <div class="lc-meta">
-      
-      
-      
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
     </div>
     <div class="lc-footer">
       <span class="lc-date">2026-05-07</span>
@@ -1583,18 +2133,19 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
      data-bedrooms="0"
      data-new="true"
      data-neighborhood="">
-  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/29/99/99/49/56/360x266/4514458156.jpg?isFirstImage=true" alt="foto" onerror="this.style.display='none'"></div>
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/29/99/99/49/56/360x266/4514458156.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
       <span class="badge-new">NOVO</span>
     </div>
     <div class="lc-title">R$ 3.000</div>
-    <div class="lc-price">—<span class="per-mo">/mês</span></div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
     <div class="lc-meta">
-      
-      
-      
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
     </div>
     <div class="lc-footer">
       <span class="lc-date">2026-05-07</span>
@@ -1608,18 +2159,19 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
      data-bedrooms="0"
      data-new="true"
      data-neighborhood="">
-  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/31/41/62/53/360x266/6467665201.jpg?isFirstImage=true" alt="foto" onerror="this.style.display='none'"></div>
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/31/41/62/53/360x266/6467665201.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
       <span class="badge-new">NOVO</span>
     </div>
     <div class="lc-title">R$ 2.450</div>
-    <div class="lc-price">—<span class="per-mo">/mês</span></div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
     <div class="lc-meta">
-      
-      
-      
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
     </div>
     <div class="lc-footer">
       <span class="lc-date">2026-05-07</span>
@@ -1633,18 +2185,19 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
      data-bedrooms="0"
      data-new="true"
      data-neighborhood="">
-  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/29/53/76/76/56/360x266/6329949187.jpg?isFirstImage=true" alt="foto" onerror="this.style.display='none'"></div>
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/29/53/76/76/56/360x266/6329949187.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
       <span class="badge-new">NOVO</span>
     </div>
     <div class="lc-title">R$ 1.700</div>
-    <div class="lc-price">—<span class="per-mo">/mês</span></div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
     <div class="lc-meta">
-      
-      
-      
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
     </div>
     <div class="lc-footer">
       <span class="lc-date">2026-05-07</span>
@@ -1658,18 +2211,19 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
      data-bedrooms="0"
      data-new="true"
      data-neighborhood="">
-  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/33/11/72/01/360x266/6542967362.jpg?isFirstImage=true" alt="foto" onerror="this.style.display='none'"></div>
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/33/11/72/01/360x266/6542967362.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
       <span class="badge-new">NOVO</span>
     </div>
     <div class="lc-title">R$ 3.680</div>
-    <div class="lc-price">—<span class="per-mo">/mês</span></div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
     <div class="lc-meta">
-      
-      
-      
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
     </div>
     <div class="lc-footer">
       <span class="lc-date">2026-05-07</span>
@@ -1683,18 +2237,19 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
      data-bedrooms="0"
      data-new="true"
      data-neighborhood="">
-  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/34/61/64/61/360x266/6654739097.jpg?isFirstImage=true" alt="foto" onerror="this.style.display='none'"></div>
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/34/61/64/61/360x266/6654739097.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
       <span class="badge-new">NOVO</span>
     </div>
     <div class="lc-title">R$ 2.880</div>
-    <div class="lc-price">—<span class="per-mo">/mês</span></div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
     <div class="lc-meta">
-      
-      
-      
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
     </div>
     <div class="lc-footer">
       <span class="lc-date">2026-05-07</span>
@@ -1708,18 +2263,19 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
      data-bedrooms="0"
      data-new="true"
      data-neighborhood="">
-  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/07/37/42/34/360x266/4914237174.jpg?isFirstImage=true" alt="foto" onerror="this.style.display='none'"></div>
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/07/37/42/34/360x266/4914237174.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
       <span class="badge-new">NOVO</span>
     </div>
     <div class="lc-title">R$ 2.300</div>
-    <div class="lc-price">—<span class="per-mo">/mês</span></div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
     <div class="lc-meta">
-      
-      
-      
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
     </div>
     <div class="lc-footer">
       <span class="lc-date">2026-05-07</span>
@@ -1733,18 +2289,19 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
      data-bedrooms="0"
      data-new="true"
      data-neighborhood="">
-  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/29/34/86/11/48/360x266/3989608529.jpg?isFirstImage=true" alt="foto" onerror="this.style.display='none'"></div>
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/29/34/86/11/48/360x266/3989608529.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
       <span class="badge-new">NOVO</span>
     </div>
     <div class="lc-title">R$ 2.600</div>
-    <div class="lc-price">—<span class="per-mo">/mês</span></div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
     <div class="lc-meta">
-      
-      
-      
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
     </div>
     <div class="lc-footer">
       <span class="lc-date">2026-05-07</span>
@@ -1758,18 +2315,19 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
      data-bedrooms="0"
      data-new="true"
      data-neighborhood="">
-  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/34/65/61/98/360x266/6657258497.jpg?isFirstImage=true" alt="foto" onerror="this.style.display='none'"></div>
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/34/65/61/98/360x266/6657258497.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
       <span class="badge-new">NOVO</span>
     </div>
     <div class="lc-title">R$ 3.100</div>
-    <div class="lc-price">—<span class="per-mo">/mês</span></div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
     <div class="lc-meta">
-      
-      
-      
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
     </div>
     <div class="lc-footer">
       <span class="lc-date">2026-05-07</span>
@@ -1783,18 +2341,19 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
      data-bedrooms="0"
      data-new="true"
      data-neighborhood="">
-  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/33/43/68/53/360x266/6580385102.jpg?isFirstImage=true" alt="foto" onerror="this.style.display='none'"></div>
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/33/43/68/53/360x266/6580385102.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
       <span class="badge-new">NOVO</span>
     </div>
     <div class="lc-title">R$ 4.200</div>
-    <div class="lc-price">—<span class="per-mo">/mês</span></div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
     <div class="lc-meta">
-      
-      
-      
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
     </div>
     <div class="lc-footer">
       <span class="lc-date">2026-05-07</span>
@@ -1808,18 +2367,19 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
      data-bedrooms="0"
      data-new="true"
      data-neighborhood="">
-  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/29/34/75/71/72/360x266/6541936965.jpg?isFirstImage=true" alt="foto" onerror="this.style.display='none'"></div>
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/29/34/75/71/72/360x266/6541936965.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
       <span class="badge-new">NOVO</span>
     </div>
     <div class="lc-title">R$ 1.700</div>
-    <div class="lc-price">—<span class="per-mo">/mês</span></div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
     <div class="lc-meta">
-      
-      
-      
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
     </div>
     <div class="lc-footer">
       <span class="lc-date">2026-05-07</span>
@@ -1833,18 +2393,19 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
      data-bedrooms="0"
      data-new="true"
      data-neighborhood="">
-  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/29/58/45/32/33/360x266/6218725251.jpg?isFirstImage=true" alt="foto" onerror="this.style.display='none'"></div>
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/29/58/45/32/33/360x266/6218725251.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
       <span class="badge-new">NOVO</span>
     </div>
     <div class="lc-title">R$ 3.400</div>
-    <div class="lc-price">—<span class="per-mo">/mês</span></div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
     <div class="lc-meta">
-      
-      
-      
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
     </div>
     <div class="lc-footer">
       <span class="lc-date">2026-05-07</span>
@@ -1858,18 +2419,19 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
      data-bedrooms="0"
      data-new="true"
      data-neighborhood="">
-  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/29/65/13/11/31/360x266/2643761644.jpg?isFirstImage=true" alt="foto" onerror="this.style.display='none'"></div>
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/29/65/13/11/31/360x266/2643761644.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
       <span class="badge-new">NOVO</span>
     </div>
     <div class="lc-title">R$ 1.350</div>
-    <div class="lc-price">—<span class="per-mo">/mês</span></div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
     <div class="lc-meta">
-      
-      
-      
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
     </div>
     <div class="lc-footer">
       <span class="lc-date">2026-05-07</span>
@@ -1883,18 +2445,19 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
      data-bedrooms="0"
      data-new="true"
      data-neighborhood="">
-  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/15/89/73/08/360x266/5350275614.jpg?isFirstImage=true" alt="foto" onerror="this.style.display='none'"></div>
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/15/89/73/08/360x266/5350275614.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
       <span class="badge-new">NOVO</span>
     </div>
     <div class="lc-title">R$ 4.500</div>
-    <div class="lc-price">—<span class="per-mo">/mês</span></div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
     <div class="lc-meta">
-      
-      
-      
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
     </div>
     <div class="lc-footer">
       <span class="lc-date">2026-05-07</span>
@@ -1908,18 +2471,19 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
      data-bedrooms="0"
      data-new="true"
      data-neighborhood="">
-  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/33/84/83/57/360x266/6616034615.jpg?isFirstImage=true" alt="foto" onerror="this.style.display='none'"></div>
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/33/84/83/57/360x266/6616034615.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
       <span class="badge-new">NOVO</span>
     </div>
     <div class="lc-title">R$ 68.000</div>
-    <div class="lc-price">—<span class="per-mo">/mês</span></div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
     <div class="lc-meta">
-      
-      
-      
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
     </div>
     <div class="lc-footer">
       <span class="lc-date">2026-05-07</span>
@@ -1933,18 +2497,19 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
      data-bedrooms="0"
      data-new="true"
      data-neighborhood="">
-  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/34/43/02/81/360x266/6646911676.jpg?isFirstImage=true" alt="foto" onerror="this.style.display='none'"></div>
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/34/43/02/81/360x266/6646911676.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
       <span class="badge-new">NOVO</span>
     </div>
     <div class="lc-title">R$ 24.000</div>
-    <div class="lc-price">—<span class="per-mo">/mês</span></div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
     <div class="lc-meta">
-      
-      
-      
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
     </div>
     <div class="lc-footer">
       <span class="lc-date">2026-05-07</span>
@@ -1958,18 +2523,19 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
      data-bedrooms="0"
      data-new="true"
      data-neighborhood="">
-  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/20/69/79/15/360x266/5700658611.jpg?isFirstImage=true" alt="foto" onerror="this.style.display='none'"></div>
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/20/69/79/15/360x266/5700658611.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
       <span class="badge-new">NOVO</span>
     </div>
     <div class="lc-title">R$ 15.000</div>
-    <div class="lc-price">—<span class="per-mo">/mês</span></div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
     <div class="lc-meta">
-      
-      
-      
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
     </div>
     <div class="lc-footer">
       <span class="lc-date">2026-05-07</span>
@@ -1983,18 +2549,19 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
      data-bedrooms="0"
      data-new="true"
      data-neighborhood="">
-  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/20/72/94/42/360x266/5646406683.jpg?isFirstImage=true" alt="foto" onerror="this.style.display='none'"></div>
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/20/72/94/42/360x266/5646406683.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
       <span class="badge-new">NOVO</span>
     </div>
     <div class="lc-title">R$ 10.000</div>
-    <div class="lc-price">—<span class="per-mo">/mês</span></div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
     <div class="lc-meta">
-      
-      
-      
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
     </div>
     <div class="lc-footer">
       <span class="lc-date">2026-05-07</span>
@@ -2008,18 +2575,19 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
      data-bedrooms="0"
      data-new="true"
      data-neighborhood="">
-  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/29/45/34/74/92/360x266/3733813652.jpg?isFirstImage=true" alt="foto" onerror="this.style.display='none'"></div>
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/29/45/34/74/92/360x266/3733813652.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
       <span class="badge-new">NOVO</span>
     </div>
     <div class="lc-title">R$ 1.850</div>
-    <div class="lc-price">—<span class="per-mo">/mês</span></div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
     <div class="lc-meta">
-      
-      
-      
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
     </div>
     <div class="lc-footer">
       <span class="lc-date">2026-05-07</span>
@@ -2033,18 +2601,19 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
      data-bedrooms="0"
      data-new="true"
      data-neighborhood="">
-  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/29/40/18/66/36/360x266/6654623228.jpg?isFirstImage=true" alt="foto" onerror="this.style.display='none'"></div>
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/29/40/18/66/36/360x266/6654623228.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
       <span class="badge-new">NOVO</span>
     </div>
     <div class="lc-title">R$ 1.490</div>
-    <div class="lc-price">—<span class="per-mo">/mês</span></div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
     <div class="lc-meta">
-      
-      
-      
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
     </div>
     <div class="lc-footer">
       <span class="lc-date">2026-05-07</span>
@@ -2058,18 +2627,19 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
      data-bedrooms="0"
      data-new="true"
      data-neighborhood="">
-  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/15/07/20/96/360x266/5304762033.jpg?isFirstImage=true" alt="foto" onerror="this.style.display='none'"></div>
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/15/07/20/96/360x266/5304762033.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
       <span class="badge-new">NOVO</span>
     </div>
     <div class="lc-title">R$ 1.300</div>
-    <div class="lc-price">—<span class="per-mo">/mês</span></div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
     <div class="lc-meta">
-      
-      
-      
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
     </div>
     <div class="lc-footer">
       <span class="lc-date">2026-05-07</span>
@@ -2083,18 +2653,19 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
      data-bedrooms="0"
      data-new="true"
      data-neighborhood="">
-  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/29/34/65/14/05/360x266/4666932620.jpg?isFirstImage=true" alt="foto" onerror="this.style.display='none'"></div>
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/29/34/65/14/05/360x266/4666932620.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
       <span class="badge-new">NOVO</span>
     </div>
     <div class="lc-title">R$ 1.600</div>
-    <div class="lc-price">—<span class="per-mo">/mês</span></div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
     <div class="lc-meta">
-      
-      
-      
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
     </div>
     <div class="lc-footer">
       <span class="lc-date">2026-05-07</span>
@@ -2108,18 +2679,19 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
      data-bedrooms="0"
      data-new="true"
      data-neighborhood="">
-  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/31/90/24/82/360x266/6445550830.jpg?isFirstImage=true" alt="foto" onerror="this.style.display='none'"></div>
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/31/90/24/82/360x266/6445550830.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
       <span class="badge-new">NOVO</span>
     </div>
     <div class="lc-title">R$ 2.500</div>
-    <div class="lc-price">—<span class="per-mo">/mês</span></div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
     <div class="lc-meta">
-      
-      
-      
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
     </div>
     <div class="lc-footer">
       <span class="lc-date">2026-05-07</span>
@@ -2133,18 +2705,19 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
      data-bedrooms="0"
      data-new="true"
      data-neighborhood="">
-  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/01/31/28/78/360x266/4564254193.jpg?isFirstImage=true" alt="foto" onerror="this.style.display='none'"></div>
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/01/31/28/78/360x266/4564254193.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
       <span class="badge-new">NOVO</span>
     </div>
     <div class="lc-title">R$ 2.500</div>
-    <div class="lc-price">—<span class="per-mo">/mês</span></div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
     <div class="lc-meta">
-      
-      
-      
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
     </div>
     <div class="lc-footer">
       <span class="lc-date">2026-05-07</span>
@@ -2158,18 +2731,19 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
      data-bedrooms="0"
      data-new="true"
      data-neighborhood="">
-  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/33/84/82/52/360x266/6615977074.jpg?isFirstImage=true" alt="foto" onerror="this.style.display='none'"></div>
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/33/84/82/52/360x266/6615977074.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
       <span class="badge-new">NOVO</span>
     </div>
     <div class="lc-title">R$ 26.000</div>
-    <div class="lc-price">—<span class="per-mo">/mês</span></div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
     <div class="lc-meta">
-      
-      
-      
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
     </div>
     <div class="lc-footer">
       <span class="lc-date">2026-05-07</span>
@@ -2183,18 +2757,19 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
      data-bedrooms="0"
      data-new="true"
      data-neighborhood="">
-  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/30/70/68/48/360x266/6346052621.jpg?isFirstImage=true" alt="foto" onerror="this.style.display='none'"></div>
+  <div class="lc-img"><img src="https://imgbr.imovelwebcdn.com/avisos/2/30/30/70/68/48/360x266/6346052621.jpg?isFirstImage=true" alt="foto" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
       <span class="badge-new">NOVO</span>
     </div>
     <div class="lc-title">R$ 2.000</div>
-    <div class="lc-price">—<span class="per-mo">/mês</span></div>
+    <div class="lc-price lc-price--na">NA<span class="per-mo"></span></div>
     <div class="lc-meta">
-      
-      
-      
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
+      <span class="lc-na">NA</span>
     </div>
     <div class="lc-footer">
       <span class="lc-date">2026-05-07</span>
@@ -2208,7 +2783,7 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
      data-bedrooms="2"
      data-new="true"
      data-neighborhood="centro">
-  <div class="lc-img"></div>
+  <div class="lc-img no-img"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#6d28d9">OLX</span>
@@ -2219,6 +2794,7 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
     <div class="lc-meta">
       <span>62 m²</span>
       <span>2 qtos</span>
+      <span class="lc-na">NA</span>
       <span>Centro</span>
     </div>
     <div class="lc-footer">
@@ -2229,14 +2805,14 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
 </div>
 <div class="listing-card"
      data-price="2400"
-     data-source="ZAP ImÃƒÆ’Ã‚Â³veis"
+     data-source="ZAP ImÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â³veis"
      data-bedrooms="3"
      data-new="true"
      data-neighborhood="oxford">
-  <div class="lc-img"></div>
+  <div class="lc-img no-img"></div>
   <div class="lc-body">
     <div class="lc-top">
-      <span class="src-badge" style="background:#6b7280">ZAP ImÃƒÆ’Ã‚Â³veis</span>
+      <span class="src-badge" style="background:#6b7280">ZAP ImÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â³veis</span>
       <span class="badge-new">NOVO</span>
     </div>
     <div class="lc-title">Casa 3 quartos bairro Oxford</div>
@@ -2244,6 +2820,7 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
     <div class="lc-meta">
       <span>90 m²</span>
       <span>3 qtos</span>
+      <span class="lc-na">NA</span>
       <span>Oxford</span>
     </div>
     <div class="lc-footer">
@@ -2258,7 +2835,7 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
      data-bedrooms="1"
      data-new="false"
      data-neighborhood="cruzeiro">
-  <div class="lc-img"></div>
+  <div class="lc-img no-img"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#10b981">Viva Real</span>
@@ -2269,6 +2846,7 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
     <div class="lc-meta">
       <span>40 m²</span>
       <span>1 qto</span>
+      <span class="lc-na">NA</span>
       <span>Cruzeiro</span>
     </div>
     <div class="lc-footer">
@@ -2283,17 +2861,18 @@ select,input[type=range]{border:1px solid #d4d4d8;border-radius:6px;padding:.3re
      data-bedrooms="3"
      data-new="false"
      data-neighborhood="colonial">
-  <div class="lc-img"></div>
+  <div class="lc-img no-img"></div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:#f59e0b">Imovelweb</span>
       
     </div>
-    <div class="lc-title">Casa espaÃƒÆ’Ã‚Â§osa bairro Colonial, 3 dormitÃƒÆ’Ã‚Â³rios, garagem</div>
+    <div class="lc-title">Casa espaÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â§osa bairro Colonial, 3 dormitÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â³rios, garagem</div>
     <div class="lc-price">R$ 2.800<span class="per-mo">/mês</span></div>
     <div class="lc-meta">
       <span>110 m²</span>
       <span>3 qtos</span>
+      <span class="lc-na">NA</span>
       <span>Colonial</span>
     </div>
     <div class="lc-footer">
@@ -2351,34 +2930,32 @@ document.querySelectorAll('.tab').forEach(tab => {
 const grid     = document.getElementById('grid');
 const allCards = Array.from(grid.querySelectorAll('.listing-card'));
 const emptyMsg = document.getElementById('empty-msg');
-const neighBadge = document.getElementById('neigh-badge');
-const neighBadgeTxt = document.getElementById('neigh-badge-text');
-let activeNeigh = '';
 
 function fmt(v) { return 'R$ ' + Number(v).toLocaleString('pt-BR'); }
 
 function applyFilters() {
-  const src  = document.getElementById('f-source').value;
-  const beds = parseInt(document.getElementById('f-beds').value);
-  const price = parseInt(document.getElementById('f-price').value);
+  const src     = document.getElementById('f-source').value;
+  const beds    = parseInt(document.getElementById('f-beds').value);
+  const price   = parseInt(document.getElementById('f-price').value);
   const onlyNew = document.getElementById('f-new').value;
+  const neigh   = document.getElementById('f-neigh').value;
   document.getElementById('price-out').textContent = price >= 5000 ? 'Sem limite' : fmt(price);
 
   let vis = 0;
   allCards.forEach(c => {
     const ok =
-      (!src      || c.dataset.source    === src) &&
-      (!beds     || parseInt(c.dataset.bedrooms) >= beds) &&
-      (price>=5000 || !parseInt(c.dataset.price) || parseInt(c.dataset.price) <= price) &&
-      (!onlyNew  || c.dataset.new === 'true') &&
-      (!activeNeigh || c.dataset.neighborhood.includes(activeNeigh.toLowerCase()));
+      (!src     || c.dataset.source === src) &&
+      (!beds    || parseInt(c.dataset.bedrooms) >= beds) &&
+      (price >= 5000 || !parseInt(c.dataset.price) || parseInt(c.dataset.price) <= price) &&
+      (!onlyNew || c.dataset.new === 'true') &&
+      (!neigh   || c.dataset.neighborhood.includes(neigh));
     c.style.display = ok ? '' : 'none';
     if (ok) vis++;
   });
   emptyMsg.style.display = vis === 0 ? '' : 'none';
 }
 
-['f-source','f-beds','f-price','f-new'].forEach(id => {
+['f-source','f-beds','f-price','f-new','f-neigh'].forEach(id => {
   document.getElementById(id).addEventListener('input', applyFilters);
 });
 
@@ -2387,21 +2964,12 @@ document.getElementById('reset-btn').addEventListener('click', () => {
   document.getElementById('f-beds').value   = '0';
   document.getElementById('f-price').value  = '5000';
   document.getElementById('f-new').value    = '';
-  clearNeighFilter();
+  document.getElementById('f-neigh').value  = '';
+  applyFilters();
 });
 
-document.getElementById('neigh-clear').addEventListener('click', clearNeighFilter);
-
-function clearNeighFilter() {
-  activeNeigh = '';
-  neighBadge.style.display = 'none';
-  applyFilters();
-}
-
 function filterByNeigh(name) {
-  activeNeigh = name.toLowerCase();
-  neighBadgeTxt.textContent = name;
-  neighBadge.style.display = 'inline-flex';
+  document.getElementById('f-neigh').value = name.toLowerCase();
   document.querySelector('[data-tab="listings"]').click();
   applyFilters();
 }

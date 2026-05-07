@@ -159,12 +159,12 @@ def load_listings():
 
 def fmt_price(p):
     if p is None:
-        return "—"
+        return "NA"
     return f"R$ {p:,.0f}".replace(",", ".")
 
 
 def fmt_area(a):
-    return f"{a} m²" if a else "—"
+    return f"{a} m²" if a else "NA"
 
 
 def source_color(src):
@@ -177,33 +177,53 @@ def source_color(src):
 
 
 def build_listing_card(l):
-    img_tag   = f'<img src="{l["images"][0]}" alt="foto" onerror="this.style.display=\'none\'">' if l.get("images") else ""
-    new_badge = '<span class="badge-new">NOVO</span>' if l.get("is_new") else ""
-    neigh     = l.get("neighborhood") or ""
-    area      = fmt_area(l.get("area"))
-    beds_n    = l.get("bedrooms") or 0
-    beds      = f'{beds_n} qto{"s" if beds_n > 1 else ""}' if beds_n else ""
-    scraped   = l.get("scraped_at", "")[:10]
-    neigh_attr = neigh.lower().strip()
+    title  = (l.get("title") or "").strip()
+    price  = l.get("price")
+    if not title and not price:
+        return ""
+
+    imgs    = l.get("images") or []
+    img_url = imgs[0] if imgs and isinstance(imgs[0], str) and imgs[0].startswith("http") else ""
+    if img_url:
+        img_tag = f'<img src="{img_url}" alt="foto" loading="lazy" onerror="this.parentNode.classList.add(\'no-img\');this.remove()">'
+    else:
+        img_tag = ""
+
+    new_badge  = '<span class="badge-new">NOVO</span>' if l.get("is_new") else ""
+    neigh      = (l.get("neighborhood") or "").strip()
+    area_v     = l.get("area")
+    beds_n     = l.get("bedrooms")
+    baths_n    = l.get("bathrooms")
+    scraped    = l.get("scraped_at", "")[:10]
+    neigh_attr = neigh.lower()
+    title_disp = title or "Sem título"
+
+    price_cls  = " lc-price--na" if price is None else ""
+    area_txt   = f"{area_v} m²"  if area_v  is not None else "NA"
+    beds_txt   = f'{beds_n} qto{"s" if beds_n and beds_n > 1 else ""}' if beds_n is not None else "NA"
+    baths_txt  = f'{baths_n} ban{"heiros" if baths_n and baths_n > 1 else "heiro"}' if baths_n is not None else "NA"
+    neigh_txt  = neigh if neigh else "NA"
+    na = ' class="lc-na"'
 
     return f"""<div class="listing-card"
-     data-price="{l.get('price') or 0}"
+     data-price="{price or 0}"
      data-source="{l.get('source','')}"
-     data-bedrooms="{beds_n}"
+     data-bedrooms="{beds_n or 0}"
      data-new="{str(l.get('is_new', False)).lower()}"
      data-neighborhood="{neigh_attr}">
-  <div class="lc-img">{img_tag}</div>
+  <div class="lc-img{'' if img_url else ' no-img'}">{img_tag}</div>
   <div class="lc-body">
     <div class="lc-top">
       <span class="src-badge" style="background:{source_color(l.get('source',''))}">{l.get('source','')}</span>
       {new_badge}
     </div>
-    <div class="lc-title">{l.get('title','Sem título')}</div>
-    <div class="lc-price">{fmt_price(l.get('price'))}<span class="per-mo">/mês</span></div>
+    <div class="lc-title">{title_disp}</div>
+    <div class="lc-price{price_cls}">{fmt_price(price)}<span class="per-mo">{'/mês' if price is not None else ''}</span></div>
     <div class="lc-meta">
-      {"<span>"+area+"</span>" if area != "—" else ""}
-      {"<span>"+beds+"</span>" if beds else ""}
-      {"<span>"+neigh+"</span>" if neigh else ""}
+      <span{na if area_v  is None else ''}>{area_txt}</span>
+      <span{na if beds_n  is None else ''}>{beds_txt}</span>
+      <span{na if baths_n is None else ''}>{baths_txt}</span>
+      <span{na if not neigh else ''}>{neigh_txt}</span>
     </div>
     <div class="lc-footer">
       <span class="lc-date">{scraped}</span>
@@ -223,7 +243,9 @@ def build_html(listings):
 
     sources     = sorted({l.get("source", "") for l in listings})
     src_options = "\n".join(f'<option value="{s}">{s}</option>' for s in sources)
-    cards_html  = "\n".join(build_listing_card(l) for l in listings)
+    cards_html  = "\n".join(c for l in listings if (c := build_listing_card(l)))
+    neighs      = sorted({(l.get("neighborhood") or "").strip() for l in listings if (l.get("neighborhood") or "").strip()})
+    neigh_options = "\n".join(f'<option value="{n.lower()}">{n}</option>' for n in neighs)
 
     neigh_json = json.dumps(NEIGHBORHOODS_DATA, ensure_ascii=False)
 
@@ -266,8 +288,11 @@ select,input[type=range]{{border:1px solid #d4d4d8;border-radius:6px;padding:.3r
 .grid{{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:.9rem;padding:0 2rem 2rem}}
 .listing-card{{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.08);transition:transform .15s,box-shadow .15s}}
 .listing-card:hover{{transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,.12)}}
-.lc-img{{height:150px;background:#e4e4e7;overflow:hidden}}
+.lc-img{{height:150px;background:#e4e4e7;overflow:hidden;display:flex;align-items:center;justify-content:center}}
 .lc-img img{{width:100%;height:100%;object-fit:cover}}
+.lc-img.no-img{{background:#f4f4f5;flex-direction:column;gap:6px}}
+.lc-img.no-img::before{{content:"";display:block;width:48px;height:48px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 24 24' fill='none' stroke='%23a1a1aa' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z'/%3E%3Cpolyline points='9 22 9 12 15 12 15 22'/%3E%3C/svg%3E");background-repeat:no-repeat;background-size:contain}}
+.lc-img.no-img::after{{content:"Sem imagem";font-size:.65rem;color:#a1a1aa}}
 .lc-body{{padding:.85rem .95rem}}
 .lc-top{{display:flex;align-items:center;gap:5px;margin-bottom:5px}}
 .src-badge{{font-size:.62rem;font-weight:600;color:#fff;padding:2px 7px;border-radius:20px;text-transform:uppercase;letter-spacing:.04em}}
@@ -277,6 +302,8 @@ select,input[type=range]{{border:1px solid #d4d4d8;border-radius:6px;padding:.3r
 .per-mo{{font-size:.68rem;font-weight:400;color:#71717a;margin-left:2px}}
 .lc-meta{{display:flex;gap:6px;flex-wrap:wrap;margin-top:5px}}
 .lc-meta span{{font-size:.72rem;color:#52525b;background:#f4f4f5;padding:2px 7px;border-radius:20px}}
+.lc-meta span.lc-na{{color:#a1a1aa;background:#fafafa;border:1px dashed #e4e4e7}}
+.lc-price--na{{color:#a1a1aa!important;font-size:.9rem!important}}
 .lc-footer{{display:flex;justify-content:space-between;align-items:center;margin-top:9px;padding-top:7px;border-top:1px solid #f4f4f5}}
 .lc-date{{font-size:.68rem;color:#a1a1aa}}
 .lc-footer a{{font-size:.77rem;color:#6d28d9;text-decoration:none;font-weight:500}}
@@ -367,13 +394,13 @@ select,input[type=range]{{border:1px solid #d4d4d8;border-radius:6px;padding:.3r
       <input type="range" id="f-price" min="500" max="5000" step="100" value="5000">
     </div>
     <div class="fg">
+      <label>Bairro</label>
+      <select id="f-neigh"><option value="">Todos</option>{neigh_options}</select>
+    </div>
+    <div class="fg">
       <label>Apenas novos</label>
       <select id="f-new"><option value="">Todos</option><option value="true">Somente novos</option></select>
     </div>
-    <span class="filter-badge" id="neigh-badge">
-      <span id="neigh-badge-text"></span>
-      <button id="neigh-clear" title="Remover filtro">×</button>
-    </span>
     <button id="reset-btn">Limpar filtros</button>
   </div>
 
@@ -428,34 +455,32 @@ document.querySelectorAll('.tab').forEach(tab => {{
 const grid     = document.getElementById('grid');
 const allCards = Array.from(grid.querySelectorAll('.listing-card'));
 const emptyMsg = document.getElementById('empty-msg');
-const neighBadge = document.getElementById('neigh-badge');
-const neighBadgeTxt = document.getElementById('neigh-badge-text');
-let activeNeigh = '';
 
 function fmt(v) {{ return 'R$ ' + Number(v).toLocaleString('pt-BR'); }}
 
 function applyFilters() {{
-  const src  = document.getElementById('f-source').value;
-  const beds = parseInt(document.getElementById('f-beds').value);
-  const price = parseInt(document.getElementById('f-price').value);
+  const src     = document.getElementById('f-source').value;
+  const beds    = parseInt(document.getElementById('f-beds').value);
+  const price   = parseInt(document.getElementById('f-price').value);
   const onlyNew = document.getElementById('f-new').value;
+  const neigh   = document.getElementById('f-neigh').value;
   document.getElementById('price-out').textContent = price >= 5000 ? 'Sem limite' : fmt(price);
 
   let vis = 0;
   allCards.forEach(c => {{
     const ok =
-      (!src      || c.dataset.source    === src) &&
-      (!beds     || parseInt(c.dataset.bedrooms) >= beds) &&
-      (price>=5000 || !parseInt(c.dataset.price) || parseInt(c.dataset.price) <= price) &&
-      (!onlyNew  || c.dataset.new === 'true') &&
-      (!activeNeigh || c.dataset.neighborhood.includes(activeNeigh.toLowerCase()));
+      (!src     || c.dataset.source === src) &&
+      (!beds    || parseInt(c.dataset.bedrooms) >= beds) &&
+      (price >= 5000 || !parseInt(c.dataset.price) || parseInt(c.dataset.price) <= price) &&
+      (!onlyNew || c.dataset.new === 'true') &&
+      (!neigh   || c.dataset.neighborhood.includes(neigh));
     c.style.display = ok ? '' : 'none';
     if (ok) vis++;
   }});
   emptyMsg.style.display = vis === 0 ? '' : 'none';
 }}
 
-['f-source','f-beds','f-price','f-new'].forEach(id => {{
+['f-source','f-beds','f-price','f-new','f-neigh'].forEach(id => {{
   document.getElementById(id).addEventListener('input', applyFilters);
 }});
 
@@ -464,21 +489,12 @@ document.getElementById('reset-btn').addEventListener('click', () => {{
   document.getElementById('f-beds').value   = '0';
   document.getElementById('f-price').value  = '5000';
   document.getElementById('f-new').value    = '';
-  clearNeighFilter();
+  document.getElementById('f-neigh').value  = '';
+  applyFilters();
 }});
 
-document.getElementById('neigh-clear').addEventListener('click', clearNeighFilter);
-
-function clearNeighFilter() {{
-  activeNeigh = '';
-  neighBadge.style.display = 'none';
-  applyFilters();
-}}
-
 function filterByNeigh(name) {{
-  activeNeigh = name.toLowerCase();
-  neighBadgeTxt.textContent = name;
-  neighBadge.style.display = 'inline-flex';
+  document.getElementById('f-neigh').value = name.toLowerCase();
   document.querySelector('[data-tab="listings"]').click();
   applyFilters();
 }}

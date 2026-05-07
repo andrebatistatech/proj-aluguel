@@ -2,6 +2,7 @@
 Agente de monitoramento de alugueis — São Bento do Sul SC
 Usa Playwright (headless browser) para contornar bot protection.
 Fontes: OLX, ZAP Imóveis, Viva Real, Imovelweb
+IMPORTANTE: Todos os anúncios filtrados para São Bento do Sul, SC.
 """
 
 import json, hashlib, os, time, logging, re
@@ -28,7 +29,7 @@ FILTERS = {
 class Listing:
     id: str; source: str; title: str
     price: Optional[int]; area: Optional[int]; bedrooms: Optional[int]
-    neighborhood: Optional[str]; url: str; images: list
+    bathrooms: Optional[int]; neighborhood: Optional[str]; url: str; images: list
     scraped_at: str; is_new: bool = True
     def to_dict(self): return asdict(self)
 
@@ -57,17 +58,21 @@ def scrape_olx(page):
             t = card.query_selector("h2"); p = card.query_selector("h3"); a = card.query_selector("a")
             link = a.get_attribute("href") if a else ""
             out.append(Listing(make_id("olx",link),"OLX",t.inner_text().strip() if t else "",
-                extract_int(p.inner_text() if p else ""),None,None,None,link,[],datetime.now().isoformat()))
+                extract_int(p.inner_text() if p else ""),None,None,None,None,link,[],datetime.now().isoformat()))
     else:
         for ad in ads:
+            municipality = ad.get("locationDetails", {}).get("municipality", "")
+            if municipality and "São Bento do Sul" not in municipality:
+                continue
             props = {p["name"]: p.get("value") for p in ad.get("properties", []) if isinstance(p, dict)}
-            link  = ad.get("url","")
+            link  = ad.get("url", "")
             imgs  = ad.get("images", [])
             img   = imgs[0].get("original","") if imgs and isinstance(imgs[0], dict) else ad.get("thumbnail","")
             out.append(Listing(make_id("olx",link),"OLX",ad.get("title",""),
                 extract_int(ad.get("price","")), extract_int(str(props.get("size",""))),
                 extract_int(str(props.get("rooms",""))),
-                ad.get("locationDetails",{}).get("neighbourhood") or ad.get("location","").split(",")[0].strip() or None,
+                extract_int(str(props.get("bathrooms",""))),
+                ad.get("locationDetails",{}).get("neighbourhood") or None,
                 link,[img],datetime.now().isoformat()))
     log.info("OLX — %d", len(out)); return out
 
@@ -78,10 +83,11 @@ def _parse_zap_api(data, base, source):
         ld = item.get("listing", {})
         pinfo = ld.get("pricingInfos", [{}])
         price = extract_int(str(next((p.get("price") for p in pinfo if p.get("businessType") == "RENTAL"), None) or ""))
-        beds  = ld.get("bedrooms", [None]); beds = int(beds[0]) if beds else None
+        beds  = ld.get("bedrooms",  [None]); beds  = int(beds[0])  if beds  else None
+        baths = ld.get("bathrooms", [None]); baths = int(baths[0]) if baths else None
         link  = base + ld.get("href", "")
         out.append(Listing(make_id(source.lower(), link), source, ld.get("title", ""),
-            price, extract_int(str(ld.get("usableArea", ""))), beds,
+            price, extract_int(str(ld.get("usableArea", ""))), beds, baths,
             ld.get("address", {}).get("neighborhood"), link,
             ld.get("images", [])[:1], datetime.now().isoformat()))
     return out
@@ -126,6 +132,9 @@ def scrape_imovelweb(page):
         page.wait_for_selector("div[data-qa='posting PROPERTY']", timeout=20_000)
         for card in page.query_selector_all("div[data-qa='posting PROPERTY']"):
             def g(sel): el=card.query_selector(sel); return el.inner_text().strip() if el else ""
+            location = g("div[data-qa='LOCATION']")
+            if location and "São Bento do Sul" not in location and "Sao Bento do Sul" not in location:
+                continue
             link_el = card.query_selector("a")
             link = "https://www.imovelweb.com.br" + (link_el.get_attribute("href") if link_el else "")
             img  = card.query_selector("img")
@@ -133,7 +142,8 @@ def scrape_imovelweb(page):
                 extract_int(g("div[data-qa='PRICE']")),
                 extract_int(g("span[data-qa='SURFACE_COVERED']")),
                 extract_int(g("span[data-qa='BEDROOMS']")),
-                g("div[data-qa='LOCATION']") or None,link,
+                extract_int(g("span[data-qa='BATHROOMS']")),
+                location or None, link,
                 [img.get_attribute("src")] if img else [],datetime.now().isoformat()))
     except Exception as exc:
         log.error("Imovelweb: %s", exc)

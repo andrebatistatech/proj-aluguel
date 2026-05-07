@@ -1,5 +1,405 @@
 [
   {
+    "id": "f66c6b814d14",
+    "source": "Imovelweb",
+    "title": "R$ 2.000",
+    "price": null,
+    "area": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "neighborhood": null,
+    "url": "https://www.imovelweb.com.br/propriedades/apartamento-novo-locacao-bairro-boehmerwald-em-sao-3009046282.html?n_src=Listado&n_pills=Permite+animais&n_pg=1&n_pos=3",
+    "images": [
+      "https://imgbr.imovelwebcdn.com/avisos/2/30/09/04/62/82/360x266/4978920138.jpg?isFirstImage=true"
+    ],
+    "scraped_at": "2026-05-07T17:58:55.114454",
+    "is_new": true
+  },
+  {
+    "id": "42ffebf9259f",
+    "source": "Imovelweb",
+    "title": "R$ 2.000",
+    "price": null,
+    "area": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "neighborhood": null,
+    "url": "https://www.imovelweb.com.br/propriedades/central-park-residence-3030706848.html?n_src=Listado&n_pills=Varanda&n_pg=1&n_pos=1",
+    "images": [
+      "https://imgbr.imovelwebcdn.com/avisos/2/30/30/70/68/48/360x266/6346052621.jpg?isFirstImage=true"
+    ],
+    "scraped_at": "2026-05-07T17:58:55.998411",
+    "is_new": true
+  },
+  {
+    "id": "6a36ec03d0f9",
+    "source": "Imovelweb",
+    "title": "R$ 2.450",
+    "price": null,
+    "area": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "neighborhood": null,
+    "url": "https://www.imovelweb.com.br/propriedades/excelente-apartamento-proximo-ao-supermercados-condor-3031416253.html?n_src=Listado&n_pills=%C3%81rea+verde&n_pg=1&n_pos=2",
+    "images": [
+      "https://imgbr.imovelwebcdn.com/avisos/2/30/31/41/62/53/360x266/6467665201.jpg?isFirstImage=true"
+    ],
+    "scraped_at": "2026-05-07T17:58:56.131000",
+    "is_new": true
+  },
+  {
+    "id": "99be3990ad12",
+    "source": "Imovelweb",
+    "title": "R$ 1.300",
+    "price": null,
+    "area": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "neighborhood": null,
+    "url": "https://www.imovelweb.com.br/propriedades/residencial-fenix-3015072096.html?n_src=Listado&n_pills=Varanda&n_pg=1&n_pos=3",
+    "images": [
+      "https://imgbr.imovelwebcdn.com/avisos/2/30/15/07/20/96/360x266/5304762033.jpg?isFirstImage=true"
+    ],
+    "scraped_at": "2026-05-07T17:58:56.237471",
+    "is_new": true
+  },
+  {
+    "id": "433085edd377",
+    "source": "Imovelweb",
+    "title": "R$ 10.000",
+    "price": null,
+    "area": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "neighborhood": null,
+    "url": "https://www.imovelweb.com.br/propriedades/-x1f3e2--aluga-se-ponto-comercial-na-sc-108-vila-3020729442.html?n_src=Listado&n_pg=1&n_pos=4",
+    "images": [
+      "https://imgbr.imovelwebcdn.com/avisos/2/30/20/72/94/42/360x266/5646406683.jpg?isFirstImage=true"
+    ],
+    "scraped_at": "2026-05-07T17:58:56.417497",
+    "is_new": true
+  },
+  {
+    "id": "a508dede770e",
+    "source": "Imovelweb",
+    "title": "R$ 1.850",
+    "price": null,
+    "area": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "neighborhood": null,
+    "url": "https://www.imovelweb.com.br/propriedades/spazio-jardim-de-nice-2945347492.html?n_src=Listado&n_pills=Varanda&n_pg=1&n_pos=5",
+    "images": [
+      "https://imgbr.imovelwebcdn.com/avisos/2/29/45/34/74/92/360x266/3733813652.jpg?isFirstImage=true"
+    ],
+    "scraped_at": "2026-05-07T17:58:56.637648",
+    "is_new": true
+  },
+  {
+    "id": "b3e3527cf802",
+    "source": "Imovelweb",
+    "title": "R$ 12.000",
+    "price": null,
+    "area": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "neighborhood": null,
+    "url": "https://www.imovelweb.com.br/propriedades/casa-comercial-para-alugar-com-310-m-por-r$-3033301140.html?n_src=Listado&n_pg=1&n_pos=6",
+    "images": [
+      "https://imgbr.imovelwebcdn.com/avisos/2/30/33/30/11/40/360x266/6581575061.jpg?isFirstImage=true"
+    ],
+    "scraped_at": "2026-05-07T17:58:57.002373",
+    "is_new": true
+  },
+  {
+    "id": "844f01c4fab6",
+    "source": "Imovelweb",
+    "title": "R$ 1.700",
+    "price": null,
+    "area": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "neighborhood": null,
+    "url": "https://www.imovelweb.com.br/propriedades/apartamento-com-1-dormitorio-39-m-venda-por-r$-2953767656.html?n_src=Listado&n_pills=Ar+condicionado&n_pg=1&n_pos=7",
+    "images": [
+      "https://imgbr.imovelwebcdn.com/avisos/2/29/53/76/76/56/360x266/6329949187.jpg?isFirstImage=true"
+    ],
+    "scraped_at": "2026-05-07T17:58:57.721006",
+    "is_new": true
+  },
+  {
+    "id": "cada6c04a780",
+    "source": "Imovelweb",
+    "title": "R$ 1.700",
+    "price": null,
+    "area": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "neighborhood": null,
+    "url": "https://www.imovelweb.com.br/propriedades/helbor-dual-offices-2934757172.html?n_src=Listado&n_pg=1&n_pos=8",
+    "images": [
+      "https://imgbr.imovelwebcdn.com/avisos/2/29/34/75/71/72/360x266/6541936965.jpg?isFirstImage=true"
+    ],
+    "scraped_at": "2026-05-07T17:58:58.000592",
+    "is_new": true
+  },
+  {
+    "id": "eaa16b2ba0ab",
+    "source": "Imovelweb",
+    "title": "R$ 3.000",
+    "price": null,
+    "area": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "neighborhood": null,
+    "url": "https://www.imovelweb.com.br/propriedades/ilha-da-madeira-america-2938614223.html?n_src=Listado&n_pills=Mobiliado&n_pg=1&n_pos=9",
+    "images": [
+      "https://imgbr.imovelwebcdn.com/avisos/2/29/38/61/42/23/360x266/2613756690.jpg?isFirstImage=true"
+    ],
+    "scraped_at": "2026-05-07T17:58:58.253019",
+    "is_new": true
+  },
+  {
+    "id": "8b15bf5fb5bf",
+    "source": "Imovelweb",
+    "title": "R$ 30.600",
+    "price": null,
+    "area": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "neighborhood": null,
+    "url": "https://www.imovelweb.com.br/propriedades/galpao-industrial-e-logistico-3034430390.html?n_src=Listado&n_pg=1&n_pos=10",
+    "images": [
+      "https://imgbr.imovelwebcdn.com/avisos/2/30/34/43/03/90/360x266/6646914444.jpg?isFirstImage=true"
+    ],
+    "scraped_at": "2026-05-07T17:58:58.408488",
+    "is_new": true
+  },
+  {
+    "id": "a85918fd1a6f",
+    "source": "Imovelweb",
+    "title": "R$ 4.100",
+    "price": null,
+    "area": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "neighborhood": null,
+    "url": "https://www.imovelweb.com.br/propriedades/mont-blanc-3016778676.html?n_src=Listado&n_pills=Churrasqueira&n_pg=1&n_pos=11",
+    "images": [
+      "https://imgbr.imovelwebcdn.com/avisos/2/30/16/77/86/76/360x266/6260518116.jpg?isFirstImage=true"
+    ],
+    "scraped_at": "2026-05-07T17:58:58.542028",
+    "is_new": true
+  },
+  {
+    "id": "ddc77ec7d974",
+    "source": "Imovelweb",
+    "title": "R$ 2.800",
+    "price": null,
+    "area": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "neighborhood": null,
+    "url": "https://www.imovelweb.com.br/propriedades/casa-com-2-dormitorios-para-alugar-120-m-por-r$-3033233063.html?n_src=Listado&n_pills=Varanda&n_pg=1&n_pos=12",
+    "images": [
+      "https://imgbr.imovelwebcdn.com/avisos/2/30/33/23/30/63/360x266/6550946017.jpg?isFirstImage=true"
+    ],
+    "scraped_at": "2026-05-07T17:58:59.112663",
+    "is_new": true
+  },
+  {
+    "id": "facab825fa44",
+    "source": "Imovelweb",
+    "title": "R$ 87.500",
+    "price": null,
+    "area": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "neighborhood": null,
+    "url": "https://www.imovelweb.com.br/propriedades/galpao-industrial-e-logistico-3034010206.html?n_src=Listado&n_pg=1&n_pos=13",
+    "images": [
+      "https://imgbr.imovelwebcdn.com/avisos/2/30/34/01/02/06/360x266/6623785917.jpg?isFirstImage=true"
+    ],
+    "scraped_at": "2026-05-07T17:58:59.235920",
+    "is_new": true
+  },
+  {
+    "id": "eb025e3ebdd5",
+    "source": "Imovelweb",
+    "title": "R$ 3.000",
+    "price": null,
+    "area": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "neighborhood": null,
+    "url": "https://www.imovelweb.com.br/propriedades/sala-3020139689.html?n_src=Listado&n_pg=1&n_pos=14",
+    "images": [
+      "https://imgbr.imovelwebcdn.com/avisos/2/30/20/13/96/89/360x266/5614228833.jpg?isFirstImage=true"
+    ],
+    "scraped_at": "2026-05-07T17:58:59.404370",
+    "is_new": true
+  },
+  {
+    "id": "83d2876eb58e",
+    "source": "Imovelweb",
+    "title": "R$ 2.300",
+    "price": null,
+    "area": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "neighborhood": null,
+    "url": "https://www.imovelweb.com.br/propriedades/apartamento-com-2-dormitorios-para-alugar-68-m-por-3007374234.html?n_src=Listado&n_pills=Churrasqueira&n_pg=1&n_pos=15",
+    "images": [
+      "https://imgbr.imovelwebcdn.com/avisos/2/30/07/37/42/34/360x266/4914237174.jpg?isFirstImage=true"
+    ],
+    "scraped_at": "2026-05-07T17:58:59.517710",
+    "is_new": true
+  },
+  {
+    "id": "a6b30809d9a4",
+    "source": "Imovelweb",
+    "title": "R$ 1.980",
+    "price": null,
+    "area": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "neighborhood": null,
+    "url": "https://www.imovelweb.com.br/propriedades/residencial-madrid-3031902553.html?n_src=Listado&n_pills=Churrasqueira&n_pg=1&n_pos=16",
+    "images": [
+      "https://imgbr.imovelwebcdn.com/avisos/2/30/31/90/25/53/360x266/6445578954.jpg?isFirstImage=true"
+    ],
+    "scraped_at": "2026-05-07T17:58:59.655498",
+    "is_new": true
+  },
+  {
+    "id": "d06e74fe7fe2",
+    "source": "Imovelweb",
+    "title": "R$ 3.400",
+    "price": null,
+    "area": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "neighborhood": null,
+    "url": "https://www.imovelweb.com.br/propriedades/apartamento-com-3-dormitorios-para-alugar-92-m-por-2958453233.html?n_src=Listado&n_pills=Piscina&n_pg=1&n_pos=17",
+    "images": [
+      "https://imgbr.imovelwebcdn.com/avisos/2/29/58/45/32/33/360x266/6218725251.jpg?isFirstImage=true"
+    ],
+    "scraped_at": "2026-05-07T17:58:59.821311",
+    "is_new": true
+  },
+  {
+    "id": "a1210ac957f8",
+    "source": "Imovelweb",
+    "title": "R$ 1.350",
+    "price": null,
+    "area": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "neighborhood": null,
+    "url": "https://www.imovelweb.com.br/propriedades/rubi-2965131131.html?n_src=Listado&n_pg=1&n_pos=18",
+    "images": [
+      "https://imgbr.imovelwebcdn.com/avisos/2/29/65/13/11/31/360x266/2643761644.jpg?isFirstImage=true"
+    ],
+    "scraped_at": "2026-05-07T17:58:59.960798",
+    "is_new": true
+  },
+  {
+    "id": "f79e4f62f417",
+    "source": "Imovelweb",
+    "title": "R$ 2.750",
+    "price": null,
+    "area": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "neighborhood": null,
+    "url": "https://www.imovelweb.com.br/propriedades/apartamento-3026545609.html?n_src=Listado&n_pg=1&n_pos=19",
+    "images": [
+      "https://imgbr.imovelwebcdn.com/avisos/2/30/26/54/56/09/360x266/5994598968.jpg?isFirstImage=true"
+    ],
+    "scraped_at": "2026-05-07T17:59:00.116133",
+    "is_new": true
+  },
+  {
+    "id": "40d5754a875a",
+    "source": "Imovelweb",
+    "title": "R$ 15.000",
+    "price": null,
+    "area": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "neighborhood": null,
+    "url": "https://www.imovelweb.com.br/propriedades/imovel-comercial-3020697915.html?n_src=Listado&n_pg=1&n_pos=20",
+    "images": [
+      "https://imgbr.imovelwebcdn.com/avisos/2/30/20/69/79/15/360x266/5700658611.jpg?isFirstImage=true"
+    ],
+    "scraped_at": "2026-05-07T17:59:00.250077",
+    "is_new": true
+  },
+  {
+    "id": "aa6e17024c3d",
+    "source": "Imovelweb",
+    "title": "R$ 3.300",
+    "price": null,
+    "area": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "neighborhood": null,
+    "url": "https://www.imovelweb.com.br/propriedades/apartamento-com-2-dormitorios-para-alugar-72-m-por-2949135683.html?n_src=Listado&n_pills=Ar+condicionado&n_pg=1&n_pos=21",
+    "images": [
+      "https://imgbr.imovelwebcdn.com/avisos/2/29/49/13/56/83/360x266/6496894350.jpg?isFirstImage=true"
+    ],
+    "scraped_at": "2026-05-07T17:59:00.377189",
+    "is_new": true
+  },
+  {
+    "id": "ba25c7689778",
+    "source": "Imovelweb",
+    "title": "R$ 5.900",
+    "price": null,
+    "area": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "neighborhood": null,
+    "url": "https://www.imovelweb.com.br/propriedades/rio-loire-2940496746.html?n_src=Listado&n_pills=Piscina&n_pg=1&n_pos=22",
+    "images": [
+      "https://imgbr.imovelwebcdn.com/avisos/2/29/40/49/67/46/360x266/4806606983.jpg?isFirstImage=true"
+    ],
+    "scraped_at": "2026-05-07T17:59:00.499811",
+    "is_new": true
+  },
+  {
+    "id": "6dec6f67ada2",
+    "source": "Imovelweb",
+    "title": "R$ 3.680",
+    "price": null,
+    "area": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "neighborhood": null,
+    "url": "https://www.imovelweb.com.br/propriedades/sobrado-com-3-dormitorios-para-alugar-97-m-por-r$-3033117201.html?n_src=Listado&n_pg=1&n_pos=23",
+    "images": [
+      "https://imgbr.imovelwebcdn.com/avisos/2/30/33/11/72/01/360x266/6542967362.jpg?isFirstImage=true"
+    ],
+    "scraped_at": "2026-05-07T17:59:00.608453",
+    "is_new": true
+  },
+  {
+    "id": "13ad25cd9d93",
+    "source": "Imovelweb",
+    "title": "R$ 1.300",
+    "price": null,
+    "area": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "neighborhood": null,
+    "url": "https://www.imovelweb.com.br/propriedades/apartamento-com-2-dormitorios-para-alugar-50-m-por-3029974471.html?n_src=Listado&n_pills=Churrasqueira&n_pg=1&n_pos=24",
+    "images": [
+      "https://imgbr.imovelwebcdn.com/avisos/2/30/29/97/44/71/360x266/6280474909.jpg?isFirstImage=true"
+    ],
+    "scraped_at": "2026-05-07T17:59:00.736661",
+    "is_new": true
+  },
+  {
     "id": "2bab8e758a21",
     "source": "OLX",
     "title": "Apartamento Forquilhas",
@@ -92,7 +492,7 @@
   {
     "id": "1f5934b531d3",
     "source": "OLX",
-    "title": "Kitnet 2 quartos em Biguaçu .",
+    "title": "Kitnet 2 quartos em BiguaÃ§u .",
     "price": 1700,
     "area": 53,
     "bedrooms": 2,
@@ -141,7 +541,7 @@
     "price": 1800,
     "area": null,
     "bedrooms": 1,
-    "neighborhood": "São João do Rio Vermelho",
+    "neighborhood": "SÃ£o JoÃ£o do Rio Vermelho",
     "url": "https://sc.olx.com.br/florianopolis-e-regiao/imoveis/alugo-loft-1498093910",
     "images": [
       "https://img.olx.com.br/images/36/364645632097717.jpg"
@@ -167,11 +567,11 @@
   {
     "id": "87885f6bd3b5",
     "source": "OLX",
-    "title": "Aluguel apartamento com uma suíte e linda vista para o mar - Saco dos Limões, Floripa",
+    "title": "Aluguel apartamento com uma suÃ­te e linda vista para o mar - Saco dos LimÃµes, Floripa",
     "price": 2450,
     "area": 30,
     "bedrooms": 1,
-    "neighborhood": "Saco dos Limões",
+    "neighborhood": "Saco dos LimÃµes",
     "url": "https://sc.olx.com.br/florianopolis-e-regiao/imoveis/aluguel-apartamento-com-uma-suite-e-linda-vista-para-o-mar-saco-dos-limoes-floripa-1498549788",
     "images": [
       "https://img.olx.com.br/images/88/881674644860998.jpg"
@@ -212,7 +612,7 @@
   {
     "id": "aa0883cb52a8",
     "source": "OLX",
-    "title": "Apartamento com 2 quartos, Areias - São José",
+    "title": "Apartamento com 2 quartos, Areias - SÃ£o JosÃ©",
     "price": 2000,
     "area": 57,
     "bedrooms": 2,
@@ -227,11 +627,11 @@
   {
     "id": "81c3a2c6d26e",
     "source": "OLX",
-    "title": "  Venha morar na pousada -QUARTOS INDIVIDUAIS - MENSAL | LAGOA DA CONCEIÇÃO",
+    "title": "  Venha morar na pousada -QUARTOS INDIVIDUAIS - MENSAL | LAGOA DA CONCEIÃ‡ÃƒO",
     "price": 1400,
     "area": null,
     "bedrooms": null,
-    "neighborhood": "Lagoa da Conceição",
+    "neighborhood": "Lagoa da ConceiÃ§Ã£o",
     "url": "https://sc.olx.com.br/florianopolis-e-regiao/imoveis/venha-morar-na-pousada-quartos-individuais-mensal-lagoa-da-conceicao-1483330638",
     "images": [
       "https://img.olx.com.br/images/49/497614264333540.jpg"
@@ -257,7 +657,7 @@
   {
     "id": "78e4608d620b",
     "source": "OLX",
-    "title": "Apartamento de um dormitório em Pinheira",
+    "title": "Apartamento de um dormitÃ³rio em Pinheira",
     "price": 2100,
     "area": 50,
     "bedrooms": 1,
@@ -302,7 +702,7 @@
   {
     "id": "e04c986a08bc",
     "source": "OLX",
-    "title": "Locação anual ou temporada - Praia de Ibiraquera - Imbituba/SC",
+    "title": "LocaÃ§Ã£o anual ou temporada - Praia de Ibiraquera - Imbituba/SC",
     "price": 2000,
     "area": 60,
     "bedrooms": 1,
@@ -317,11 +717,11 @@
   {
     "id": "2ea26a475699",
     "source": "OLX",
-    "title": "Alugo Anual Apto 1 Dorm Semi mobiliado p/ Casal ou Moça - Bairro Nações",
+    "title": "Alugo Anual Apto 1 Dorm Semi mobiliado p/ Casal ou MoÃ§a - Bairro NaÃ§Ãµes",
     "price": 1890,
     "area": 32,
     "bedrooms": 1,
-    "neighborhood": "Nações",
+    "neighborhood": "NaÃ§Ãµes",
     "url": "https://sc.olx.com.br/norte-de-santa-catarina/imoveis/alugo-anual-apto-1-dorm-semi-mobiliado-p-casal-ou-moca-bairro-nacoes-1500161555",
     "images": [
       "https://img.olx.com.br/images/11/115631649845870.jpg"
@@ -381,7 +781,7 @@
     "price": 900,
     "area": null,
     "bedrooms": null,
-    "neighborhood": "Guarda do Cubatão",
+    "neighborhood": "Guarda do CubatÃ£o",
     "url": "https://sc.olx.com.br/florianopolis-e-regiao/imoveis/quarto-mobiliado-1500159193",
     "images": [
       "https://img.olx.com.br/images/50/502652402120822.jpg"
@@ -1244,7 +1644,7 @@
   },
   {
     "id": "def456",
-    "source": "ZAP ImÃƒÆ’Ã‚Â³veis",
+    "source": "ZAP ImÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â³veis",
     "title": "Casa 3 quartos bairro Oxford",
     "price": 2400,
     "area": 90,
@@ -1271,7 +1671,7 @@
   {
     "id": "jkl012",
     "source": "Imovelweb",
-    "title": "Casa espaÃƒÆ’Ã‚Â§osa bairro Colonial, 3 dormitÃƒÆ’Ã‚Â³rios, garagem",
+    "title": "Casa espaÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â§osa bairro Colonial, 3 dormitÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â³rios, garagem",
     "price": 2800,
     "area": 110,
     "bedrooms": 3,
