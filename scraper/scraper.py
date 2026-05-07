@@ -61,11 +61,14 @@ def scrape_olx(page):
                 extract_int(p.inner_text() if p else ""),None,None,None,None,link,[],datetime.now().isoformat()))
     else:
         for ad in ads:
+            link = ad.get("url", "")
+            if not link:
+                continue  # pula banners publicitários (sem URL real)
             municipality = ad.get("locationDetails", {}).get("municipality", "")
-            if municipality and "São Bento do Sul" not in municipality:
+            muni_norm = municipality.lower().replace("ã","a").replace("é","e")
+            if municipality and "sao bento do sul" not in muni_norm:
                 continue
             props = {p["name"]: p.get("value") for p in ad.get("properties", []) if isinstance(p, dict)}
-            link  = ad.get("url", "")
             imgs  = ad.get("images", [])
             img   = imgs[0].get("original","") if imgs and isinstance(imgs[0], dict) else ad.get("thumbnail","")
             out.append(Listing(make_id("olx",link),"OLX",ad.get("title",""),
@@ -76,51 +79,55 @@ def scrape_olx(page):
                 link,[img],datetime.now().isoformat()))
     log.info("OLX — %d", len(out)); return out
 
-def _parse_zap_api(data, base, source):
+def _scrape_dom_listings(page, page_url, source, url_slug):
     out = []
-    listings = data.get("search", {}).get("result", {}).get("listings", [])
-    for item in listings:
-        ld = item.get("listing", {})
-        pinfo = ld.get("pricingInfos", [{}])
-        price = extract_int(str(next((p.get("price") for p in pinfo if p.get("businessType") == "RENTAL"), None) or ""))
-        beds  = ld.get("bedrooms",  [None]); beds  = int(beds[0])  if beds  else None
-        baths = ld.get("bathrooms", [None]); baths = int(baths[0]) if baths else None
-        link  = base + ld.get("href", "")
-        out.append(Listing(make_id(source.lower(), link), source, ld.get("title", ""),
-            price, extract_int(str(ld.get("usableArea", ""))), beds, baths,
-            ld.get("address", {}).get("neighborhood"), link,
-            ld.get("images", [])[:1], datetime.now().isoformat()))
-    return out
-
-def _scrape_glue_api(ctx, page, page_url, api_host, base, source):
-    captured = {}
-
-    def on_response(response):
-        if f"{api_host}/v2/listings" in response.url:
-            try: captured["data"] = response.json()
-            except: pass
-
-    ctx.on("response", on_response)
     try:
         page.goto(page_url, wait_until="domcontentloaded", timeout=30_000)
-        page.wait_for_timeout(5_000)
+        page.wait_for_timeout(4_000)
+        cards = page.query_selector_all("a[href*='/imovel/']")
+        seen_hrefs = set()
+        for card in cards:
+            href = card.get_attribute("href") or ""
+            if not href or href in seen_hrefs:
+                continue
+            seen_hrefs.add(href)
+            href_norm = href.lower().replace("-", " ")
+            if url_slug not in href_norm:
+                continue
+            text = card.inner_text()
+            text_norm = text.lower().replace("ã","a").replace("é","e").replace("ô","o")
+            if "sao bento do sul" not in text_norm and url_slug not in href_norm:
+                continue
+            price_m = re.search(r"R\$\s*([\d.,]+)", text)
+            price = extract_int(price_m.group(1)) if price_m else None
+            area_m = re.search(r"(\d+)\s*m[²2]", text)
+            area = int(area_m.group(1)) if area_m else None
+            beds_m = re.search(r"(\d+)\s*quarto", text, re.I)
+            beds = int(beds_m.group(1)) if beds_m else None
+            baths_m = re.search(r"(\d+)\s*banheiro", text, re.I)
+            baths = int(baths_m.group(1)) if baths_m else None
+            lines = [l.strip() for l in text.split("\n") if l.strip()]
+            title = next((l for l in lines if len(l) > 15 and "R$" not in l and "foto" not in l.lower()), "")
+            img_el = card.query_selector("img")
+            img = img_el.get_attribute("src") or "" if img_el else ""
+            out.append(Listing(make_id(source.lower(), href), source, title,
+                price, area, beds, baths, None, href, [img] if img else [], datetime.now().isoformat()))
     except Exception as exc:
-        log.warning("%s page load: %s", source, exc)
-    ctx.remove_listener("response", on_response)
-    return _parse_zap_api(captured.get("data", {}), base, source)
+        log.warning("%s DOM scrape: %s", source, exc)
+    return out
 
 def scrape_zapimoveis(page, ctx):
     log.info("ZAP — scraping...")
-    out = _scrape_glue_api(ctx, page,
+    out = _scrape_dom_listings(page,
         "https://www.zapimoveis.com.br/aluguel/imoveis/sc+sao-bento-do-sul/",
-        "glue-api.zapimoveis.com.br", "https://www.zapimoveis.com.br", "ZAP Imóveis")
+        "ZAP Imóveis", "sao bento do sul")
     log.info("ZAP — %d", len(out)); return out
 
 def scrape_vivareal(page, ctx):
     log.info("Viva Real — scraping...")
-    out = _scrape_glue_api(ctx, page,
+    out = _scrape_dom_listings(page,
         "https://www.vivareal.com.br/aluguel/santa-catarina/sao-bento-do-sul/",
-        "glue-api.vivareal.com", "https://www.vivareal.com.br", "Viva Real")
+        "Viva Real", "sao bento do sul")
     log.info("Viva Real — %d", len(out)); return out
 
 def _parse_imovelweb_features(text):
@@ -146,8 +153,9 @@ def scrape_imovelweb(page):
         for card in page.query_selector_all("div[data-qa='posting PROPERTY']"):
             def g(qa): el=card.query_selector(f"[data-qa='{qa}']"); return el.inner_text().strip() if el else ""
             location = g("POSTING_CARD_LOCATION")
-            # obrigatório: só aceita se confirmar São Bento do Sul
-            if not location or "São Bento do Sul" not in location:
+            # obrigatório: só aceita se confirmar São Bento do Sul (normalizado por encoding)
+            loc_norm = location.lower().replace("ã","a").replace("é","e").replace("ô","o")
+            if not location or "sao bento do sul" not in loc_norm:
                 continue
             neighborhood = location.split(",")[0].strip() if "," in location else None
             price_txt = g("POSTING_CARD_PRICE")
@@ -173,7 +181,7 @@ def save_seen(seen):
     json.dump(list(seen), open(SEEN_FILE,"w"))
 
 def load_existing():
-    return json.load(open(DATA_FILE)) if os.path.exists(DATA_FILE) else []
+    return json.load(open(DATA_FILE, encoding="utf-8")) if os.path.exists(DATA_FILE) else []
 
 def apply_filters(listings):
     out = []
@@ -210,6 +218,7 @@ def run():
             (scrape_vivareal,   (page, ctx)),
             (scrape_imovelweb,  (page,)),
         ]
+        # ctx kept in signature for compatibility but _scrape_dom_listings doesn't use it
         for fn, args in scrapers:
             try: all_listings.extend(fn(*args))
             except Exception as exc: log.error("%s falhou: %s", fn.__name__, exc)
