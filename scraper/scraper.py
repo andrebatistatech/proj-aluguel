@@ -173,6 +173,49 @@ def scrape_imovelweb(page):
         log.error("Imovelweb: %s", exc)
     log.info("Imovelweb — %d", len(out)); return out
 
+def scrape_chavesnamao(page):
+    log.info("Chaves na Mão — scraping...")
+    out = []
+    try:
+        page.goto("https://www.chavesnamao.com.br/imoveis-para-alugar/sc-sao-bento-do-sul/",
+                  wait_until="domcontentloaded", timeout=30_000)
+        page.wait_for_timeout(4_000)
+        for card in page.query_selector_all("div[class*='card']"):
+            a = card.query_selector("a")
+            href = a.get_attribute("href") if a else ""
+            if not href:
+                continue
+            link = "https://www.chavesnamao.com.br" + href if href.startswith("/") else href
+            text = card.inner_text()
+            text_norm = text.lower().replace("ã","a").replace("é","e").replace("ô","o")
+            if "sao bento do sul" not in text_norm:
+                continue
+            lines = [l.strip() for l in text.split("\n") if l.strip()]
+            title = lines[0] if lines else ""
+            neighborhood = None
+            area = beds = baths = None
+            price = None
+            for line in lines:
+                ln = line.lower()
+                if "sao bento do sul" in ln.replace("ã","a").replace("é","e"):
+                    neighborhood = line.split(",")[0].strip()
+                elif "m²" in line or "m2" in ln:
+                    area = extract_int(line)
+                elif line.startswith("R$"):
+                    price = extract_int(line.replace("Confira","").replace("confira",""))
+            beds_el = card.query_selector("p[title*='Quarto'], p[aria-label*='Quarto']")
+            beds = extract_int(beds_el.get_attribute("title") or beds_el.inner_text()) if beds_el else None
+            baths_el = card.query_selector("p[title*='Banheiro'], p[aria-label*='Banheiro']")
+            baths = extract_int(baths_el.get_attribute("title") or baths_el.inner_text()) if baths_el else None
+            img_el = card.query_selector("img")
+            img = img_el.get_attribute("src") or "" if img_el else ""
+            out.append(Listing(make_id("chavesnamao", link), "Chaves na Mão", title,
+                price, area, beds, baths, neighborhood, link,
+                [img] if img else [], datetime.now().isoformat()))
+    except Exception as exc:
+        log.error("Chaves na Mão: %s", exc)
+    log.info("Chaves na Mão — %d", len(out)); return out
+
 def load_seen():
     return set(json.load(open(SEEN_FILE))) if os.path.exists(SEEN_FILE) else set()
 
@@ -213,12 +256,12 @@ def run():
         page = ctx.new_page()
 
         scrapers = [
-            (scrape_olx,        (page,)),
-            (scrape_zapimoveis, (page, ctx)),
-            (scrape_vivareal,   (page, ctx)),
-            (scrape_imovelweb,  (page,)),
+            (scrape_olx,         (page,)),
+            (scrape_zapimoveis,  (page, ctx)),
+            (scrape_vivareal,    (page, ctx)),
+            (scrape_imovelweb,   (page,)),
+            (scrape_chavesnamao, (page,)),
         ]
-        # ctx kept in signature for compatibility but _scrape_dom_listings doesn't use it
         for fn, args in scrapers:
             try: all_listings.extend(fn(*args))
             except Exception as exc: log.error("%s falhou: %s", fn.__name__, exc)
