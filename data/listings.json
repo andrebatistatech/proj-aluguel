@@ -1,1 +1,348 @@
-[]
+[
+  {
+    "id": "d52198f67ba8",
+    "source": "OLX",
+    "title": "Alugo quarto no centro de São Bento do Sul ",
+    "price": 590,
+    "area": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "neighborhood": "Centro",
+    "url": "https://sc.olx.com.br/norte-de-santa-catarina/imoveis/alugo-quarto-no-centro-de-sao-bento-do-sul-1499454083",
+    "images": [
+      "https://img.olx.com.br/images/70/706636642580547.jpg"
+    ],
+    "scraped_at": "2026-05-07T22:05:47.707643",
+    "is_new": true
+  },
+  {
+    "id": "8ea4b51a6574",
+    "source": "OLX",
+    "title": "Vende-se ou Aluga-se Sobrado Semi-Mobiliado.",
+    "price": 2100,
+    "area": 92,
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "neighborhood": "Schramm",
+    "url": "https://sc.olx.com.br/norte-de-santa-catarina/imoveis/vende-se-ou-aluga-se-sobrado-semi-mobiliado-1499089741",
+    "images": [
+      "https://img.olx.com.br/images/75/755658289667544.jpg"
+    ],
+    "scraped_at": "2026-05-07T22:05:47.707680",
+    "is_new": true
+  },
+  {
+    "id": "249b3ea5db52",
+    "source": "OLX",
+    "title": "Casa no bairro colonial .2 quarto sala e cozinha lavanderia garagem com pátio ",
+    "price": 1300,
+    "area": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "neighborhood": "Colonial",
+    "url": "https://sc.olx.com.br/norte-de-santa-catarina/imoveis/casa-no-bairro-colonial-2-quarto-sala-e-cozinha-lavanderia-garagem-com-patio-1496114364",
+    "images": [
+      "https://img.olx.com.br/images/74/743632753330949.jpg"
+    ],
+    "scraped_at": "2026-05-07T22:05:47.707693",
+    "is_new": true
+  },
+  {
+    "id": "a9de93a17e42",
+    "source": "OLX",
+    "title": "Kitnet mobiliada em são Bento do Sul ",
+    "price": 1350,
+    "area": 50,
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "neighborhood": "Centenário",
+    "url": "https://sc.olx.com.br/norte-de-santa-catarina/imoveis/kitnet-mobiliada-em-sao-bento-do-sul-1485852315",
+    "images": [
+      "https://img.olx.com.br/images/98/983651264524968.jpg"
+    ],
+    "scraped_at": "2026-05-07T22:05:47.707706",
+    "is_new": true
+  },
+  {
+    "id": "38934d97df23",
+    "source": "Chaves na Mão",
+    "title": "Sala comercial para alugar na Avenida Argolo, Centro, São Bento do Sul",
+    "price": null,
+    "area": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "neighborhood": "Centro",
+    "url": "https://www.chavesnamao.com.br/imovel/sala-comercial-para-alugar-sc-sao-bento-do-sul-centro/id-34165278/",
+    "images": [
+      "https://www.chavesnamao.com.br/imn/0400X0262/N/60/imoveis/130233/34165278/sc-sao-bento-do-sul-centro-avenida-argolo-conj-comercial-sala-para-alugar-68ae2f2c-2.jpg"
+    ],
+    "scraped_at": "2026-05-07T22:06:34.795570",
+    "is_new": true
+  },
+  {
+    "id": "dd50aaed2891",
+    "source": "Chaves na Mão",
+    "title": "Casa para alugar na Rua Alberto Malschitzky, Progresso, São Bento do Sul",
+    "price": 1300,
+    "area": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "neighborhood": "Progresso",
+    "url": "https://www.chavesnamao.com.br/imovel/casa-para-alugar-sc-sao-bento-do-sul-progresso-RS1300/id-41980422/",
+    "images": [
+      "https://www.chavesnamao.com.br/imn/0400X0262/N/60/imoveis/794280/41980422/sc-sao-bento-do-sul-progresso-rua-alberto-malschitzky-casa-sobrado-para-alugar-69efeffb-1.jpg"
+    ],
+    "scraped_at": "2026-05-07T22:06:34.825956",
+    "is_new": true
+  },
+  {
+    "id": "0db2daa6d2fe",
+    "source": "Chaves na Mão",
+    "title": "Apartamento amplo para locação com 2 dormitórios em ótima localização em são bento do sul-sc",
+    "price": 1650,
+    "area": null,
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "neighborhood": "Schramm",
+    "url": "https://www.chavesnamao.com.br/imovel/apartamento-para-alugar-2-quartos-com-garagem-sc-sao-bento-do-sul-schramm-RS1650/id-40118561/",
+    "images": [
+      "https://www.chavesnamao.com.br/imn/0400X0262/N/60/imoveis/375745/40118561/sc-sao-bento-do-sul-schramm-rua-alexandre-buhnemann-apartamento-para-alugar-2-quartos-69a83426-1.jpg"
+    ],
+    "scraped_at": "2026-05-07T22:06:34.853404",
+    "is_new": true
+  },
+  {
+    "id": "699faa2ef4bc",
+    "source": "Chaves na Mão",
+    "title": "Apartamento Vista para a Matriz – Conforto e Localização Central",
+    "price": 2700,
+    "area": 149,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "neighborhood": "Centro",
+    "url": "https://www.chavesnamao.com.br/imovel/apartamento-para-alugar-3-quartos-com-garagem-sc-sao-bento-do-sul-centro-149m2-RS2700/id-41803207/",
+    "images": [],
+    "scraped_at": "2026-05-07T22:06:34.919832",
+    "is_new": true
+  },
+  {
+    "id": "cd682b6ac2ab",
+    "source": "Chaves na Mão",
+    "title": "Ponto comercial para alugar na Rua Luiz Bollmann, Centro, São Bento do Sul",
+    "price": 1800,
+    "area": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "neighborhood": "Centro",
+    "url": "https://www.chavesnamao.com.br/imovel/ponto-comercial-para-alugar-sc-sao-bento-do-sul-centro-RS1800/id-35316864/",
+    "images": [],
+    "scraped_at": "2026-05-07T22:06:34.935242",
+    "is_new": true
+  },
+  {
+    "id": "66c9e8c3a6dc",
+    "source": "Chaves na Mão",
+    "title": "Terreno comercial para alugar na Rua Alexandre Buhnemann, sn, Schramm, São Bento do Sul",
+    "price": 2800,
+    "area": 900,
+    "bedrooms": null,
+    "bathrooms": null,
+    "neighborhood": "Schramm",
+    "url": "https://www.chavesnamao.com.br/imovel/terreno-comercial-para-alugar-sc-sao-bento-do-sul-schramm-900m2-RS2800/id-33621329/",
+    "images": [],
+    "scraped_at": "2026-05-07T22:06:34.970405",
+    "is_new": true
+  },
+  {
+    "id": "af1a677ee8f9",
+    "source": "MGF Imóveis",
+    "title": "Bela casa no Bairro Cruzeiro - CA17",
+    "price": 2250,
+    "area": null,
+    "bedrooms": 3,
+    "bathrooms": 1,
+    "neighborhood": "Cruzeiro",
+    "url": "https://sc.mgfimoveis.com.br/bela-casa-no-bairro-cruzeiro-ca17-aluguel-sc-sao-bento-do-sul-300213216",
+    "images": [
+      "https://i.mgfserv.com/345x207/aHR0cHM6Ly9pbWcub2x4LmNvbS5ici9pbWFnZXMvODIvODI0Mzc0NDA1MzU3MTk2LmpwZw.jpg"
+    ],
+    "scraped_at": "2026-05-07T22:06:42.663161",
+    "is_new": true
+  },
+  {
+    "id": "5d0c18649d3d",
+    "source": "MGF Imóveis",
+    "title": "Sobrados Novos, Prontos para Morar - SO18",
+    "price": 2000,
+    "area": null,
+    "bedrooms": 2,
+    "bathrooms": 3,
+    "neighborhood": "Schramm",
+    "url": "https://sc.mgfimoveis.com.br/sobrados-novos-prontos-para-morar-so18-aluguel-sc-sao-bento-do-sul-300824324",
+    "images": [
+      "https://i.mgfserv.com/345x207/aHR0cHM6Ly9pbWcub2x4LmNvbS5ici9pbWFnZXMvMDEvMDE5MzUyNjQyNzE0NDk3LmpwZw.jpg"
+    ],
+    "scraped_at": "2026-05-07T22:06:42.673853",
+    "is_new": true
+  },
+  {
+    "id": "fc24334f4dc8",
+    "source": "MGF Imóveis",
+    "title": "Sobrados Novos, Prontos para Morar - W2021_SO18",
+    "price": 2000,
+    "area": null,
+    "bedrooms": 2,
+    "bathrooms": 3,
+    "neighborhood": "Schramm",
+    "url": "https://sc.mgfimoveis.com.br/sobrados-novos-prontos-para-morar-w2021so18-aluguel-sc-sao-bento-do-sul-303030427",
+    "images": [
+      "https://i.mgfserv.com/345x207/aHR0cHM6Ly9pbWcub2x4LmNvbS5ici9pbWFnZXMvNTUvNTU5Mzg2MDY0NzAwMTYzLmpwZw.jpg"
+    ],
+    "scraped_at": "2026-05-07T22:06:42.684845",
+    "is_new": true
+  },
+  {
+    "id": "49e43e676cc3",
+    "source": "MGF Imóveis",
+    "title": "Sobrados Novos, Prontos para Morar - W2021_SO18",
+    "price": 2000,
+    "area": null,
+    "bedrooms": 2,
+    "bathrooms": 3,
+    "neighborhood": "Schramm",
+    "url": "https://sc.mgfimoveis.com.br/sobrados-novos-prontos-para-morar-w2021so18-aluguel-sc-sao-bento-do-sul-301121829",
+    "images": [
+      "https://i.mgfserv.com/345x207/aHR0cHM6Ly9pbWcub2x4LmNvbS5ici9pbWFnZXMvMTAvMTA1MzIzMjk3MDAxNDY1LmpwZw.jpg"
+    ],
+    "scraped_at": "2026-05-07T22:06:42.695428",
+    "is_new": true
+  },
+  {
+    "id": "057c5f789d83",
+    "source": "MGF Imóveis",
+    "title": "ALUGO SOBRADO - São Bento do Sul",
+    "price": 1700,
+    "area": null,
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "neighborhood": "Boehmerwald",
+    "url": "https://sc.mgfimoveis.com.br/alugo-sobrado-sao-bento-do-sul-aluguel-sc-sao-bento-do-sul-298670673",
+    "images": [
+      "https://i.mgfserv.com/345x207/aHR0cHM6Ly9pbWcub2x4LmNvbS5ici9pbWFnZXMvMzQvMzQ5MzQ1Mzg1MDQyNjYyLmpwZw.jpg"
+    ],
+    "scraped_at": "2026-05-07T22:06:42.734879",
+    "is_new": true
+  },
+  {
+    "id": "9cbfa1f56994",
+    "source": "MGF Imóveis",
+    "title": "Kitnet - 01 quarto - 600,00 incluso luz e água",
+    "price": 600,
+    "area": null,
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "neighborhood": "Colonial",
+    "url": "https://sc.mgfimoveis.com.br/kitnet-01-quarto-60000-incluso-luz-agua-aluguel-sc-sao-bento-do-sul-area-233567013",
+    "images": [
+      "https://i.mgfserv.com/345x207/aHR0cHM6Ly9pbWcub2x4LmNvbS5ici9pbWFnZXMvODQvODQ1MDA3NDA4NzE1ODAzLmpwZw.jpg"
+    ],
+    "scraped_at": "2026-05-07T22:06:42.776550",
+    "is_new": true
+  },
+  {
+    "id": "60ed901dbb94",
+    "source": "MGF Imóveis",
+    "title": "Casa para aluguel, 3 quarto(s), Colonial, São Bento Do Sul - CA80",
+    "price": 2350,
+    "area": null,
+    "bedrooms": 3,
+    "bathrooms": 3,
+    "neighborhood": "Colonial",
+    "url": "https://sc.mgfimoveis.com.br/casa-para-aluguel-3-quartos-colonial-sao-bento-do-sul-ca80-aluguel-sc-sao-303390164",
+    "images": [
+      "https://i.mgfserv.com/345x207/aHR0cHM6Ly9pbWcub2x4LmNvbS5ici9pbWFnZXMvMTIvMTI2Mzc3NDM4MTI4NTAwLmpwZw.jpg"
+    ],
+    "scraped_at": "2026-05-07T22:06:42.787030",
+    "is_new": true
+  },
+  {
+    "id": "8912ecaf33e2",
+    "source": "MGF Imóveis",
+    "title": "Casa 3 quartos",
+    "price": 1350,
+    "area": null,
+    "bedrooms": 3,
+    "bathrooms": 1,
+    "neighborhood": "Cruzeiro",
+    "url": "https://sc.mgfimoveis.com.br/casa131quartos1aluguel1sc1sao1bento1do1sul1casa1031quartos1em1madeira1estilo-295611977",
+    "images": [
+      "https://i.mgfserv.com/345x207/aHR0cHM6Ly9pbWcub2x4LmNvbS5ici9pbWFnZXMvNTcvNTcxMjUxNzcxMjc0MTEwLmpwZw.jpg"
+    ],
+    "scraped_at": "2026-05-07T22:06:42.802483",
+    "is_new": true
+  },
+  {
+    "id": "77366cb0622e",
+    "source": "MGF Imóveis",
+    "title": "Casa direto com proprietario no bairro 25 de Julho",
+    "price": 1500,
+    "area": null,
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "neighborhood": "25 de Julho",
+    "url": "https://sc.mgfimoveis.com.br/casa-direto-proprietario-no-bairro-25-julho-aluguel-sc-sao-bento-do-sul-309476044",
+    "images": [
+      "https://i.mgfserv.com/345x207/aHR0cHM6Ly9pbWcub2x4LmNvbS5ici9pbWFnZXMvMTAvMTAxNTg3NDcwMDg0OTQyLmpwZw.jpg"
+    ],
+    "scraped_at": "2026-05-07T22:06:42.813210",
+    "is_new": true
+  },
+  {
+    "id": "9aab6fec1354",
+    "source": "MGF Imóveis",
+    "title": "Casa 02 Quartos Bairro Rio Negro",
+    "price": 1000,
+    "area": null,
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "neighborhood": "Schramm",
+    "url": "https://sc.mgfimoveis.com.br/casa-02-quartos-bairro-rio-negro-aluguel-sc-sao-bento-do-sul-302411463",
+    "images": [
+      "https://i.mgfserv.com/345x207/aHR0cHM6Ly9pbWcub2x4LmNvbS5ici9pbWFnZXMvMzYvMzYzMzUwNTQ5NzMxNTUyLmpwZw.jpg"
+    ],
+    "scraped_at": "2026-05-07T22:06:42.853683",
+    "is_new": true
+  },
+  {
+    "id": "5470c6167161",
+    "source": "MGF Imóveis",
+    "title": "Casa para aluguel, 3 quarto(s), Colonial, São Bento Do Sul - W2021_CA80",
+    "price": 2500,
+    "area": null,
+    "bedrooms": 3,
+    "bathrooms": 3,
+    "neighborhood": "Colonial",
+    "url": "https://sc.mgfimoveis.com.br/casa-para-aluguel-3-quartos-colonial-sao-bento-do-sul-w2021ca80-aluguel-sc-301137190",
+    "images": [
+      "https://i.mgfserv.com/345x207/aHR0cHM6Ly9pbWcub2x4LmNvbS5ici9pbWFnZXMvMTAvMTAzMzcyMTcxNjI1MzM1LmpwZw.jpg"
+    ],
+    "scraped_at": "2026-05-07T22:06:42.879586",
+    "is_new": true
+  },
+  {
+    "id": "5f18156ea5eb",
+    "source": "MGF Imóveis",
+    "title": "Casa com suíte próximo ao Centro",
+    "price": 1300,
+    "area": null,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "neighborhood": "Rio Negro",
+    "url": "https://sc.mgfimoveis.com.br/casa-suite-proximo-ao-centro-aluguel-sc-sao-bento-do-sul-207181696",
+    "images": [
+      "https://i.mgfserv.com/345x207/aHR0cHM6Ly9pbWcub2x4LmNvbS5ici9pbWFnZXMvNjMvNjM0MDAxMDA5NzcxODEwLmpwZw.jpg"
+    ],
+    "scraped_at": "2026-05-07T22:06:42.901053",
+    "is_new": true
+  }
+]
