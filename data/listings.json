@@ -1,5 +1,37 @@
 [
   {
+    "id": "6a589af3825a",
+    "source": "MGF Imóveis",
+    "title": "Casa para Locação em São Bento do Sul, Colonial, 3 dormitórios, 1 banheiro, 1 vaga",
+    "price": 1650,
+    "area": null,
+    "bedrooms": 3,
+    "bathrooms": 1,
+    "neighborhood": "Rio Negro",
+    "url": "https://sc.mgfimoveis.com.br/casa-para-locacao-em-sao-bento-do-sul-colonial-3-dormitorios-1-banheiro-1-302496658",
+    "images": [
+      "https://i.mgfserv.com/345x207/aHR0cHM6Ly9pbWcub2x4LmNvbS5ici9pbWFnZXMvNjMvNjMyMzM0MTgwMTgxMjI4LmpwZw.jpg"
+    ],
+    "scraped_at": "2026-05-09T00:49:15.265201",
+    "is_new": true
+  },
+  {
+    "id": "d628652e48ad",
+    "source": "MGF Imóveis",
+    "title": "Casa Aluguel, 360M² de Área Construída",
+    "price": 1500,
+    "area": 360,
+    "bedrooms": 2,
+    "bathrooms": null,
+    "neighborhood": "Rio Negro",
+    "url": "https://sc.mgfimoveis.com.br/casa-aluguel-360m-de-area-construida-aluguel-sc-sao-bento-do-sul-304395785",
+    "images": [
+      "https://i.mgfserv.com/345x207/aHR0cDovL2ZvdG9zLnNvYnJlc3NhaS5jb20uYnIvZm90b3MvMTc4Mi8xNzgyLzEyMzgxOTQvMjY2MDc4ODAvTU0vMjY2MDc4ODAuanBn.jpg"
+    ],
+    "scraped_at": "2026-05-09T00:49:15.276623",
+    "is_new": true
+  },
+  {
     "id": "d52198f67ba8",
     "source": "OLX",
     "title": "Alugo quarto no centro de São Bento do Sul ",
