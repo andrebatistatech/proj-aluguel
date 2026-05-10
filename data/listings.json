@@ -1,5 +1,21 @@
 [
   {
+    "id": "284295c4c621",
+    "source": "OLX",
+    "title": "Quitinete mobiliada ",
+    "price": 1200,
+    "area": 40,
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "neighborhood": "Centenário",
+    "url": "https://sc.olx.com.br/norte-de-santa-catarina/imoveis/quitinete-mobiliada-1483070365",
+    "images": [
+      "https://img.olx.com.br/images/81/810652747770291.jpg"
+    ],
+    "scraped_at": "2026-05-10T18:24:43.488475",
+    "is_new": true
+  },
+  {
     "id": "6a589af3825a",
     "source": "MGF Imóveis",
     "title": "Casa para Locação em São Bento do Sul, Colonial, 3 dormitórios, 1 banheiro, 1 vaga",
