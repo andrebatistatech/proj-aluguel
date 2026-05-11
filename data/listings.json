@@ -1,5 +1,53 @@
 [
   {
+    "id": "a62ac14390d6",
+    "source": "MGF Imóveis",
+    "title": "Casa de madeira em São Bento próximo à Promossul",
+    "price": null,
+    "area": null,
+    "bedrooms": 2,
+    "bathrooms": null,
+    "neighborhood": "Brasília",
+    "url": "https://sc.mgfimoveis.com.br/aluga-casa-madeira-em-sbs-proximo-promossul-aluguel-sc-sao-bento-do-sul-200253513",
+    "images": [
+      "https://i.mgfserv.com/345x207/aHR0cHM6Ly9pbWcub2x4LmNvbS5ici9pbWFnZXMvMjYvMjY5OTI2MTA0MTQzMDgwLmpwZw.jpg"
+    ],
+    "scraped_at": "2026-05-11T00:52:15.632086",
+    "is_new": true
+  },
+  {
+    "id": "9bfbba48daad",
+    "source": "MGF Imóveis",
+    "title": "Alugo Casa próx. Univille Sao Bento do Sul semi mobiliada",
+    "price": 1200,
+    "area": null,
+    "bedrooms": 2,
+    "bathrooms": 4,
+    "neighborhood": "Colonial",
+    "url": "https://sc.mgfimoveis.com.br/alugo-casa-prox-univille-sao-bento-do-sul-semi-mobiliada-aluguel-sc-sao-bento-do-208919150",
+    "images": [
+      "https://i.mgfserv.com/345x207/aHR0cHM6Ly9pbWcub2x4LmNvbS5ici9pbWFnZXMvNzUvNzU0MDE0MDAzMTQ4Njg0LmpwZw.jpg"
+    ],
+    "scraped_at": "2026-05-11T00:52:15.655674",
+    "is_new": true
+  },
+  {
+    "id": "7153e5279e59",
+    "source": "MGF Imóveis",
+    "title": "Aluga-se casa com ótima localização",
+    "price": 750,
+    "area": null,
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "neighborhood": "Centenário",
+    "url": "https://sc.mgfimoveis.com.br/alugase-casa-otima-localizacao-aluguel-sc-sao-bento-do-sul-area-207883283",
+    "images": [
+      "https://i.mgfserv.com/345x207/aHR0cHM6Ly9pbWcub2x4LmNvbS5ici9pbWFnZXMvNjgvNjgzMDA3MDAwNTU1MTA5LmpwZw.jpg"
+    ],
+    "scraped_at": "2026-05-11T00:52:15.721681",
+    "is_new": true
+  },
+  {
     "id": "284295c4c621",
     "source": "OLX",
     "title": "Quitinete mobiliada ",
