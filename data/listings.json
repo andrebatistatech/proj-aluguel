@@ -1,5 +1,117 @@
 [
   {
+    "id": "7fcfbfc2f39e",
+    "source": "MGF Imóveis",
+    "title": "Casa de alvenaria Scharmm. Tipo Aluguel - casa em rua pública. Área",
+    "price": 825,
+    "area": 80,
+    "bedrooms": 4,
+    "bathrooms": null,
+    "neighborhood": "Ind Sudoeste",
+    "url": "https://sc.mgfimoveis.com.br/sc-sao-bento-do-sul-casa-alvenaria-scharmm-tipo-aluguel-casa-em-rua-39416086",
+    "images": [
+      "https://i.mgfserv.com/345x207/aHR0cDovL2ltZy5vbHguY29tLmJyL2ltYWdlcy83NC83NDQ1MTkwMDY3NzU4NzUuanBn.jpg"
+    ],
+    "scraped_at": "2026-05-11T07:22:15.732372",
+    "is_new": true
+  },
+  {
+    "id": "20f72dd89db4",
+    "source": "MGF Imóveis",
+    "title": "Alugo Casa com ótima Localização!",
+    "price": 2500,
+    "area": 240,
+    "bedrooms": 4,
+    "bathrooms": null,
+    "neighborhood": "Rio Negro",
+    "url": "https://sc.mgfimoveis.com.br/alugo-casa-otima-localizacao-aluguel-sc-sao-bento-do-sul-211169089",
+    "images": [
+      "https://i.mgfserv.com/345x207/aHR0cHM6Ly9pbWcub2x4LmNvbS5ici9pbWFnZXMvODgvODg4MDI3MDAwODYyMDQxLmpwZw.jpg"
+    ],
+    "scraped_at": "2026-05-11T07:22:15.742132",
+    "is_new": true
+  },
+  {
+    "id": "546c0e4addf9",
+    "source": "MGF Imóveis",
+    "title": "Aluga-se casa no bairro Serra Alta",
+    "price": 2000,
+    "area": null,
+    "bedrooms": 4,
+    "bathrooms": 2,
+    "neighborhood": "São Bento do Sul",
+    "url": "https://sc.mgfimoveis.com.br/alugase-casa-no-bairro-serra-alta-aluguel-sc-sao-bento-do-sul-area-servico-285534733",
+    "images": [
+      "https://i.mgfserv.com/345x207/aHR0cHM6Ly9pbWcub2x4LmNvbS5ici9pbWFnZXMvNjUvNjU2MjM0NzQ1NTA0ODAzLmpwZw.jpg"
+    ],
+    "scraped_at": "2026-05-11T07:22:15.751702",
+    "is_new": true
+  },
+  {
+    "id": "dd76b6e73075",
+    "source": "MGF Imóveis",
+    "title": "Casa em Sao Bento do Sul",
+    "price": 1600,
+    "area": null,
+    "bedrooms": 3,
+    "bathrooms": null,
+    "neighborhood": "Centro",
+    "url": "https://sc.mgfimoveis.com.br/casa-em-sao-bento-do-sul-aluguel-sc-sao-bento-do-sul-varanda-area-servico-109682263",
+    "images": [
+      "https://i.mgfserv.com/345x207/aHR0cHM6Ly9pbWcub2x4LmNvbS5ici9pbWFnZXMvOTQvOTQ4ODIwMDg5NDE0NTY4LmpwZw.jpg"
+    ],
+    "scraped_at": "2026-05-11T07:22:15.761472",
+    "is_new": true
+  },
+  {
+    "id": "cbe1c6747afb",
+    "source": "MGF Imóveis",
+    "title": "Casa 2 Quartos",
+    "price": 1300,
+    "area": null,
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "neighborhood": "São Bento do Sul",
+    "url": "https://sc.mgfimoveis.com.br/casa-2-quartos-aluguel-sc-sao-bento-do-sul-em-excelente-localizacao-em-rua-282773377",
+    "images": [
+      "https://i.mgfserv.com/345x207/aHR0cHM6Ly9pbWcub2x4LmNvbS5ici9pbWFnZXMvNDkvNDk1MjA5NDkwOTA0OTEwLmpwZw.jpg"
+    ],
+    "scraped_at": "2026-05-11T07:22:15.781239",
+    "is_new": true
+  },
+  {
+    "id": "e441dfdc8c23",
+    "source": "MGF Imóveis",
+    "title": "Chalé residencial ou comercial. Aluguel",
+    "price": 1500,
+    "area": null,
+    "bedrooms": 4,
+    "bathrooms": 2,
+    "neighborhood": "São Bento do Sul",
+    "url": "https://sc.mgfimoveis.com.br/chale-residencial-ou-comercial-aluguel-aluguel-sc-sao-bento-do-sul-278365738",
+    "images": [
+      "https://i.mgfserv.com/345x207/aHR0cHM6Ly9pbWcub2x4LmNvbS5ici9pbWFnZXMvMjgvMjgxMjkzMjUxMTkyMTI0LmpwZw.jpg"
+    ],
+    "scraped_at": "2026-05-11T07:22:15.790644",
+    "is_new": true
+  },
+  {
+    "id": "4ed086d1f99a",
+    "source": "MGF Imóveis",
+    "title": "Alugo quarto no centro",
+    "price": 900,
+    "area": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "neighborhood": "Centro",
+    "url": "https://sc.mgfimoveis.com.br/alugo-quarto-no-centro-aluguel-sc-alugo-quarto-no-centro-de-sao-bento-do-sulsem-308189581",
+    "images": [
+      "https://i.mgfserv.com/345x207/aHR0cHM6Ly9waG90by5tZ2ZpbW92ZWlzLmNvbS5ici9waG90b3MvNjYvZmJlOTMyNjhhMGRiMzc3MzFjZDM3YmNmYmFhYjY2ZDYuanBn.jpg"
+    ],
+    "scraped_at": "2026-05-11T07:22:15.800433",
+    "is_new": true
+  },
+  {
     "id": "a62ac14390d6",
     "source": "MGF Imóveis",
     "title": "Casa de madeira em São Bento próximo à Promossul",
