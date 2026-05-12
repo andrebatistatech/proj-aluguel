@@ -1,5 +1,21 @@
 [
   {
+    "id": "695b7806ed31",
+    "source": "MGF Imóveis",
+    "title": "Sobrados Novos, Prontos para Morar - SO18",
+    "price": 2000,
+    "area": null,
+    "bedrooms": 2,
+    "bathrooms": 3,
+    "neighborhood": "Schramm",
+    "url": "https://sc.mgfimoveis.com.br/sobrados-novos-prontos-para-morar-so18-aluguel-sc-sao-bento-do-sul-300473533",
+    "images": [
+      "https://i.mgfserv.com/345x207/aHR0cHM6Ly9zdGF0aWMub2x4LmNvbS5ici9jZC92aS9pbWFnZXMvaWNfbm8tcGhvdG8tcGxhY2Vob2xkZXIucG5n.jpg"
+    ],
+    "scraped_at": "2026-05-12T07:09:20.251494",
+    "is_new": true
+  },
+  {
     "id": "7fcfbfc2f39e",
     "source": "MGF Imóveis",
     "title": "Casa de alvenaria Scharmm. Tipo Aluguel - casa em rua pública. Área",
