@@ -1,5 +1,21 @@
 [
   {
+    "id": "e0180f97b387",
+    "source": "Chaves na Mão",
+    "title": "Casa com 4 quartos para alugar na Rua das Neves, 820, 25 de Julho, São Bento do Sul",
+    "price": 2700,
+    "area": 160,
+    "bedrooms": 4,
+    "bathrooms": 2,
+    "neighborhood": "25 de Julho",
+    "url": "https://www.chavesnamao.com.br/imovel/casa-para-alugar-4-quartos-com-garagem-sc-sao-bento-do-sul-25-de-julho-1000m2-RS2700/id-41437807/",
+    "images": [
+      "https://www.chavesnamao.com.br/imn/0400X0262/N/60/imoveis/1258465/41437807/sc-sao-bento-do-sul-25-de-julho-rua-das-neves-casa-sobrado-para-alugar-4-quartos-69eab8f0-1.jpg"
+    ],
+    "scraped_at": "2026-05-12T12:50:00.868861",
+    "is_new": true
+  },
+  {
     "id": "695b7806ed31",
     "source": "MGF Imóveis",
     "title": "Sobrados Novos, Prontos para Morar - SO18",
