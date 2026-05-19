@@ -1,5 +1,35 @@
 [
   {
+    "id": "b574a4c3cf0e",
+    "source": "Chaves na Mão",
+    "title": "Prédio para alugar na Rua Rodolfo Klaumann, 197, Centro, São Bento do Sul",
+    "price": 800,
+    "area": 35,
+    "bedrooms": null,
+    "bathrooms": null,
+    "neighborhood": "Centro",
+    "url": "https://www.chavesnamao.com.br/imovel/predio-para-alugar-sc-sao-bento-do-sul-centro-35m2-RS800/id-41813854/",
+    "images": [
+      "https://www.chavesnamao.com.br/imn/0400X0262/N/60/imoveis/1258465/41813854/sc-sao-bento-do-sul-centro-rua-rodolfo-klaumann-para-alugar-69e8e8de-1.jpg"
+    ],
+    "scraped_at": "2026-05-19T07:22:01.917634",
+    "is_new": true
+  },
+  {
+    "id": "4493426575eb",
+    "source": "Chaves na Mão",
+    "title": "Apartamento para alugar na Rua Agudos do Sul, 20, Cruzeiro, São Bento do Sul",
+    "price": 2800,
+    "area": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "neighborhood": "Cruzeiro",
+    "url": "https://www.chavesnamao.com.br/imovel/apartamento-para-alugar-sc-sao-bento-do-sul-cruzeiro-RS2800/id-41251741/",
+    "images": [],
+    "scraped_at": "2026-05-19T07:22:02.041301",
+    "is_new": true
+  },
+  {
     "id": "e0180f97b387",
     "source": "Chaves na Mão",
     "title": "Casa com 4 quartos para alugar na Rua das Neves, 820, 25 de Julho, São Bento do Sul",
