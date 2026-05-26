@@ -1,5 +1,51 @@
 [
   {
+    "id": "d2131030913b",
+    "source": "Chaves na Mão",
+    "title": "Sobrado para locação com 2 dormitórios no bairro brasília em são bento do sul-sc",
+    "price": 1250,
+    "area": null,
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "neighborhood": "Brasilia",
+    "url": "https://www.chavesnamao.com.br/imovel/casa-para-alugar-2-quartos-com-garagem-sc-sao-bento-do-sul-brasilia-RS1250/id-42942785/",
+    "images": [
+      "https://www.chavesnamao.com.br/imn/0400X0262/N/60/imoveis/375745/42942785/sc-sao-bento-do-sul-brasilia-rua-paulo-malinowsky-para-alugar-2-quartos-6a12f73b-1.jpg"
+    ],
+    "scraped_at": "2026-05-26T07:21:10.171487",
+    "is_new": true
+  },
+  {
+    "id": "1b731df0cfb7",
+    "source": "Chaves na Mão",
+    "title": "<p>Descubra o privilégio de viver em uma casa exclusiva no bairro Schramm, em São Bento do Sul! Com impressionantes 729m² de área útil, esta residência oferece o equilíbrio perfeito entre confor",
+    "price": 700,
+    "area": 729,
+    "bedrooms": 4,
+    "bathrooms": 5,
+    "neighborhood": "Schramm",
+    "url": "https://www.chavesnamao.com.br/imovel/casa-para-alugar-4-quartos-com-garagem-sc-sao-bento-do-sul-schramm-729m2-RS6500/id-42840856/",
+    "images": [
+      "https://www.chavesnamao.com.br/imn/0400X0262/N/60/imoveis/521158/42840856/sc-sao-bento-do-sul-schramm-rua-ivo-hummelgen-casa-sobrado-para-alugar-4-quartos-6a0f2429-1.jpg"
+    ],
+    "scraped_at": "2026-05-26T07:21:10.216808",
+    "is_new": true
+  },
+  {
+    "id": "a2f4a6291757",
+    "source": "Chaves na Mão",
+    "title": "Apartamento com 3 quartos para alugar na Avenida São Bento, 400, Rio Negro, São Bento do Sul",
+    "price": 500,
+    "area": 114,
+    "bedrooms": 3,
+    "bathrooms": 3,
+    "neighborhood": "Rio Negro",
+    "url": "https://www.chavesnamao.com.br/imovel/apartamento-para-alugar-3-quartos-com-garagem-sc-sao-bento-do-sul-rio-negro-114m2-RS4800/id-41897781/",
+    "images": [],
+    "scraped_at": "2026-05-26T07:21:10.239675",
+    "is_new": true
+  },
+  {
     "id": "b574a4c3cf0e",
     "source": "Chaves na Mão",
     "title": "Prédio para alugar na Rua Rodolfo Klaumann, 197, Centro, São Bento do Sul",
