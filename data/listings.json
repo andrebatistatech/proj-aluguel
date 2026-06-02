@@ -1,5 +1,19 @@
 [
   {
+    "id": "d7ab2cc6dd9e",
+    "source": "Chaves na Mão",
+    "title": "Apartamento com 2 quartos para alugar na Rua Carlos Stiegler, 325, Colonial, São Bento do Sul",
+    "price": 2000,
+    "area": 75,
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "neighborhood": "Colonial",
+    "url": "https://www.chavesnamao.com.br/imovel/apartamento-para-alugar-2-quartos-com-garagem-sc-sao-bento-do-sul-colonial-75m2-RS2000/id-41827272/",
+    "images": [],
+    "scraped_at": "2026-06-02T07:47:05.599965",
+    "is_new": true
+  },
+  {
     "id": "d2131030913b",
     "source": "Chaves na Mão",
     "title": "Sobrado para locação com 2 dormitórios no bairro brasília em são bento do sul-sc",
