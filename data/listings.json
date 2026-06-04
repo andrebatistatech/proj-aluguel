@@ -1,5 +1,21 @@
 [
   {
+    "id": "59ac344eb97d",
+    "source": "OLX",
+    "title": "",
+    "price": 1900,
+    "area": 62,
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "neighborhood": "Centro",
+    "url": "https://sc.olx.com.br/norte-de-santa-catarina/imoveis/sobrado-c-sacada-e-garagem-coberta-schramm-sao-bento-direto-proprietario-1507709273",
+    "images": [
+      "https://img.olx.com.br/images/40/407658657260426.jpg"
+    ],
+    "scraped_at": "2026-06-04T01:06:39.170628",
+    "is_new": true
+  },
+  {
     "id": "d7ab2cc6dd9e",
     "source": "Chaves na Mão",
     "title": "Apartamento com 2 quartos para alugar na Rua Carlos Stiegler, 325, Colonial, São Bento do Sul",
