@@ -1,5 +1,19 @@
 [
   {
+    "id": "c50915e1ca04",
+    "source": "Chaves na Mão",
+    "title": "Casa com 2 quartos para alugar na Rua Amando Küster, Serra Alta, São Bento do Sul",
+    "price": 1390,
+    "area": 60,
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "neighborhood": "Serra Alta",
+    "url": "https://www.chavesnamao.com.br/imovel/casa-para-alugar-2-quartos-com-garagem-sc-sao-bento-do-sul-serra-alta-60m2-RS1390/id-43226383/",
+    "images": [],
+    "scraped_at": "2026-06-09T07:22:38.441989",
+    "is_new": true
+  },
+  {
     "id": "59ac344eb97d",
     "source": "OLX",
     "title": "",
