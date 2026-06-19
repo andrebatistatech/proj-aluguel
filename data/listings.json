@@ -1,5 +1,21 @@
 [
   {
+    "id": "efbc439625e4",
+    "source": "OLX",
+    "title": "",
+    "price": 1500,
+    "area": 60,
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "neighborhood": "Centro",
+    "url": "https://sc.olx.com.br/norte-de-santa-catarina/imoveis/apartamento-1-quarto-1511650249",
+    "images": [
+      "https://img.olx.com.br/images/34/344664539586101.jpg"
+    ],
+    "scraped_at": "2026-06-19T18:42:32.973741",
+    "is_new": true
+  },
+  {
     "id": "c50915e1ca04",
     "source": "Chaves na Mão",
     "title": "Casa com 2 quartos para alugar na Rua Amando Küster, Serra Alta, São Bento do Sul",
