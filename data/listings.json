@@ -1,5 +1,69 @@
 [
   {
+    "id": "9865c573595a",
+    "source": "ZAP Imóveis",
+    "title": "",
+    "price": null,
+    "area": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "neighborhood": null,
+    "url": "https://www.zapimoveis.com.br/imovel/venda-casa-4-quartos-com-piscina-centro-sao-bento-do-sul-240m2-id-2893910879/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.zapimoveis.com.br/img/vr-listing/808a1a2d33ffc4737b991c4c0397e417/casa-com-4-quartos-para-venda-ou-aluguel-240m-no-centro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-06-20T07:26:50.740168",
+    "is_new": true
+  },
+  {
+    "id": "002f05b2a444",
+    "source": "ZAP Imóveis",
+    "title": "",
+    "price": null,
+    "area": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "neighborhood": null,
+    "url": "https://www.zapimoveis.com.br/imovel/venda-casa-3-quartos-mobiliado-centro-sao-bento-do-sul-312m2-id-2893910876/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.zapimoveis.com.br/img/vr-listing/030c18df30503f47b732cecaca741c22/casa-com-3-quartos-para-venda-ou-aluguel-312m-no-centro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-06-20T07:26:50.754021",
+    "is_new": true
+  },
+  {
+    "id": "b9fe1fd3cd80",
+    "source": "Viva Real",
+    "title": "",
+    "price": null,
+    "area": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "neighborhood": null,
+    "url": "https://www.vivareal.com.br/imovel/casa-4-quartos-centro-sao-bento-do-sul-com-garagem-240m2-venda-RS1200000-id-2893910879/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.vivareal.com/img/vr-listing/808a1a2d33ffc4737b991c4c0397e417/casa-com-4-quartos-para-venda-ou-aluguel-240m-no-centro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-06-20T07:26:58.875618",
+    "is_new": true
+  },
+  {
+    "id": "4fb9d4f519e8",
+    "source": "Viva Real",
+    "title": "",
+    "price": null,
+    "area": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "neighborhood": null,
+    "url": "https://www.vivareal.com.br/imovel/casa-3-quartos-centro-sao-bento-do-sul-com-garagem-312m2-venda-RS2800000-id-2893910876/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.vivareal.com/img/vr-listing/030c18df30503f47b732cecaca741c22/casa-com-3-quartos-para-venda-ou-aluguel-312m-no-centro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-06-20T07:26:58.885585",
+    "is_new": true
+  },
+  {
     "id": "c5fc2ef9ab96",
     "source": "OLX",
     "title": "",
