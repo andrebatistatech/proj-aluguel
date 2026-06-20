@@ -1,5 +1,357 @@
 [
   {
+    "id": "c5fc2ef9ab96",
+    "source": "OLX",
+    "title": "",
+    "price": 2200,
+    "area": 70,
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "neighborhood": "Colonial",
+    "url": "https://sc.olx.com.br/norte-de-santa-catarina/imoveis/residencial-jardim-colonial-i-1511858929",
+    "images": [
+      "https://img.olx.com.br/images/98/983605291542149.jpg"
+    ],
+    "scraped_at": "2026-06-20T00:57:43.253493",
+    "is_new": true
+  },
+  {
+    "id": "bdeb09afe282",
+    "source": "OLX",
+    "title": "",
+    "price": 2000,
+    "area": 100,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "neighborhood": "Centro",
+    "url": "https://sc.olx.com.br/norte-de-santa-catarina/imoveis/apartamento-3-dormitorios-para-alugar-centro-sao-bento-do-sul-sc-1511858605",
+    "images": [
+      "https://img.olx.com.br/images/88/882662892634526.jpg"
+    ],
+    "scraped_at": "2026-06-20T00:57:43.254579",
+    "is_new": true
+  },
+  {
+    "id": "de275edb81a8",
+    "source": "OLX",
+    "title": "",
+    "price": 1700,
+    "area": 75,
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "neighborhood": "Schramm",
+    "url": "https://sc.olx.com.br/norte-de-santa-catarina/imoveis/apartamento-vila-lobos-1511858584",
+    "images": [
+      "https://img.olx.com.br/images/74/749691298147876.jpg"
+    ],
+    "scraped_at": "2026-06-20T00:57:43.254606",
+    "is_new": true
+  },
+  {
+    "id": "1afe0ab65510",
+    "source": "OLX",
+    "title": "",
+    "price": 2500,
+    "area": 115,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "neighborhood": "Centro",
+    "url": "https://sc.olx.com.br/norte-de-santa-catarina/imoveis/apartamento-carlos-taschek-1511858469",
+    "images": [
+      "https://img.olx.com.br/images/70/706612177782009.jpg"
+    ],
+    "scraped_at": "2026-06-20T00:57:43.254671",
+    "is_new": true
+  },
+  {
+    "id": "2e9256d8feb0",
+    "source": "ZAP Imóveis",
+    "title": "Apartamento para alugar ou à venda com 2 quartos, 1 suíte, 2 banheiros, 70 m², aceita animais e varanda em",
+    "price": 2200,
+    "area": 70,
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "neighborhood": null,
+    "url": "https://www.zapimoveis.com.br/imovel/venda-apartamento-2-quartos-com-churrasqueira-colonial-sao-bento-do-sul-70m2-id-2893911073/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.zapimoveis.com.br/img/vr-listing/ad0ce3c40f447e15af8cca3f695b5ba9/apartamento-com-2-quartos-para-venda-ou-aluguel-70m-no-colonial-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-06-20T00:57:53.230226",
+    "is_new": true
+  },
+  {
+    "id": "4187d2a2d53f",
+    "source": "ZAP Imóveis",
+    "title": "Sala/Conjunto/Escritório para alugar com 1 quarto, 2 banheiros, 55 m² e garagem em",
+    "price": 2500,
+    "area": 55,
+    "bedrooms": 1,
+    "bathrooms": 2,
+    "neighborhood": null,
+    "url": "https://www.zapimoveis.com.br/imovel/aluguel-conjunto-comercial-sala-1-quarto-centro-sao-bento-do-sul-55m2-id-2893908810/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.zapimoveis.com.br/img/vr-listing/a82a83aa9cd42b0f284d6c23256d82fa/conjunto-comercial-sala-com-1-quarto-para-alugar-55m-no-centro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-06-20T00:57:53.241030",
+    "is_new": true
+  },
+  {
+    "id": "62b4c36cc013",
+    "source": "ZAP Imóveis",
+    "title": "Apartamento para alugar com 3 quartos, 1 suíte, 2 banheiros, 1 vaga na garagem e 100 m² em",
+    "price": 2000,
+    "area": 100,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "neighborhood": null,
+    "url": "https://www.zapimoveis.com.br/imovel/aluguel-apartamento-3-quartos-centro-sao-bento-do-sul-100m2-id-2893908811/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.zapimoveis.com.br/img/vr-listing/57c96783a7b24bb9f545d695e918bb2b/apartamento-com-3-quartos-para-alugar-100m-no-centro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-06-20T00:57:53.262628",
+    "is_new": true
+  },
+  {
+    "id": "11bda04dae87",
+    "source": "ZAP Imóveis",
+    "title": "",
+    "price": null,
+    "area": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "neighborhood": null,
+    "url": "https://www.zapimoveis.com.br/imovel/venda-sobrados-3-quartos-com-churrasqueira-centro-sao-bento-do-sul-129m2-id-2893908803/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.zapimoveis.com.br/img/vr-listing/0b5bc3916fba41df547d4461ef2382fb/sobrado-com-3-quartos-para-venda-ou-aluguel-129m-no-centro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-06-20T00:57:53.280892",
+    "is_new": true
+  },
+  {
+    "id": "bc6694c86de6",
+    "source": "ZAP Imóveis",
+    "title": "",
+    "price": null,
+    "area": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "neighborhood": null,
+    "url": "https://www.zapimoveis.com.br/imovel/aluguel-conjunto-comercial-sala-3-quartos-centro-sao-bento-do-sul-70m2-id-2893910392/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.zapimoveis.com.br/img/vr-listing/f462601dcff23e6a4f39c4dd877cd90a/conjunto-comercial-sala-com-3-quartos-para-alugar-70m-no-centro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-06-20T00:57:53.293895",
+    "is_new": true
+  },
+  {
+    "id": "d9519577f1ca",
+    "source": "ZAP Imóveis",
+    "title": "",
+    "price": null,
+    "area": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "neighborhood": null,
+    "url": "https://www.zapimoveis.com.br/imovel/aluguel-conjunto-comercial-sala-centro-sao-bento-do-sul-125m2-id-2893909811/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.zapimoveis.com.br/img/vr-listing/a0289baaf0ac79a8f81c963990497333/conjunto-comercial-sala-para-alugar-125m-no-centro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-06-20T00:57:53.306364",
+    "is_new": true
+  },
+  {
+    "id": "137444b1e8b4",
+    "source": "ZAP Imóveis",
+    "title": "",
+    "price": null,
+    "area": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "neighborhood": null,
+    "url": "https://www.zapimoveis.com.br/imovel/aluguel-apartamento-2-quartos-com-interfone-schramm-sao-bento-do-sul-75m2-id-2893906529/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.zapimoveis.com.br/img/vr-listing/6e4ed838ba772675596db14a02286066/apartamento-com-2-quartos-para-alugar-75m-no-schramm-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-06-20T00:57:53.318196",
+    "is_new": true
+  },
+  {
+    "id": "479f609b55f7",
+    "source": "ZAP Imóveis",
+    "title": "",
+    "price": null,
+    "area": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "neighborhood": null,
+    "url": "https://www.zapimoveis.com.br/imovel/aluguel-apartamento-3-quartos-com-cozinha-centro-sao-bento-do-sul-115m2-id-2893909413/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.zapimoveis.com.br/img/vr-listing/3ad2e762d575fbafdba91b867f2d3214/apartamento-com-3-quartos-para-alugar-115m-no-centro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-06-20T00:57:53.330466",
+    "is_new": true
+  },
+  {
+    "id": "514a7fb8b9ed",
+    "source": "ZAP Imóveis",
+    "title": "",
+    "price": null,
+    "area": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "neighborhood": null,
+    "url": "https://www.zapimoveis.com.br/imovel/aluguel-predio-com-escada-centro-sao-bento-do-sul-35m2-id-2893910875/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.zapimoveis.com.br/img/vr-listing/261a26d8a0b8322bc87814fba6e7f56d/predio-inteiro-para-alugar-35m-no-centro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-06-20T00:57:53.343886",
+    "is_new": true
+  },
+  {
+    "id": "6da63d112c66",
+    "source": "Viva Real",
+    "title": "Apartamento para alugar com 70 m², 2 quartos, 2 banheiros, 1 vaga em",
+    "price": 2200,
+    "area": 70,
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "neighborhood": null,
+    "url": "https://www.vivareal.com.br/imovel/apartamento-2-quartos-colonial-sao-bento-do-sul-com-garagem-70m2-venda-RS360000-id-2893911073/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.vivareal.com/img/vr-listing/ad0ce3c40f447e15af8cca3f695b5ba9/apartamento-com-2-quartos-para-venda-ou-aluguel-70m-no-colonial-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-06-20T00:58:01.396329",
+    "is_new": true
+  },
+  {
+    "id": "589d6046cc96",
+    "source": "Viva Real",
+    "title": "Sala/Conjunto para alugar com 55 m², 1 quarto, 2 banheiros em",
+    "price": 2500,
+    "area": 55,
+    "bedrooms": 1,
+    "bathrooms": 2,
+    "neighborhood": null,
+    "url": "https://www.vivareal.com.br/imovel/sala-comercial-1-quartos-centro-sao-bento-do-sul-55m2-aluguel-RS2500-id-2893908810/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.vivareal.com/img/vr-listing/a82a83aa9cd42b0f284d6c23256d82fa/sala-comercial-com-1-quarto-para-alugar-55m-no-centro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-06-20T00:58:01.407356",
+    "is_new": true
+  },
+  {
+    "id": "159a8d3e6f46",
+    "source": "Viva Real",
+    "title": "Apartamento para alugar com 100 m², 3 quartos, 2 banheiros, 1 vaga em",
+    "price": 2000,
+    "area": 100,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "neighborhood": null,
+    "url": "https://www.vivareal.com.br/imovel/apartamento-3-quartos-centro-sao-bento-do-sul-com-garagem-100m2-aluguel-RS2000-id-2893908811/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.vivareal.com/img/vr-listing/57c96783a7b24bb9f545d695e918bb2b/apartamento-com-3-quartos-para-alugar-100m-no-centro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-06-20T00:58:01.431786",
+    "is_new": true
+  },
+  {
+    "id": "91ac883c9122",
+    "source": "Viva Real",
+    "title": "",
+    "price": null,
+    "area": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "neighborhood": null,
+    "url": "https://www.vivareal.com.br/imovel/sobrado-3-quartos-centro-sao-bento-do-sul-com-garagem-129m2-venda-RS720000-id-2893908803/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.vivareal.com/img/vr-listing/0b5bc3916fba41df547d4461ef2382fb/sobrado-com-3-quartos-para-venda-ou-aluguel-129m-no-centro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-06-20T00:58:01.443145",
+    "is_new": true
+  },
+  {
+    "id": "3c50237d6f40",
+    "source": "Viva Real",
+    "title": "",
+    "price": null,
+    "area": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "neighborhood": null,
+    "url": "https://www.vivareal.com.br/imovel/sala-comercial-3-quartos-centro-sao-bento-do-sul-com-garagem-70m2-aluguel-RS3000-id-2893910392/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.vivareal.com/img/vr-listing/f462601dcff23e6a4f39c4dd877cd90a/sala-comercial-com-3-quartos-para-alugar-70m-no-centro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-06-20T00:58:01.454122",
+    "is_new": true
+  },
+  {
+    "id": "5323abee3d90",
+    "source": "Viva Real",
+    "title": "",
+    "price": null,
+    "area": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "neighborhood": null,
+    "url": "https://www.vivareal.com.br/imovel/sala-comercial-centro-sao-bento-do-sul-com-garagem-125m2-aluguel-RS4000-id-2893909811/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.vivareal.com/img/vr-listing/a0289baaf0ac79a8f81c963990497333/sala-comercial-para-alugar-125m-no-centro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-06-20T00:58:01.465343",
+    "is_new": true
+  },
+  {
+    "id": "84cf3caa33d2",
+    "source": "Viva Real",
+    "title": "",
+    "price": null,
+    "area": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "neighborhood": null,
+    "url": "https://www.vivareal.com.br/imovel/apartamento-2-quartos-schramm-sao-bento-do-sul-com-garagem-75m2-aluguel-RS1700-id-2893906529/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.vivareal.com/img/vr-listing/6e4ed838ba772675596db14a02286066/apartamento-com-2-quartos-para-alugar-75m-no-schramm-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-06-20T00:58:01.476768",
+    "is_new": true
+  },
+  {
+    "id": "47ab521f76dc",
+    "source": "Viva Real",
+    "title": "",
+    "price": null,
+    "area": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "neighborhood": null,
+    "url": "https://www.vivareal.com.br/imovel/apartamento-3-quartos-centro-sao-bento-do-sul-com-garagem-115m2-aluguel-RS2500-id-2893909413/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.vivareal.com/img/vr-listing/3ad2e762d575fbafdba91b867f2d3214/apartamento-com-3-quartos-para-alugar-115m-no-centro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-06-20T00:58:01.488205",
+    "is_new": true
+  },
+  {
+    "id": "1e1040b1258e",
+    "source": "Viva Real",
+    "title": "",
+    "price": null,
+    "area": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "neighborhood": null,
+    "url": "https://www.vivareal.com.br/imovel/predio-comercial-centro-sao-bento-do-sul-35m2-aluguel-RS800-id-2893910875/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.vivareal.com/img/vr-listing/261a26d8a0b8322bc87814fba6e7f56d/predio-comercial-para-alugar-35m-no-centro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-06-20T00:58:01.499804",
+    "is_new": true
+  },
+  {
     "id": "efbc439625e4",
     "source": "OLX",
     "title": "",
