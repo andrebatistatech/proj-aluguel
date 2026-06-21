@@ -1,5 +1,37 @@
 [
   {
+    "id": "a22343ef9a18",
+    "source": "ZAP Imóveis",
+    "title": "",
+    "price": null,
+    "area": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "neighborhood": null,
+    "url": "https://www.zapimoveis.com.br/imovel/aluguel-galpao-deposito-armazem-com-rampas-cruzeiro-sao-bento-do-sul-2100m2-id-2804534921/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.zapimoveis.com.br/img/vr-listing/70c0bf1ed0a04dc374d14a400c4300aa/galpao-deposito-armazem-para-alugar-2100m-no-cruzeiro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-06-21T07:45:22.804117",
+    "is_new": true
+  },
+  {
+    "id": "b05707dbf62b",
+    "source": "Viva Real",
+    "title": "",
+    "price": null,
+    "area": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "neighborhood": null,
+    "url": "https://www.vivareal.com.br/imovel/galpao-deposito-armazem-cruzeiro-sao-bento-do-sul-com-garagem-2100m2-aluguel-RS29900-id-2804534921/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.vivareal.com/img/vr-listing/70c0bf1ed0a04dc374d14a400c4300aa/galpaodepositoarmazem-para-alugar-2100m-no-cruzeiro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-06-21T07:45:30.885740",
+    "is_new": true
+  },
+  {
     "id": "9865c573595a",
     "source": "ZAP Imóveis",
     "title": "",
