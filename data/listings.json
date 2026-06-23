@@ -1,5 +1,19 @@
 [
   {
+    "id": "2d1fca1eb47f",
+    "source": "Chaves na Mão",
+    "title": "Sobrado para Locação em São Bento do Sul, Colonial, 2 dormitórios, 2 banheiros",
+    "price": 2200,
+    "area": null,
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "neighborhood": "Colonial",
+    "url": "https://www.chavesnamao.com.br/imovel/casa-para-alugar-2-quartos-sc-sao-bento-do-sul-colonial-RS2200/id-43926270/",
+    "images": [],
+    "scraped_at": "2026-06-23T13:06:10.162527",
+    "is_new": true
+  },
+  {
     "id": "720738fd7759",
     "source": "Chaves na Mão",
     "title": "Sala Comercial 3 dormitórios para alugar Centro São Bento do Sul/SC",
