@@ -1,5 +1,33 @@
 [
   {
+    "id": "720738fd7759",
+    "source": "Chaves na Mão",
+    "title": "Sala Comercial 3 dormitórios para alugar Centro São Bento do Sul/SC",
+    "price": 3000,
+    "area": 70,
+    "bedrooms": null,
+    "bathrooms": 1,
+    "neighborhood": "Centro",
+    "url": "https://www.chavesnamao.com.br/imovel/sala-comercial-para-alugar-com-garagem-sc-sao-bento-do-sul-centro-70m2-RS3000/id-43254417/",
+    "images": [],
+    "scraped_at": "2026-06-23T07:23:01.678344",
+    "is_new": true
+  },
+  {
+    "id": "7dbe70af0b3a",
+    "source": "Chaves na Mão",
+    "title": "Sala comercial para alugar na Avenida Argolo, 873, Centro, São Bento do Sul",
+    "price": 2500,
+    "area": 55,
+    "bedrooms": null,
+    "bathrooms": 2,
+    "neighborhood": "Centro",
+    "url": "https://www.chavesnamao.com.br/imovel/sala-comercial-para-alugar-sc-sao-bento-do-sul-centro-55m2-RS2500/id-43798799/",
+    "images": [],
+    "scraped_at": "2026-06-23T07:23:01.758242",
+    "is_new": true
+  },
+  {
     "id": "a22343ef9a18",
     "source": "ZAP Imóveis",
     "title": "",
