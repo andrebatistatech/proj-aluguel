@@ -1,5 +1,21 @@
 [
   {
+    "id": "714028174459",
+    "source": "ZAP Imóveis",
+    "title": "",
+    "price": null,
+    "area": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "neighborhood": null,
+    "url": "https://www.zapimoveis.com.br/imovel/aluguel-conjunto-comercial-sala-com-infraestrutura-internet-centro-sao-bento-do-sul-125m2-id-2893909811/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.zapimoveis.com.br/img/vr-listing/a0289baaf0ac79a8f81c963990497333/conjunto-comercial-sala-para-alugar-125m-no-centro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-06-24T00:51:28.968893",
+    "is_new": true
+  },
+  {
     "id": "2d1fca1eb47f",
     "source": "Chaves na Mão",
     "title": "Sobrado para Locação em São Bento do Sul, Colonial, 2 dormitórios, 2 banheiros",
