@@ -1,5 +1,37 @@
 [
   {
+    "id": "cffcd17da42f",
+    "source": "ZAP Imóveis",
+    "title": "",
+    "price": null,
+    "area": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "neighborhood": null,
+    "url": "https://www.zapimoveis.com.br/imovel/aluguel-galpao-deposito-armazem-2-quartos-colonial-sao-bento-do-sul-1287m2-id-2895340808/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.zapimoveis.com.br/img/vr-listing/6619024b0e732f020f219622b0214b90/galpao-deposito-armazem-com-2-quartos-para-alugar-1287m-no-colonial-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-06-27T00:54:35.839002",
+    "is_new": true
+  },
+  {
+    "id": "b7de72d7a735",
+    "source": "Viva Real",
+    "title": "",
+    "price": null,
+    "area": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "neighborhood": null,
+    "url": "https://www.vivareal.com.br/imovel/galpao-deposito-armazem-2-quartos-colonial-sao-bento-do-sul-com-garagem-1287m2-aluguel-RS15000-id-2895340808/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.vivareal.com/img/vr-listing/6619024b0e732f020f219622b0214b90/galpaodepositoarmazem-com-2-quartos-para-alugar-1287m-no-colonial-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-06-27T00:54:43.873747",
+    "is_new": true
+  },
+  {
     "id": "714028174459",
     "source": "ZAP Imóveis",
     "title": "",
