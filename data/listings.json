@@ -1,5 +1,37 @@
 [
   {
+    "id": "2cd9f759306b",
+    "source": "OLX",
+    "title": "",
+    "price": 2990,
+    "area": 160,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "neighborhood": "Centro",
+    "url": "https://sc.olx.com.br/norte-de-santa-catarina/imoveis/alugo-amplo-apto-frente-rua-3q-sacada-terraco-3-garagens-centro-sbs-1514120115",
+    "images": [
+      "https://img.olx.com.br/images/77/773642418375372.jpg"
+    ],
+    "scraped_at": "2026-06-29T18:46:40.628981",
+    "is_new": true
+  },
+  {
+    "id": "981bced8eef9",
+    "source": "ZAP Imóveis",
+    "title": "",
+    "price": null,
+    "area": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "neighborhood": null,
+    "url": "https://www.zapimoveis.com.br/imovel/aluguel-galpao-deposito-armazem-com-entrada-para-caminhoes-cruzeiro-sao-bento-do-sul-2100m2-id-2804534921/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.zapimoveis.com.br/img/vr-listing/70c0bf1ed0a04dc374d14a400c4300aa/galpao-deposito-armazem-para-alugar-2100m-no-cruzeiro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-06-29T18:46:48.716697",
+    "is_new": true
+  },
+  {
     "id": "cffcd17da42f",
     "source": "ZAP Imóveis",
     "title": "",
