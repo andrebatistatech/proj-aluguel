@@ -1,5 +1,21 @@
 [
   {
+    "id": "21b75230271c",
+    "source": "OLX",
+    "title": "",
+    "price": 1250,
+    "area": 60,
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "neighborhood": "Centenário",
+    "url": "https://sc.olx.com.br/norte-de-santa-catarina/imoveis/alugo-kitnet-mobiliada-1514205881",
+    "images": [
+      "https://img.olx.com.br/images/97/973636297692239.jpg"
+    ],
+    "scraped_at": "2026-06-30T00:55:40.509703",
+    "is_new": true
+  },
+  {
     "id": "2cd9f759306b",
     "source": "OLX",
     "title": "",
