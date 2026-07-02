@@ -1,5 +1,21 @@
 [
   {
+    "id": "076237d7089c",
+    "source": "Chaves na Mão",
+    "title": "Casa com 3 quartos para alugar na Rua Leonidas Sergio Hantschel, Rio Negro, São Bento do Sul",
+    "price": 1300,
+    "area": 90,
+    "bedrooms": 3,
+    "bathrooms": 1,
+    "neighborhood": "Rio Negro",
+    "url": "https://www.chavesnamao.com.br/imovel/casa-para-alugar-3-quartos-com-garagem-sc-sao-bento-do-sul-rio-negro-90m2-RS1300/id-44280758/",
+    "images": [
+      "https://www.chavesnamao.com.br/imn/0400X0262/N/60/imoveis/157648/44280758/sc-sao-bento-do-sul-rio-negro-rua-leonidas-sergio-hantschel-casa-sobrado-para-alugar-3-quartos-6a468fea-1.jpg"
+    ],
+    "scraped_at": "2026-07-02T18:35:36.325418",
+    "is_new": true
+  },
+  {
     "id": "21b75230271c",
     "source": "OLX",
     "title": "",
