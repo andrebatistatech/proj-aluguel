@@ -1,5 +1,21 @@
 [
   {
+    "id": "297e285db78f",
+    "source": "ZAP Imóveis",
+    "title": "Imobiliaria Cidade Sbs",
+    "price": 2500,
+    "area": 115,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "neighborhood": null,
+    "url": "https://www.zapimoveis.com.br/imovel/aluguel-apartamento-3-quartos-com-churrasqueira-centro-sao-bento-do-sul-115m2-id-2893909413/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.zapimoveis.com.br/img/vr-listing/b87eac9d817f2e3d43e6b74dbbcaf78b/apartamento-com-3-quartos-para-alugar-115m-no-centro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-07-08T00:39:26.041004",
+    "is_new": true
+  },
+  {
     "id": "076237d7089c",
     "source": "Chaves na Mão",
     "title": "Casa com 3 quartos para alugar na Rua Leonidas Sergio Hantschel, Rio Negro, São Bento do Sul",
