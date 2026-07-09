@@ -1,5 +1,21 @@
 [
   {
+    "id": "edfb6ae105c4",
+    "source": "Viva Real",
+    "title": "Imobiliaria Cidade Sbs",
+    "price": 2200,
+    "area": 70,
+    "bedrooms": 2,
+    "bathrooms": null,
+    "neighborhood": null,
+    "url": "https://www.vivareal.com.br/imovel/apartamento-2-quartos-colonial-sao-bento-do-sul-com-garagem-70m2-venda-RS345000-id-2893911073/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.vivareal.com/img/vr-listing/ad0ce3c40f447e15af8cca3f695b5ba9/apartamento-com-2-quartos-para-venda-ou-aluguel-70m-no-colonial-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-07-09T00:44:10.518652",
+    "is_new": true
+  },
+  {
     "id": "297e285db78f",
     "source": "ZAP Imóveis",
     "title": "Imobiliaria Cidade Sbs",
