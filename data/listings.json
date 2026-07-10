@@ -1,5 +1,53 @@
 [
   {
+    "id": "f10e9479949e",
+    "source": "ZAP Imóveis",
+    "title": "Imobiliaria Cidade Sbs",
+    "price": 3000,
+    "area": 100,
+    "bedrooms": 3,
+    "bathrooms": 1,
+    "neighborhood": null,
+    "url": "https://www.zapimoveis.com.br/imovel/aluguel-apartamento-3-quartos-com-cozinha-rio-negro-sao-bento-do-sul-100m2-id-2897977295/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.zapimoveis.com.br/img/vr-listing/aa56fc31a1726a6e3497bee43ef694dd/apartamento-com-3-quartos-para-alugar-100m-no-rio-negro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-07-10T00:44:24.959455",
+    "is_new": true
+  },
+  {
+    "id": "55486285ac61",
+    "source": "Viva Real",
+    "title": "Imobiliaria Cidade Sbs",
+    "price": 3000,
+    "area": 100,
+    "bedrooms": 3,
+    "bathrooms": 1,
+    "neighborhood": null,
+    "url": "https://www.vivareal.com.br/imovel/apartamento-3-quartos-rio-negro-sao-bento-do-sul-com-garagem-100m2-aluguel-RS3000-id-2897977295/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.vivareal.com/img/vr-listing/aa56fc31a1726a6e3497bee43ef694dd/apartamento-com-3-quartos-para-alugar-100m-no-rio-negro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-07-10T00:44:34.079171",
+    "is_new": true
+  },
+  {
+    "id": "3478c42f9cca",
+    "source": "MGF Imóveis",
+    "title": "CASA RESIDENCIAL em São Bento do Sul - SC, Cruzeiro",
+    "price": 2350,
+    "area": null,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "neighborhood": "Cruzeiro",
+    "url": "https://sc.mgfimoveis.com.br/casa-3-quartos-cruzeiro-sao-bento-do-sul-sc-area-de-servico-312329693",
+    "images": [
+      "https://i.mgfserv.com/345x207/aHR0cHM6Ly9jZG51c28uY29tLzM2OTc1LzIwMjUvMTEvOGVkMzJhY2Q2MjRkZmU1OWI2NzUwNTQ1NWJhMDlkOTcuanBn.jpg"
+    ],
+    "scraped_at": "2026-07-10T00:45:13.305834",
+    "is_new": true
+  },
+  {
     "id": "edfb6ae105c4",
     "source": "Viva Real",
     "title": "Imobiliaria Cidade Sbs",
