@@ -1,5 +1,21 @@
 [
   {
+    "id": "ffa719e86351",
+    "source": "Chaves na Mão",
+    "title": "Apartamento para Locação em São Bento do Sul, Rio Negro, 2 dormitórios, 1 banheiro, 1 vaga",
+    "price": 1500,
+    "area": 70,
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "neighborhood": "Rio Negro",
+    "url": "https://www.chavesnamao.com.br/imovel/apartamento-para-alugar-2-quartos-com-garagem-sc-sao-bento-do-sul-rio-negro-RS1500/id-25940434/",
+    "images": [
+      "https://www.chavesnamao.com.br/imn/0400X0262/N/60/imoveis/130233/25940434/sc-sao-bento-do-sul-rio-negro-rua-fernando-gruber-apartamento-para-alugar-2-quartos-6a47aaf5-1.jpg"
+    ],
+    "scraped_at": "2026-07-14T06:50:14.237474",
+    "is_new": true
+  },
+  {
     "id": "f10e9479949e",
     "source": "ZAP Imóveis",
     "title": "Imobiliaria Cidade Sbs",
