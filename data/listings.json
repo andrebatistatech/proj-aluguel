@@ -1,5 +1,19 @@
 [
   {
+    "id": "e9f3fc619767",
+    "source": "Chaves na Mão",
+    "title": "Casa com 2 quartos para alugar na Rua Amando Küster, Serra Alta, São Bento do Sul",
+    "price": 1280,
+    "area": 60,
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "neighborhood": "Serra Alta",
+    "url": "https://www.chavesnamao.com.br/imovel/casa-para-alugar-2-quartos-com-garagem-sc-sao-bento-do-sul-serra-alta-60m2-RS1280/id-43226383/",
+    "images": [],
+    "scraped_at": "2026-07-15T12:34:11.286191",
+    "is_new": true
+  },
+  {
     "id": "5046145e1b73",
     "source": "Chaves na Mão",
     "title": "Casa com 3 quartos para alugar na Rua Daniela Patricia Mengarda, Rio Negro, São Bento do Sul",
