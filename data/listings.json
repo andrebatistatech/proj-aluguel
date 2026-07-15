@@ -1,5 +1,37 @@
 [
   {
+    "id": "12878bcb513d",
+    "source": "ZAP Imóveis",
+    "title": "Imobiliaria Cidade Sbs",
+    "price": 3000,
+    "area": 100,
+    "bedrooms": 3,
+    "bathrooms": 1,
+    "neighborhood": null,
+    "url": "https://www.zapimoveis.com.br/imovel/aluguel-apartamento-3-quartos-rio-negro-sao-bento-do-sul-100m2-id-2897977295/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.zapimoveis.com.br/img/vr-listing/aa56fc31a1726a6e3497bee43ef694dd/apartamento-com-3-quartos-para-alugar-100m-no-rio-negro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-07-15T18:28:16.226171",
+    "is_new": true
+  },
+  {
+    "id": "3510b01a2a42",
+    "source": "ZAP Imóveis",
+    "title": "Imobiliaria Cidade Sbs",
+    "price": 2500,
+    "area": 55,
+    "bedrooms": 1,
+    "bathrooms": 2,
+    "neighborhood": null,
+    "url": "https://www.zapimoveis.com.br/imovel/aluguel-conjunto-comercial-sala-1-quarto-com-escada-centro-sao-bento-do-sul-55m2-id-2893908810/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.zapimoveis.com.br/img/vr-listing/a82a83aa9cd42b0f284d6c23256d82fa/conjunto-comercial-sala-com-1-quarto-para-alugar-55m-no-centro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-07-15T18:28:16.287934",
+    "is_new": true
+  },
+  {
     "id": "e9f3fc619767",
     "source": "Chaves na Mão",
     "title": "Casa com 2 quartos para alugar na Rua Amando Küster, Serra Alta, São Bento do Sul",
