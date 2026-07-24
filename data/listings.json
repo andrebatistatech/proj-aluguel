@@ -1,5 +1,19 @@
 [
   {
+    "id": "5269e23d863e",
+    "source": "Chaves na Mão",
+    "title": "Casa com 3 quartos para alugar na Rua Daniela Patricia Mengarda, Rio Negro, São Bento do Sul",
+    "price": 2000,
+    "area": 120,
+    "bedrooms": 3,
+    "bathrooms": 1,
+    "neighborhood": "Rio Negro",
+    "url": "https://www.chavesnamao.com.br/imovel/casa-para-alugar-3-quartos-com-garagem-sc-sao-bento-do-sul-rio-negro-120m2-RS2000/id-44590041/",
+    "images": [],
+    "scraped_at": "2026-07-24T18:35:32.710802",
+    "is_new": true
+  },
+  {
     "id": "12878bcb513d",
     "source": "ZAP Imóveis",
     "title": "Imobiliaria Cidade Sbs",
