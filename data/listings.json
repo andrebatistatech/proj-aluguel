@@ -1,5 +1,309 @@
 [
   {
+    "id": "e1130a7e447a",
+    "source": "MGF Imóveis",
+    "title": "Aluguel",
+    "price": null,
+    "area": 447,
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "neighborhood": "Brasília",
+    "url": "https://sc.mgfimoveis.com.br/aluga-ou-vende-casa-no-b-brasilia-aluguel-sc-contendo-2-dormitorios-sala-185229801",
+    "images": [
+      "https://i.mgfserv.com/345x207/aHR0cHM6Ly9waG90by5tZ2ZzZXJ2LmNvbS9waG90b3MvNTEvNDBmMTU5MDFhYTNhZTQ2NjViYTE3NmQzZTYyNGJmNTEucG5n.jpg"
+    ],
+    "scraped_at": "2026-07-25T00:41:01.336244",
+    "is_new": true
+  },
+  {
+    "id": "d81a2b97a513",
+    "source": "MGF Imóveis",
+    "title": "Aluguel",
+    "price": null,
+    "area": null,
+    "bedrooms": 4,
+    "bathrooms": null,
+    "neighborhood": "Rio Negro",
+    "url": "https://sc.mgfimoveis.com.br/casa-alto-padrao-proximidades-forun-sao-bento-do-sul-aluguel-sc-sao-bento-do-sul-160663627",
+    "images": [
+      "https://i.mgfserv.com/345x207/aHR0cHM6Ly9pbWcub2x4LmNvbS5ici9pbWFnZXMvODQvODQ1OTA3MDI2MTYyNzAxLmpwZw.jpg"
+    ],
+    "scraped_at": "2026-07-25T00:41:01.346074",
+    "is_new": true
+  },
+  {
+    "id": "125fb8007d2d",
+    "source": "MGF Imóveis",
+    "title": "Aluguel",
+    "price": null,
+    "area": 200,
+    "bedrooms": 3,
+    "bathrooms": 3,
+    "neighborhood": "Centenário",
+    "url": "https://sc.mgfimoveis.com.br/casa-para-locacao-em-sao-bento-do-sul-aluguel-sc-sao-bento-do-sul-301964009",
+    "images": [
+      "https://i.mgfserv.com/345x207/aHR0cHM6Ly9pbWcub2x4LmNvbS5ici9pbWFnZXMvMzYvMzYwMzM5Nzc2NzIyNjE0LmpwZw.jpg"
+    ],
+    "scraped_at": "2026-07-25T00:41:01.355574",
+    "is_new": true
+  },
+  {
+    "id": "f997d6ae762f",
+    "source": "MGF Imóveis",
+    "title": "Aluguel",
+    "price": null,
+    "area": 99,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "neighborhood": "Dona Francisca",
+    "url": "https://sc.mgfimoveis.com.br/casa-galpao-dona-francisca-sao-bento-do-sul-ca115-aluguel-sc-sao-bento-303412153",
+    "images": [
+      "https://i.mgfserv.com/345x207/aHR0cHM6Ly9pbWcub2x4LmNvbS5ici9pbWFnZXMvMTAvMTAxMzQ2MzEyNDY1OTQyLmpwZw.jpg"
+    ],
+    "scraped_at": "2026-07-25T00:41:01.375781",
+    "is_new": true
+  },
+  {
+    "id": "63df9ca7fca5",
+    "source": "MGF Imóveis",
+    "title": "Aluguel",
+    "price": null,
+    "area": 745,
+    "bedrooms": 2,
+    "bathrooms": 3,
+    "neighborhood": "Boehmerwald",
+    "url": "https://sc.mgfimoveis.com.br/alugase-excelente-casa-em-sao-bento-do-sul-aluguel-sc-sao-bento-do-sul-303284562",
+    "images": [
+      "https://i.mgfserv.com/345x207/aHR0cHM6Ly9pbWcub2x4LmNvbS5ici9pbWFnZXMvMTgvMTg5MzY0MzEyNzM5ODk4LmpwZw.jpg"
+    ],
+    "scraped_at": "2026-07-25T00:41:01.385581",
+    "is_new": true
+  },
+  {
+    "id": "9597427d01cb",
+    "source": "MGF Imóveis",
+    "title": "Aluguel",
+    "price": null,
+    "area": 745,
+    "bedrooms": 2,
+    "bathrooms": 3,
+    "neighborhood": "Boehmerwald",
+    "url": "https://sc.mgfimoveis.com.br/alugase-casa-em-sao-bento-do-sul-aluguel-sc-sao-bento-do-sul-302100897",
+    "images": [
+      "https://i.mgfserv.com/345x207/aHR0cHM6Ly9pbWcub2x4LmNvbS5ici9pbWFnZXMvNDAvNDAyMzE5MTg4NjA1OTUyLmpwZw.jpg"
+    ],
+    "scraped_at": "2026-07-25T00:41:01.395234",
+    "is_new": true
+  },
+  {
+    "id": "d92595da4e02",
+    "source": "MGF Imóveis",
+    "title": "Aluguel",
+    "price": null,
+    "area": 150,
+    "bedrooms": 4,
+    "bathrooms": 3,
+    "neighborhood": "Brasília",
+    "url": "https://sc.mgfimoveis.com.br/casa-para-venda-3-quartos-brasilia-sao-bento-do-sul-ca29-aluguel-sc-sao-303412142",
+    "images": [
+      "https://i.mgfserv.com/345x207/aHR0cHM6Ly9pbWcub2x4LmNvbS5ici9pbWFnZXMvNTkvNTk5MzY3NjczNjk5NzI1LmpwZw.jpg"
+    ],
+    "scraped_at": "2026-07-25T00:41:01.434292",
+    "is_new": true
+  },
+  {
+    "id": "fcda88b84b88",
+    "source": "MGF Imóveis",
+    "title": "Aluguel",
+    "price": null,
+    "area": 700,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "neighborhood": "Rio Negro",
+    "url": "https://sc.mgfimoveis.com.br/casa-para-venda-rio-negro-sao-bento-do-sul-ca52-aluguel-sc-sao-bento-do-sul-300174594",
+    "images": [
+      "https://i.mgfserv.com/345x207/aHR0cHM6Ly9pbWcub2x4LmNvbS5ici9pbWFnZXMvODEvODE4MzE1MTY1ODUxMTEyLmpwZw.jpg"
+    ],
+    "scraped_at": "2026-07-25T00:41:01.443990",
+    "is_new": true
+  },
+  {
+    "id": "3187be8b7340",
+    "source": "MGF Imóveis",
+    "title": "Aluguel",
+    "price": null,
+    "area": 99,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "neighborhood": "Dona Francisca",
+    "url": "https://sc.mgfimoveis.com.br/casa-para-venda-aluguel-dona-francisca-sao-bento-do-sul-w2021ca115-aluguel-302826629",
+    "images": [
+      "https://i.mgfserv.com/345x207/aHR0cHM6Ly9pbWcub2x4LmNvbS5ici9pbWFnZXMvOTEvOTE1MzIyNzg0NjEzMjEzLmpwZw.jpg"
+    ],
+    "scraped_at": "2026-07-25T00:41:01.453616",
+    "is_new": true
+  },
+  {
+    "id": "1b5b829dcc7a",
+    "source": "MGF Imóveis",
+    "title": "Aluguel",
+    "price": null,
+    "area": 700,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "neighborhood": "Rio Negro",
+    "url": "https://sc.mgfimoveis.com.br/casa-para-venda-rio-negro-sao-bento-do-sul-ca52-aluguel-sc-sao-bento-do-sul-300473989",
+    "images": [
+      "https://i.mgfserv.com/345x207/aHR0cHM6Ly9pbWcub2x4LmNvbS5ici9pbWFnZXMvOTAvOTA5MzgwNDAxMTAwNjcxLmpwZw.jpg"
+    ],
+    "scraped_at": "2026-07-25T00:41:01.463623",
+    "is_new": true
+  },
+  {
+    "id": "6ec7f8e21185",
+    "source": "MGF Imóveis",
+    "title": "Aluguel",
+    "price": null,
+    "area": 700,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "neighborhood": "Rio Negro",
+    "url": "https://sc.mgfimoveis.com.br/casa-para-venda-rio-negro-sao-bento-do-sul-w2021ca52-aluguel-sc-sao-bento-do-302827063",
+    "images": [
+      "https://i.mgfserv.com/345x207/aHR0cHM6Ly9pbWcub2x4LmNvbS5ici9pbWFnZXMvODYvODY4MzIyMDY4NDAxMjkxLmpwZw.jpg"
+    ],
+    "scraped_at": "2026-07-25T00:41:01.472995",
+    "is_new": true
+  },
+  {
+    "id": "a13949399c55",
+    "source": "MGF Imóveis",
+    "title": "Aluguel",
+    "price": null,
+    "area": 700,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "neighborhood": "Rio Negro",
+    "url": "https://sc.mgfimoveis.com.br/casa-para-venda-rio-negro-sao-bento-do-sul-w2021ca52-aluguel-sc-sao-bento-do-301127610",
+    "images": [
+      "https://i.mgfserv.com/345x207/aHR0cHM6Ly9pbWcub2x4LmNvbS5ici9pbWFnZXMvMTAvMTAyMzA1MTcxNDUxOTUyLmpwZw.jpg"
+    ],
+    "scraped_at": "2026-07-25T00:41:01.483082",
+    "is_new": true
+  },
+  {
+    "id": "758d66536c03",
+    "source": "MGF Imóveis",
+    "title": "Aluguel",
+    "price": null,
+    "area": 180,
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "neighborhood": "Rio Negro",
+    "url": "https://sc.mgfimoveis.com.br/alugo-casa-em-sao-bento-do-sul-aluguel-sc-sao-bento-do-sul-299619167",
+    "images": [
+      "https://i.mgfserv.com/345x207/aHR0cHM6Ly9pbWcub2x4LmNvbS5ici9pbWFnZXMvNjQvNjQ4MzU0NzU0OTk3MTY5LmpwZw.jpg"
+    ],
+    "scraped_at": "2026-07-25T00:41:01.492568",
+    "is_new": true
+  },
+  {
+    "id": "b51befdf0eba",
+    "source": "MGF Imóveis",
+    "title": "Aluguel",
+    "price": null,
+    "area": 150,
+    "bedrooms": 4,
+    "bathrooms": 3,
+    "neighborhood": "Brasília",
+    "url": "https://sc.mgfimoveis.com.br/casa-para-venda-3-quartos-brasilia-sao-bento-do-sul-ca29-aluguel-sc-sao-300473609",
+    "images": [
+      "https://i.mgfserv.com/345x207/aHR0cHM6Ly9pbWcub2x4LmNvbS5ici9pbWFnZXMvOTAvOTAwMzYxMjg5NzczNDAyLmpwZw.jpg"
+    ],
+    "scraped_at": "2026-07-25T00:41:01.559560",
+    "is_new": true
+  },
+  {
+    "id": "2d27d913e5db",
+    "source": "MGF Imóveis",
+    "title": "Aluguel",
+    "price": null,
+    "area": 360,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "neighborhood": "Schramm",
+    "url": "https://sc.mgfimoveis.com.br/casa-para-venda-3-quartos-schramm-sao-bento-do-sul-w2021ca31-aluguel-sc-302826463",
+    "images": [
+      "https://i.mgfserv.com/345x207/aHR0cHM6Ly9pbWcub2x4LmNvbS5ici9pbWFnZXMvODkvODkyMzYwOTAwOTEwNDY3LmpwZw.jpg"
+    ],
+    "scraped_at": "2026-07-25T00:41:01.569391",
+    "is_new": true
+  },
+  {
+    "id": "4fd5e52f8500",
+    "source": "MGF Imóveis",
+    "title": "Aluguel",
+    "price": null,
+    "area": 360,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "neighborhood": "Schramm",
+    "url": "https://sc.mgfimoveis.com.br/casa-para-venda-3-quartos-schramm-sao-bento-do-sul-ca31-aluguel-sc-sao-300473614",
+    "images": [
+      "https://i.mgfserv.com/345x207/aHR0cHM6Ly9pbWcub2x4LmNvbS5ici9pbWFnZXMvOTAvOTA1MzM3ODgwMTEwMTY5LmpwZw.jpg"
+    ],
+    "scraped_at": "2026-07-25T00:41:01.579067",
+    "is_new": true
+  },
+  {
+    "id": "c5c50bf460fb",
+    "source": "MGF Imóveis",
+    "title": "Aluguel",
+    "price": null,
+    "area": 360,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "neighborhood": "Schramm",
+    "url": "https://sc.mgfimoveis.com.br/casa-para-venda-3-quartos-schramm-sao-bento-do-sul-w2021ca31-aluguel-sc-301122139",
+    "images": [
+      "https://i.mgfserv.com/345x207/aHR0cHM6Ly9pbWcub2x4LmNvbS5ici9pbWFnZXMvMTAvMTA4MzE5MTc3MjQ5NTA1LmpwZw.jpg"
+    ],
+    "scraped_at": "2026-07-25T00:41:01.588768",
+    "is_new": true
+  },
+  {
+    "id": "4c2e9a0e2465",
+    "source": "MGF Imóveis",
+    "title": "Aluguel",
+    "price": null,
+    "area": 360,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "neighborhood": "Schramm",
+    "url": "https://sc.mgfimoveis.com.br/casa-para-venda-3-quartos-schramm-sao-bento-do-sul-ca31-aluguel-sc-sao-299544035",
+    "images": [
+      "https://i.mgfserv.com/345x207/aHR0cHM6Ly9pbWcub2x4LmNvbS5ici9pbWFnZXMvNjIvNjIyMzc3MTU3MTQ0MTQ4LmpwZw.jpg"
+    ],
+    "scraped_at": "2026-07-25T00:41:01.598249",
+    "is_new": true
+  },
+  {
+    "id": "6bcfd1116aab",
+    "source": "MGF Imóveis",
+    "title": "Aluguel",
+    "price": null,
+    "area": 150,
+    "bedrooms": 4,
+    "bathrooms": 3,
+    "neighborhood": "Brasília",
+    "url": "https://sc.mgfimoveis.com.br/casa-para-venda-3-quartos-brasilia-sao-bento-do-sul-w2021ca29-aluguel-sc-301597384",
+    "images": [
+      "https://i.mgfserv.com/345x207/aHR0cHM6Ly9pbWcub2x4LmNvbS5ici9pbWFnZXMvMjUvMjU3MzE4MjkyNjQ5MjA0LmpwZw.jpg"
+    ],
+    "scraped_at": "2026-07-25T00:41:01.607911",
+    "is_new": true
+  },
+  {
     "id": "5269e23d863e",
     "source": "Chaves na Mão",
     "title": "Casa com 3 quartos para alugar na Rua Daniela Patricia Mengarda, Rio Negro, São Bento do Sul",
