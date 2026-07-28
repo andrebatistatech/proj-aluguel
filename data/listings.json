@@ -1,5 +1,33 @@
 [
   {
+    "id": "327f2d9785e6",
+    "source": "Chaves na Mão",
+    "title": "Casa com 3 quartos para alugar na Rua Jose Roesler, Serra Alta, São Bento do Sul",
+    "price": 1400,
+    "area": null,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "neighborhood": "Serra Alta",
+    "url": "https://www.chavesnamao.com.br/imovel/casa-para-alugar-3-quartos-com-garagem-sc-sao-bento-do-sul-serra-alta-RS1400/id-44899909/",
+    "images": [],
+    "scraped_at": "2026-07-28T06:58:45.275300",
+    "is_new": true
+  },
+  {
+    "id": "f775c81377c2",
+    "source": "Chaves na Mão",
+    "title": "Casa para Locação em São Bento do Sul, Brasilia, 2 dormitórios, 1 banheiro",
+    "price": 1700,
+    "area": 881,
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "neighborhood": "Brasilia",
+    "url": "https://www.chavesnamao.com.br/imovel/casa-para-alugar-2-quartos-sc-sao-bento-do-sul-brasilia-881m2-RS1700/id-44547804/",
+    "images": [],
+    "scraped_at": "2026-07-28T06:58:45.302841",
+    "is_new": true
+  },
+  {
     "id": "e1130a7e447a",
     "source": "MGF Imóveis",
     "title": "Aluguel",
