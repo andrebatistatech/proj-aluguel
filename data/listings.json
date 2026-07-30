@@ -1,5 +1,21 @@
 [
   {
+    "id": "ce519ada39ba",
+    "source": "MGF Imóveis",
+    "title": "Aluguel",
+    "price": null,
+    "area": 360,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "neighborhood": "Schramm",
+    "url": "https://sc.mgfimoveis.com.br/casa-para-venda-3-quartos-schramm-sao-bento-do-sul-w2021ca31-aluguel-sc-301669415",
+    "images": [
+      "https://a.deztop.com/image/000/069/998/69998083_640x480.webp"
+    ],
+    "scraped_at": "2026-07-30T00:37:10.482134",
+    "is_new": true
+  },
+  {
     "id": "327f2d9785e6",
     "source": "Chaves na Mão",
     "title": "Casa com 3 quartos para alugar na Rua Jose Roesler, Serra Alta, São Bento do Sul",
