@@ -1,5 +1,51 @@
 [
   {
+    "id": "15b96d38325b",
+    "source": "ZAP Imóveis",
+    "title": "Apartamento à venda com 2 quartos, 1 banheiro, 1 vaga na garagem, churrasqueira no condomínio e varanda em",
+    "price": 2500,
+    "area": 69,
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "neighborhood": null,
+    "url": "https://www.zapimoveis.com.br/imovel/aluguel-apartamento-2-quartos-mobiliado-rio-negro-sao-bento-do-sul-69m2-id-2887994384/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.zapimoveis.com.br/img/vr-listing/7383cf64a969fb58a1e412b39ef79022/apartamento-com-2-quartos-para-alugar-69m-no-rio-negro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-08-04T06:57:26.308591",
+    "is_new": true
+  },
+  {
+    "id": "2c6e72fb3cc4",
+    "source": "Viva Real",
+    "title": "Apartamento com varanda, condomínio com churrasqueira, 2 dormitórios e 1 banheiro para comprar em",
+    "price": 2500,
+    "area": 69,
+    "bedrooms": null,
+    "bathrooms": 1,
+    "neighborhood": null,
+    "url": "https://www.vivareal.com.br/imovel/apartamento-2-quartos-rio-negro-sao-bento-do-sul-com-garagem-69m2-aluguel-RS2500-id-2887994384/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.vivareal.com/img/vr-listing/7383cf64a969fb58a1e412b39ef79022/apartamento-com-2-quartos-para-alugar-69m-no-rio-negro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-08-04T06:57:34.443487",
+    "is_new": true
+  },
+  {
+    "id": "af4104df1b1e",
+    "source": "Chaves na Mão",
+    "title": "Sobrado para Locação em São Bento do Sul, Colonial, 2 dormitórios, 2 banheiros",
+    "price": 2200,
+    "area": 77,
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "neighborhood": "Colonial",
+    "url": "https://www.chavesnamao.com.br/imovel/casa-para-alugar-2-quartos-sc-sao-bento-do-sul-colonial-80m2-RS2200/id-43926270/",
+    "images": [],
+    "scraped_at": "2026-08-04T06:58:06.358491",
+    "is_new": true
+  },
+  {
     "id": "ce519ada39ba",
     "source": "MGF Imóveis",
     "title": "Aluguel",
