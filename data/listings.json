@@ -1,5 +1,37 @@
 [
   {
+    "id": "01797f1a0c18",
+    "source": "ZAP Imóveis",
+    "title": "Imobiliaria Cidade Sbs",
+    "price": 3000,
+    "area": 116,
+    "bedrooms": 3,
+    "bathrooms": 3,
+    "neighborhood": null,
+    "url": "https://www.zapimoveis.com.br/imovel/venda-apartamento-3-quartos-com-churrasqueira-centro-sao-bento-do-sul-116m2-id-2903399611/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.zapimoveis.com.br/img/vr-listing/fb9a3a6491b11cbb42d89083c536acdb/apartamento-com-3-quartos-para-venda-ou-aluguel-116m-no-centro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-08-05T02:32:40.193010",
+    "is_new": true
+  },
+  {
+    "id": "331dba36fe08",
+    "source": "Viva Real",
+    "title": "Imobiliaria Cidade Sbs",
+    "price": 3000,
+    "area": 116,
+    "bedrooms": 3,
+    "bathrooms": 3,
+    "neighborhood": null,
+    "url": "https://www.vivareal.com.br/imovel/apartamento-3-quartos-centro-sao-bento-do-sul-com-garagem-116m2-venda-RS700000-id-2903399611/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.vivareal.com/img/vr-listing/fb9a3a6491b11cbb42d89083c536acdb/apartamento-com-3-quartos-para-venda-ou-aluguel-116m-no-centro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-08-05T02:32:48.430201",
+    "is_new": true
+  },
+  {
     "id": "15b96d38325b",
     "source": "ZAP Imóveis",
     "title": "Apartamento à venda com 2 quartos, 1 banheiro, 1 vaga na garagem, churrasqueira no condomínio e varanda em",
