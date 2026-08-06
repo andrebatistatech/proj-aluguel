@@ -1,5 +1,69 @@
 [
   {
+    "id": "581e9ec3fe72",
+    "source": "ZAP Imóveis",
+    "title": "Imobiliaria Cidade Sbs",
+    "price": 2500,
+    "area": 115,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "neighborhood": null,
+    "url": "https://www.zapimoveis.com.br/imovel/aluguel-apartamento-3-quartos-com-churrasqueira-centro-sao-bento-do-sul-115m2-id-2903637948/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.zapimoveis.com.br/img/vr-listing/b87eac9d817f2e3d43e6b74dbbcaf78b/apartamento-com-3-quartos-para-alugar-115m-no-centro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-08-06T02:35:10.193102",
+    "is_new": true
+  },
+  {
+    "id": "3985f93edaa1",
+    "source": "ZAP Imóveis",
+    "title": "Imobiliaria Cidade Sbs",
+    "price": 3000,
+    "area": 144,
+    "bedrooms": 3,
+    "bathrooms": 3,
+    "neighborhood": null,
+    "url": "https://www.zapimoveis.com.br/imovel/venda-apartamento-3-quartos-com-churrasqueira-centro-sao-bento-do-sul-144m2-id-2903399611/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.zapimoveis.com.br/img/vr-listing/fb9a3a6491b11cbb42d89083c536acdb/apartamento-com-3-quartos-para-venda-ou-aluguel-144m-no-centro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-08-06T02:35:10.203784",
+    "is_new": true
+  },
+  {
+    "id": "cf2378f522b8",
+    "source": "Viva Real",
+    "title": "Imobiliaria Cidade Sbs",
+    "price": 2500,
+    "area": 115,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "neighborhood": null,
+    "url": "https://www.vivareal.com.br/imovel/apartamento-3-quartos-centro-sao-bento-do-sul-com-garagem-115m2-aluguel-RS2500-id-2903637948/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.vivareal.com/img/vr-listing/b87eac9d817f2e3d43e6b74dbbcaf78b/apartamento-com-3-quartos-para-alugar-115m-no-centro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-08-06T02:35:18.609967",
+    "is_new": true
+  },
+  {
+    "id": "0d14f08545e8",
+    "source": "Viva Real",
+    "title": "Imobiliaria Cidade Sbs",
+    "price": 3000,
+    "area": 144,
+    "bedrooms": 3,
+    "bathrooms": 3,
+    "neighborhood": null,
+    "url": "https://www.vivareal.com.br/imovel/apartamento-3-quartos-centro-sao-bento-do-sul-com-garagem-144m2-venda-RS700000-id-2903399611/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.vivareal.com/img/vr-listing/fb9a3a6491b11cbb42d89083c536acdb/apartamento-com-3-quartos-para-venda-ou-aluguel-144m-no-centro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-08-06T02:35:18.620352",
+    "is_new": true
+  },
+  {
     "id": "01797f1a0c18",
     "source": "ZAP Imóveis",
     "title": "Imobiliaria Cidade Sbs",
