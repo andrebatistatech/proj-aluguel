@@ -1,5 +1,21 @@
 [
   {
+    "id": "4f06e4fe63d2",
+    "source": "Chaves na Mão",
+    "title": "Apartamento para Locação em São Bento do Sul, Schramm, 1 dormitório, 1 banheiro, 1 vaga",
+    "price": 1700,
+    "area": 61,
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "neighborhood": "Schramm",
+    "url": "https://www.chavesnamao.com.br/imovel/apartamento-para-alugar-1-quarto-com-garagem-sc-sao-bento-do-sul-schramm-RS1700/id-45046843/",
+    "images": [
+      "https://www.chavesnamao.com.br/imn/0400X0262/N/60/imoveis/130233/45046843/sc-sao-bento-do-sul-schramm-nao-encontrado-apartamento-para-alugar-2-quartos-6a64abfb-1.jpg"
+    ],
+    "scraped_at": "2026-08-11T07:08:21.091225",
+    "is_new": true
+  },
+  {
     "id": "adfa19b3d32a",
     "source": "ZAP Imóveis",
     "title": "Imobiliaria Cidade Sbs",
