@@ -1,5 +1,19 @@
 [
   {
+    "id": "5411d13540b2",
+    "source": "Chaves na Mão",
+    "title": "Sala comercial com 2 salas para alugar na Rua Cecília Weiss, Oxford, São Bento do Sul",
+    "price": 2700,
+    "area": 208,
+    "bedrooms": null,
+    "bathrooms": 1,
+    "neighborhood": "Oxford",
+    "url": "https://www.chavesnamao.com.br/imovel/sala-comercial-para-alugar-2-salas-sc-sao-bento-do-sul-oxford-208m2-RS2700/id-45444196/",
+    "images": [],
+    "scraped_at": "2026-08-11T13:06:10.716188",
+    "is_new": true
+  },
+  {
     "id": "4f06e4fe63d2",
     "source": "Chaves na Mão",
     "title": "Apartamento para Locação em São Bento do Sul, Schramm, 1 dormitório, 1 banheiro, 1 vaga",
