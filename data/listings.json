@@ -1,5 +1,21 @@
 [
   {
+    "id": "84192bb10525",
+    "source": "ZAP Imóveis",
+    "title": "Imobiliaria Cidade Sbs",
+    "price": 2800,
+    "area": 95,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "neighborhood": null,
+    "url": "https://www.zapimoveis.com.br/imovel/venda-apartamento-3-quartos-com-escada-centro-sao-bento-do-sul-95m2-id-2898707238/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.zapimoveis.com.br/img/vr-listing/5c6506f6792fbe65c0917cdf3c571efe/apartamento-com-3-quartos-para-venda-ou-aluguel-95m-no-centro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-08-14T13:06:00.067884",
+    "is_new": true
+  },
+  {
     "id": "5411d13540b2",
     "source": "Chaves na Mão",
     "title": "Sala comercial com 2 salas para alugar na Rua Cecília Weiss, Oxford, São Bento do Sul",
