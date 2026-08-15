@@ -1,5 +1,21 @@
 [
   {
+    "id": "44aac291849e",
+    "source": "Viva Real",
+    "title": "Imobiliaria Cidade Sbs",
+    "price": 2500,
+    "area": 77,
+    "bedrooms": null,
+    "bathrooms": null,
+    "neighborhood": null,
+    "url": "https://www.vivareal.com.br/imovel/apartamento-2-quartos-rio-negro-sao-bento-do-sul-com-garagem-77m2-venda-RS415000-id-2893909810/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.vivareal.com/img/vr-listing/4f409b2cc30b893a4c21d829d54be517/apartamento-com-2-quartos-para-venda-ou-aluguel-77m-no-rio-negro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-08-15T06:38:03.054881",
+    "is_new": true
+  },
+  {
     "id": "87fa19b3287d",
     "source": "ZAP Imóveis",
     "title": "Imobiliaria Cidade Sbs",
