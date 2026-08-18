@@ -1,5 +1,33 @@
 [
   {
+    "id": "fb6392fea473",
+    "source": "Chaves na Mão",
+    "title": "Vai vagar em 20/08 Casa geminada com 2 DORMITÓRIOS - UNIDADE 1",
+    "price": 1000,
+    "area": null,
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "neighborhood": "Boehmerwald",
+    "url": "https://www.chavesnamao.com.br/imovel/casa-para-alugar-2-quartos-com-garagem-sc-sao-bento-do-sul-boehmerwald-RS1000/id-26574699/",
+    "images": [],
+    "scraped_at": "2026-08-18T06:43:43.200700",
+    "is_new": true
+  },
+  {
+    "id": "21a831e16d8a",
+    "source": "Chaves na Mão",
+    "title": "Casa com 2 quartos para alugar na Rua Maria Liebl, Rio Vermelho Estação, São Bento do Sul",
+    "price": 1150,
+    "area": 50,
+    "bedrooms": 2,
+    "bathrooms": null,
+    "neighborhood": "Rio Vermelho Estação",
+    "url": "https://www.chavesnamao.com.br/imovel/casa-para-alugar-2-quartos-com-garagem-sc-sao-bento-do-sul-rio-vermelho-estacao-50m2-RS1150/id-27788573/",
+    "images": [],
+    "scraped_at": "2026-08-18T06:43:43.240585",
+    "is_new": true
+  },
+  {
     "id": "44aac291849e",
     "source": "Viva Real",
     "title": "Imobiliaria Cidade Sbs",
