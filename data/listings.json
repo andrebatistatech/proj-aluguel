@@ -1,5 +1,101 @@
 [
   {
+    "id": "15bb75cb4057",
+    "source": "ZAP Imóveis",
+    "title": "Imobiliaria Cidade Sbs",
+    "price": 2200,
+    "area": 70,
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "neighborhood": null,
+    "url": "https://www.zapimoveis.com.br/imovel/aluguel-apartamento-2-quartos-com-churrasqueira-colonial-sao-bento-do-sul-70m2-id-2893911073/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.zapimoveis.com.br/img/vr-listing/ad0ce3c40f447e15af8cca3f695b5ba9/apartamento-com-2-quartos-para-alugar-70m-no-colonial-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-08-19T18:40:09.399193",
+    "is_new": true
+  },
+  {
+    "id": "20c682b2f30b",
+    "source": "ZAP Imóveis",
+    "title": "Imobiliaria Cidade Sbs",
+    "price": 2800,
+    "area": 95,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "neighborhood": null,
+    "url": "https://www.zapimoveis.com.br/imovel/aluguel-apartamento-3-quartos-com-escada-centro-sao-bento-do-sul-95m2-id-2898707238/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.zapimoveis.com.br/img/vr-listing/5c6506f6792fbe65c0917cdf3c571efe/apartamento-com-3-quartos-para-alugar-95m-no-centro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-08-19T18:40:09.411273",
+    "is_new": true
+  },
+  {
+    "id": "b97a5615c5b7",
+    "source": "ZAP Imóveis",
+    "title": "Imobiliaria Cidade Sbs",
+    "price": 2500,
+    "area": 77,
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "neighborhood": null,
+    "url": "https://www.zapimoveis.com.br/imovel/aluguel-apartamento-2-quartos-mobiliado-rio-negro-sao-bento-do-sul-77m2-id-2893909810/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.zapimoveis.com.br/img/vr-listing/4f409b2cc30b893a4c21d829d54be517/apartamento-com-2-quartos-para-alugar-77m-no-rio-negro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-08-19T18:40:09.448766",
+    "is_new": true
+  },
+  {
+    "id": "c7c85474e58f",
+    "source": "Viva Real",
+    "title": "Imobiliaria Cidade Sbs",
+    "price": 2200,
+    "area": 70,
+    "bedrooms": 2,
+    "bathrooms": null,
+    "neighborhood": null,
+    "url": "https://www.vivareal.com.br/imovel/apartamento-2-quartos-colonial-sao-bento-do-sul-com-garagem-70m2-aluguel-RS2200-id-2893911073/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.vivareal.com/img/vr-listing/ad0ce3c40f447e15af8cca3f695b5ba9/apartamento-com-2-quartos-para-alugar-70m-no-colonial-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-08-19T18:40:17.757088",
+    "is_new": true
+  },
+  {
+    "id": "7bf247741af8",
+    "source": "Viva Real",
+    "title": "Imobiliaria Cidade Sbs",
+    "price": 2800,
+    "area": 95,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "neighborhood": null,
+    "url": "https://www.vivareal.com.br/imovel/apartamento-3-quartos-centro-sao-bento-do-sul-com-garagem-95m2-aluguel-RS2800-id-2898707238/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.vivareal.com/img/vr-listing/5c6506f6792fbe65c0917cdf3c571efe/apartamento-com-3-quartos-para-alugar-95m-no-centro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-08-19T18:40:17.766984",
+    "is_new": true
+  },
+  {
+    "id": "c65dc210b43c",
+    "source": "Viva Real",
+    "title": "Imobiliaria Cidade Sbs",
+    "price": 2500,
+    "area": 77,
+    "bedrooms": null,
+    "bathrooms": null,
+    "neighborhood": null,
+    "url": "https://www.vivareal.com.br/imovel/apartamento-2-quartos-rio-negro-sao-bento-do-sul-com-garagem-77m2-aluguel-RS2500-id-2893909810/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.vivareal.com/img/vr-listing/4f409b2cc30b893a4c21d829d54be517/apartamento-com-2-quartos-para-alugar-77m-no-rio-negro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-08-19T18:40:17.797389",
+    "is_new": true
+  },
+  {
     "id": "fb6392fea473",
     "source": "Chaves na Mão",
     "title": "Vai vagar em 20/08 Casa geminada com 2 DORMITÓRIOS - UNIDADE 1",
