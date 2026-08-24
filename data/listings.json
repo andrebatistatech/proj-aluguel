@@ -1,5 +1,37 @@
 [
   {
+    "id": "a40fc9ae903f",
+    "source": "ZAP Imóveis",
+    "title": "Apartamento para alugar com 85 m², 2 quartos, 2 banheiros, 1 vaga em",
+    "price": 2500,
+    "area": 85,
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "neighborhood": null,
+    "url": "https://www.zapimoveis.com.br/imovel/aluguel-apartamento-2-quartos-centro-sao-bento-do-sul-85m2-id-2907519170/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.zapimoveis.com.br/img/vr-listing/5c5d863481fd7c72123a2951b0e0d726/apartamento-com-2-quartos-para-alugar-85m-no-centro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-08-24T18:39:45.649171",
+    "is_new": true
+  },
+  {
+    "id": "0cbf2f04a871",
+    "source": "Viva Real",
+    "title": "Apartamento para alugar com 85 m², 2 quartos, 2 banheiros, 1 vaga em",
+    "price": 2500,
+    "area": 85,
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "neighborhood": null,
+    "url": "https://www.vivareal.com.br/imovel/apartamento-2-quartos-centro-sao-bento-do-sul-com-garagem-85m2-aluguel-RS2500-id-2907519170/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.vivareal.com/img/vr-listing/5c5d863481fd7c72123a2951b0e0d726/apartamento-com-2-quartos-para-alugar-85m-no-centro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-08-24T18:39:53.951092",
+    "is_new": true
+  },
+  {
     "id": "15bb75cb4057",
     "source": "ZAP Imóveis",
     "title": "Imobiliaria Cidade Sbs",
