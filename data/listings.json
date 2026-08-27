@@ -1,5 +1,37 @@
 [
   {
+    "id": "26dac7413dc2",
+    "source": "ZAP Imóveis",
+    "title": "Ponto comercial/Loja/Box para alugar com 104 m², 1 banheiro, 2 vagas em",
+    "price": 2500,
+    "area": 104,
+    "bedrooms": null,
+    "bathrooms": 1,
+    "neighborhood": null,
+    "url": "https://www.zapimoveis.com.br/imovel/aluguel-loja-salao-com-seguranca-interna-cruzeiro-sao-bento-do-sul-104m2-id-2907958374/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.zapimoveis.com.br/img/vr-listing/45ff9c5f2d45620d600e323ed37e4dd4/loja-salao-ponto-comercial-para-alugar-104m-no-cruzeiro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-08-27T07:53:28.498365",
+    "is_new": true
+  },
+  {
+    "id": "abd91a604c11",
+    "source": "Viva Real",
+    "title": "Ponto comercial/Loja/Box para alugar com 104 m², 1 banheiro, 2 vagas em",
+    "price": 2500,
+    "area": 104,
+    "bedrooms": null,
+    "bathrooms": 1,
+    "neighborhood": null,
+    "url": "https://www.vivareal.com.br/imovel/ponto-comercial-cruzeiro-sao-bento-do-sul-com-garagem-104m2-aluguel-RS2500-id-2907958374/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.vivareal.com/img/vr-listing/45ff9c5f2d45620d600e323ed37e4dd4/ponto-comercial-para-alugar-104m-no-cruzeiro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-08-27T07:53:36.821177",
+    "is_new": true
+  },
+  {
     "id": "116cba01e560",
     "source": "ZAP Imóveis",
     "title": "Sala/Conjunto para alugar com 104 m², 1 banheiro, 2 vagas em",
