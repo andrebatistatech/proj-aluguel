@@ -1,5 +1,51 @@
 [
   {
+    "id": "35cbf7eabde9",
+    "source": "ZAP Imóveis",
+    "title": "Apartamento para alugar com 85 m², 2 quartos, 2 banheiros, 1 vaga em",
+    "price": 2500,
+    "area": 85,
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "neighborhood": null,
+    "url": "https://www.zapimoveis.com.br/imovel/aluguel-apartamento-2-quartos-com-varanda-centro-sao-bento-do-sul-85m2-id-2907519170/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.zapimoveis.com.br/img/vr-listing/5c5d863481fd7c72123a2951b0e0d726/apartamento-com-2-quartos-para-alugar-85m-no-centro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-08-27T21:52:49.430604",
+    "is_new": true
+  },
+  {
+    "id": "7eabd7589545",
+    "source": "ZAP Imóveis",
+    "title": "Ponto comercial/Loja/Box para alugar com 104 m², 1 banheiro, 2 vagas em",
+    "price": 2500,
+    "area": 104,
+    "bedrooms": null,
+    "bathrooms": 1,
+    "neighborhood": null,
+    "url": "https://www.zapimoveis.com.br/imovel/aluguel-loja-salao-cruzeiro-sao-bento-do-sul-104m2-id-2907958374/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.zapimoveis.com.br/img/vr-listing/45ff9c5f2d45620d600e323ed37e4dd4/loja-salao-ponto-comercial-para-alugar-104m-no-cruzeiro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-08-27T21:52:49.472758",
+    "is_new": true
+  },
+  {
+    "id": "09fad38a4e6c",
+    "source": "Chaves na Mão",
+    "title": "Casa com 2 quartos para alugar na Rua Maria Liebl, Rio Vermelho Estação, São Bento do Sul",
+    "price": 1200,
+    "area": 50,
+    "bedrooms": 2,
+    "bathrooms": null,
+    "neighborhood": "Rio Vermelho Estação",
+    "url": "https://www.chavesnamao.com.br/imovel/casa-para-alugar-2-quartos-com-garagem-sc-sao-bento-do-sul-rio-vermelho-estacao-50m2-RS1200/id-27788573/",
+    "images": [],
+    "scraped_at": "2026-08-27T21:53:29.102679",
+    "is_new": true
+  },
+  {
     "id": "26dac7413dc2",
     "source": "ZAP Imóveis",
     "title": "Ponto comercial/Loja/Box para alugar com 104 m², 1 banheiro, 2 vagas em",
