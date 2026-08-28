@@ -1,5 +1,21 @@
 [
   {
+    "id": "5bd00e6667ee",
+    "source": "ZAP Imóveis",
+    "title": "Apartamento para alugar com 85 m², 2 quartos, 2 banheiros, 1 vaga em",
+    "price": 2500,
+    "area": 85,
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "neighborhood": null,
+    "url": "https://www.zapimoveis.com.br/imovel/aluguel-apartamento-2-quartos-com-cozinha-centro-sao-bento-do-sul-85m2-id-2907519170/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.zapimoveis.com.br/img/vr-listing/5c5d863481fd7c72123a2951b0e0d726/apartamento-com-2-quartos-para-alugar-85m-no-centro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-08-28T21:46:43.543885",
+    "is_new": true
+  },
+  {
     "id": "57405f471b63",
     "source": "ZAP Imóveis",
     "title": "Apartamento para alugar com 83 m², 1 quarto, 2 banheiros, 1 vaga em",
