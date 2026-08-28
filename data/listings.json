@@ -1,5 +1,37 @@
 [
   {
+    "id": "57405f471b63",
+    "source": "ZAP Imóveis",
+    "title": "Apartamento para alugar com 83 m², 1 quarto, 2 banheiros, 1 vaga em",
+    "price": 2800,
+    "area": 83,
+    "bedrooms": 1,
+    "bathrooms": 2,
+    "neighborhood": null,
+    "url": "https://www.zapimoveis.com.br/imovel/aluguel-apartamento-1-quarto-com-churrasqueira-cruzeiro-sao-bento-do-sul-83m2-id-2908293318/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.zapimoveis.com.br/img/vr-listing/6315038ad02a7aad755b2c0c710e2d5f/apartamento-com-1-quarto-para-alugar-83m-no-cruzeiro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-08-28T09:57:27.354307",
+    "is_new": true
+  },
+  {
+    "id": "8c1cee15b1d4",
+    "source": "Viva Real",
+    "title": "Apartamento para alugar com 83 m², 1 quarto, 2 banheiros, 1 vaga em",
+    "price": 2800,
+    "area": 83,
+    "bedrooms": 1,
+    "bathrooms": 2,
+    "neighborhood": null,
+    "url": "https://www.vivareal.com.br/imovel/apartamento-1-quartos-cruzeiro-sao-bento-do-sul-com-garagem-83m2-aluguel-RS2800-id-2908293318/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.vivareal.com/img/vr-listing/6315038ad02a7aad755b2c0c710e2d5f/apartamento-com-1-quarto-para-alugar-83m-no-cruzeiro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-08-28T09:57:35.661233",
+    "is_new": true
+  },
+  {
     "id": "35cbf7eabde9",
     "source": "ZAP Imóveis",
     "title": "Apartamento para alugar com 85 m², 2 quartos, 2 banheiros, 1 vaga em",
