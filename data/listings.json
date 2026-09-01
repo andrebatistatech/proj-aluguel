@@ -1,5 +1,53 @@
 [
   {
+    "id": "0f04a407afbf",
+    "source": "ZAP Imóveis",
+    "title": "Apartamento para alugar com 85 m², 2 quartos, 2 banheiros, 1 vaga em",
+    "price": 2500,
+    "area": 85,
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "neighborhood": null,
+    "url": "https://www.zapimoveis.com.br/imovel/aluguel-apartamento-2-quartos-com-area-de-servico-centro-sao-bento-do-sul-85m2-id-2907519170/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.zapimoveis.com.br/img/vr-listing/5c5d863481fd7c72123a2951b0e0d726/apartamento-com-2-quartos-para-alugar-85m-no-centro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-09-01T16:10:37.025424",
+    "is_new": true
+  },
+  {
+    "id": "3218886c1e52",
+    "source": "ZAP Imóveis",
+    "title": "Sobrado para alugar com 120 m², 2 quartos, 2 banheiros, 1 vaga em",
+    "price": 2600,
+    "area": 120,
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "neighborhood": null,
+    "url": "https://www.zapimoveis.com.br/imovel/aluguel-sobrados-2-quartos-com-churrasqueira-colonial-sao-bento-do-sul-120m2-id-2909224412/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.zapimoveis.com.br/img/vr-listing/b6c8ee4cedb0d29a6a4069cae63f49f9/sobrado-com-2-quartos-para-alugar-120m-no-colonial-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-09-01T16:10:37.177918",
+    "is_new": true
+  },
+  {
+    "id": "e3b78b8c7002",
+    "source": "Viva Real",
+    "title": "Sobrado para alugar com 120 m², 2 quartos, 2 banheiros, 1 vaga em",
+    "price": 2600,
+    "area": 120,
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "neighborhood": null,
+    "url": "https://www.vivareal.com.br/imovel/sobrado-2-quartos-colonial-sao-bento-do-sul-com-garagem-120m2-aluguel-RS2600-id-2909224412/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.vivareal.com/img/vr-listing/b6c8ee4cedb0d29a6a4069cae63f49f9/sobrado-com-2-quartos-para-alugar-120m-no-colonial-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-09-01T16:10:45.402801",
+    "is_new": true
+  },
+  {
     "id": "7e69e5fd9e95",
     "source": "Chaves na Mão",
     "title": "Apartamento para Locação em São Bento do Sul, Schramm, 2 dormitórios, 1 banheiro, 1 vaga",
