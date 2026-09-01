@@ -1,5 +1,53 @@
 [
   {
+    "id": "1c7440452585",
+    "source": "ZAP Imóveis",
+    "title": "Apartamento para alugar com 85 m², 2 quartos, 2 banheiros, 1 vaga em",
+    "price": 2500,
+    "area": 85,
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "neighborhood": null,
+    "url": "https://www.zapimoveis.com.br/imovel/aluguel-apartamento-2-quartos-com-lavabo-centro-sao-bento-do-sul-85m2-id-2907519170/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.zapimoveis.com.br/img/vr-listing/5c5d863481fd7c72123a2951b0e0d726/apartamento-com-2-quartos-para-alugar-85m-no-centro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-09-01T03:55:07.941054",
+    "is_new": true
+  },
+  {
+    "id": "e7b54523b45d",
+    "source": "ZAP Imóveis",
+    "title": "Sala/Conjunto para alugar com 108 m², 1 banheiro, 2 vagas em",
+    "price": 2700,
+    "area": 108,
+    "bedrooms": null,
+    "bathrooms": 1,
+    "neighborhood": null,
+    "url": "https://www.zapimoveis.com.br/imovel/aluguel-conjunto-comercial-sala-com-seguranca-interna-cruzeiro-sao-bento-do-sul-108m2-id-2909127817/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.zapimoveis.com.br/img/vr-listing/aa94361ba9f6cb08f867db4d1ab57c04/conjunto-comercial-sala-para-alugar-108m-no-cruzeiro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-09-01T03:55:08.083127",
+    "is_new": true
+  },
+  {
+    "id": "521e625c4473",
+    "source": "Viva Real",
+    "title": "Sala/Conjunto para alugar com 108 m², 1 banheiro, 2 vagas em",
+    "price": 2700,
+    "area": 108,
+    "bedrooms": null,
+    "bathrooms": 1,
+    "neighborhood": null,
+    "url": "https://www.vivareal.com.br/imovel/sala-comercial-cruzeiro-sao-bento-do-sul-com-garagem-108m2-aluguel-RS2700-id-2909127817/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.vivareal.com/img/vr-listing/aa94361ba9f6cb08f867db4d1ab57c04/sala-comercial-para-alugar-108m-no-cruzeiro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-09-01T03:55:16.627891",
+    "is_new": true
+  },
+  {
     "id": "5bd00e6667ee",
     "source": "ZAP Imóveis",
     "title": "Apartamento para alugar com 85 m², 2 quartos, 2 banheiros, 1 vaga em",
