@@ -1,5 +1,37 @@
 [
   {
+    "id": "95f60e53f61b",
+    "source": "ZAP Imóveis",
+    "title": "Apartamento para alugar com 85 m², 1 quarto, 2 banheiros, 2 vagas em",
+    "price": 2300,
+    "area": 85,
+    "bedrooms": 1,
+    "bathrooms": 2,
+    "neighborhood": null,
+    "url": "https://www.zapimoveis.com.br/imovel/aluguel-apartamento-1-quarto-com-churrasqueira-rio-negro-sao-bento-do-sul-85m2-id-2909941338/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.zapimoveis.com.br/img/vr-listing/998cd0b344a1d26ac60c302e641b34ac/apartamento-com-1-quarto-para-alugar-85m-no-rio-negro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-09-04T15:52:48.382991",
+    "is_new": true
+  },
+  {
+    "id": "040cbe60402f",
+    "source": "Viva Real",
+    "title": "Apartamento para alugar com 85 m², 1 quarto, 2 banheiros, 2 vagas em",
+    "price": 2300,
+    "area": 85,
+    "bedrooms": 1,
+    "bathrooms": 2,
+    "neighborhood": null,
+    "url": "https://www.vivareal.com.br/imovel/apartamento-1-quartos-rio-negro-sao-bento-do-sul-com-garagem-85m2-aluguel-RS2300-id-2909941338/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.vivareal.com/img/vr-listing/998cd0b344a1d26ac60c302e641b34ac/apartamento-com-1-quarto-para-alugar-85m-no-rio-negro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-09-04T15:52:56.557207",
+    "is_new": true
+  },
+  {
     "id": "0f04a407afbf",
     "source": "ZAP Imóveis",
     "title": "Apartamento para alugar com 85 m², 2 quartos, 2 banheiros, 1 vaga em",
