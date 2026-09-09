@@ -1,5 +1,293 @@
 [
   {
+    "id": "2be8f44f5de8",
+    "source": "ZAP Imóveis",
+    "title": "Apartamento para alugar com 85 m², 1 quarto, 2 banheiros, 2 vagas em",
+    "price": 2300,
+    "area": 85,
+    "bedrooms": 1,
+    "bathrooms": 2,
+    "neighborhood": null,
+    "url": "https://www.zapimoveis.com.br/imovel/aluguel-apartamento-1-quarto-com-churrasqueira-rio-negro-sao-bento-do-sul-sc-85m2-id-2909941338/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.zapimoveis.com.br/img/vr-listing/998cd0b344a1d26ac60c302e641b34ac/apartamento-com-1-quarto-para-alugar-85m-no-rio-negro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-09-09T16:02:32.101234",
+    "is_new": true
+  },
+  {
+    "id": "7c2a99ab2610",
+    "source": "ZAP Imóveis",
+    "title": "Sobrado para alugar com 120 m², 2 quartos, 2 banheiros, 1 vaga em",
+    "price": 2600,
+    "area": 120,
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "neighborhood": null,
+    "url": "https://www.zapimoveis.com.br/imovel/aluguel-sobrados-2-quartos-com-churrasqueira-colonial-sao-bento-do-sul-sc-120m2-id-2909224412/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.zapimoveis.com.br/img/vr-listing/b6c8ee4cedb0d29a6a4069cae63f49f9/sobrado-com-2-quartos-para-alugar-120m-no-colonial-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-09-09T16:02:32.111459",
+    "is_new": true
+  },
+  {
+    "id": "27b6f3d8c58b",
+    "source": "ZAP Imóveis",
+    "title": "Apartamento para alugar com 83 m², 1 quarto, 2 banheiros, 1 vaga em",
+    "price": 2800,
+    "area": 83,
+    "bedrooms": 1,
+    "bathrooms": 2,
+    "neighborhood": null,
+    "url": "https://www.zapimoveis.com.br/imovel/aluguel-apartamento-1-quarto-com-churrasqueira-cruzeiro-sao-bento-do-sul-sc-83m2-id-2908293318/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.zapimoveis.com.br/img/vr-listing/6315038ad02a7aad755b2c0c710e2d5f/apartamento-com-1-quarto-para-alugar-83m-no-cruzeiro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-09-09T16:02:32.132678",
+    "is_new": true
+  },
+  {
+    "id": "70ebe65d9a84",
+    "source": "ZAP Imóveis",
+    "title": "Sala/Conjunto para alugar com 108 m², 1 banheiro, 2 vagas em",
+    "price": 2700,
+    "area": 108,
+    "bedrooms": null,
+    "bathrooms": 1,
+    "neighborhood": null,
+    "url": "https://www.zapimoveis.com.br/imovel/aluguel-conjunto-comercial-sala-com-seguranca-interna-cruzeiro-sao-bento-do-sul-sc-108m2-id-2909127817/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.zapimoveis.com.br/img/vr-listing/aa94361ba9f6cb08f867db4d1ab57c04/conjunto-comercial-sala-para-alugar-108m-no-cruzeiro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-09-09T16:02:32.143499",
+    "is_new": true
+  },
+  {
+    "id": "4685fe412c9c",
+    "source": "ZAP Imóveis",
+    "title": "Ponto comercial/Loja/Box para alugar com 104 m², 1 banheiro, 2 vagas em",
+    "price": 2500,
+    "area": 104,
+    "bedrooms": null,
+    "bathrooms": 1,
+    "neighborhood": null,
+    "url": "https://www.zapimoveis.com.br/imovel/aluguel-loja-salao-cruzeiro-sao-bento-do-sul-sc-104m2-id-2907958374/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.zapimoveis.com.br/img/vr-listing/45ff9c5f2d45620d600e323ed37e4dd4/loja-salao-ponto-comercial-para-alugar-104m-no-cruzeiro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-09-09T16:02:32.162992",
+    "is_new": true
+  },
+  {
+    "id": "658c82c3483a",
+    "source": "ZAP Imóveis",
+    "title": "Imobiliaria Cidade Sbs",
+    "price": 2500,
+    "area": 55,
+    "bedrooms": 1,
+    "bathrooms": 2,
+    "neighborhood": null,
+    "url": "https://www.zapimoveis.com.br/imovel/aluguel-conjunto-comercial-sala-1-quarto-com-escada-centro-sao-bento-do-sul-sc-55m2-id-2893908810/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.zapimoveis.com.br/img/vr-listing/a82a83aa9cd42b0f284d6c23256d82fa/conjunto-comercial-sala-com-1-quarto-para-alugar-55m-no-centro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-09-09T16:02:32.172673",
+    "is_new": true
+  },
+  {
+    "id": "0d33f88c8663",
+    "source": "ZAP Imóveis",
+    "title": "Imobiliaria Cidade Sbs",
+    "price": 2500,
+    "area": 77,
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "neighborhood": null,
+    "url": "https://www.zapimoveis.com.br/imovel/aluguel-apartamento-2-quartos-mobiliado-rio-negro-sao-bento-do-sul-sc-77m2-id-2893909810/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.zapimoveis.com.br/img/vr-listing/4f409b2cc30b893a4c21d829d54be517/apartamento-com-2-quartos-para-alugar-77m-no-rio-negro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-09-09T16:02:32.182430",
+    "is_new": true
+  },
+  {
+    "id": "5dc5d7670a1f",
+    "source": "ZAP Imóveis",
+    "title": "Imobiliaria Cidade Sbs",
+    "price": 2200,
+    "area": 70,
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "neighborhood": null,
+    "url": "https://www.zapimoveis.com.br/imovel/aluguel-apartamento-2-quartos-com-churrasqueira-colonial-sao-bento-do-sul-sc-70m2-id-2893911073/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.zapimoveis.com.br/img/vr-listing/ad0ce3c40f447e15af8cca3f695b5ba9/apartamento-com-2-quartos-para-alugar-70m-no-colonial-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-09-09T16:02:32.192848",
+    "is_new": true
+  },
+  {
+    "id": "edb08bab543b",
+    "source": "ZAP Imóveis",
+    "title": "Imobiliaria Cidade Sbs",
+    "price": 2800,
+    "area": 95,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "neighborhood": null,
+    "url": "https://www.zapimoveis.com.br/imovel/aluguel-apartamento-3-quartos-centro-sao-bento-do-sul-sc-95m2-id-2898707238/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.zapimoveis.com.br/img/vr-listing/5c6506f6792fbe65c0917cdf3c571efe/apartamento-com-3-quartos-para-alugar-95m-no-centro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-09-09T16:02:32.212270",
+    "is_new": true
+  },
+  {
+    "id": "05a8221fc0d0",
+    "source": "Viva Real",
+    "title": "Apartamento para alugar com 85 m², 1 quarto, 2 banheiros, 2 vagas em",
+    "price": 2300,
+    "area": 85,
+    "bedrooms": 1,
+    "bathrooms": 2,
+    "neighborhood": null,
+    "url": "https://www.vivareal.com.br/imovel/apartamento-1-quartos-rio-negro-bairros-sao-bento-do-sul-com-garagem-85m2-aluguel-RS2300-id-2909941338/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.vivareal.com/img/vr-listing/998cd0b344a1d26ac60c302e641b34ac/apartamento-com-1-quarto-para-alugar-85m-no-rio-negro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-09-09T16:02:40.319214",
+    "is_new": true
+  },
+  {
+    "id": "ee9297b1cac0",
+    "source": "Viva Real",
+    "title": "Sobrado para alugar com 120 m², 2 quartos, 2 banheiros, 1 vaga em",
+    "price": 2600,
+    "area": 120,
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "neighborhood": null,
+    "url": "https://www.vivareal.com.br/imovel/sobrado-2-quartos-colonial-bairros-sao-bento-do-sul-com-garagem-120m2-aluguel-RS2600-id-2909224412/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.vivareal.com/img/vr-listing/b6c8ee4cedb0d29a6a4069cae63f49f9/sobrado-com-2-quartos-para-alugar-120m-no-colonial-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-09-09T16:02:40.329383",
+    "is_new": true
+  },
+  {
+    "id": "3e6da260ecf8",
+    "source": "Viva Real",
+    "title": "Apartamento para alugar com 83 m², 1 quarto, 2 banheiros, 1 vaga em",
+    "price": 2800,
+    "area": 83,
+    "bedrooms": 1,
+    "bathrooms": 2,
+    "neighborhood": null,
+    "url": "https://www.vivareal.com.br/imovel/apartamento-1-quartos-cruzeiro-bairros-sao-bento-do-sul-com-garagem-83m2-aluguel-RS2800-id-2908293318/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.vivareal.com/img/vr-listing/6315038ad02a7aad755b2c0c710e2d5f/apartamento-com-1-quarto-para-alugar-83m-no-cruzeiro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-09-09T16:02:40.348439",
+    "is_new": true
+  },
+  {
+    "id": "934d2d4e4ee8",
+    "source": "Viva Real",
+    "title": "Sala/Conjunto para alugar com 108 m², 1 banheiro, 2 vagas em",
+    "price": 2700,
+    "area": 108,
+    "bedrooms": null,
+    "bathrooms": 1,
+    "neighborhood": null,
+    "url": "https://www.vivareal.com.br/imovel/sala-comercial-cruzeiro-bairros-sao-bento-do-sul-com-garagem-108m2-aluguel-RS2700-id-2909127817/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.vivareal.com/img/vr-listing/aa94361ba9f6cb08f867db4d1ab57c04/sala-comercial-para-alugar-108m-no-cruzeiro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-09-09T16:02:40.358168",
+    "is_new": true
+  },
+  {
+    "id": "3da12aee7cfe",
+    "source": "Viva Real",
+    "title": "Ponto comercial/Loja/Box para alugar com 104 m², 1 banheiro, 2 vagas em",
+    "price": 2500,
+    "area": 104,
+    "bedrooms": null,
+    "bathrooms": 1,
+    "neighborhood": null,
+    "url": "https://www.vivareal.com.br/imovel/ponto-comercial-cruzeiro-bairros-sao-bento-do-sul-com-garagem-104m2-aluguel-RS2500-id-2907958374/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.vivareal.com/img/vr-listing/45ff9c5f2d45620d600e323ed37e4dd4/ponto-comercial-para-alugar-104m-no-cruzeiro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-09-09T16:02:40.378530",
+    "is_new": true
+  },
+  {
+    "id": "d88ebda6a873",
+    "source": "Viva Real",
+    "title": "Imobiliaria Cidade Sbs",
+    "price": 2500,
+    "area": 55,
+    "bedrooms": 1,
+    "bathrooms": 2,
+    "neighborhood": null,
+    "url": "https://www.vivareal.com.br/imovel/sala-comercial-1-quartos-centro-bairros-sao-bento-do-sul-55m2-aluguel-RS2500-id-2893908810/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.vivareal.com/img/vr-listing/a82a83aa9cd42b0f284d6c23256d82fa/sala-comercial-com-1-quarto-para-alugar-55m-no-centro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-09-09T16:02:40.388373",
+    "is_new": true
+  },
+  {
+    "id": "593f59b7407a",
+    "source": "Viva Real",
+    "title": "Imobiliaria Cidade Sbs",
+    "price": 2500,
+    "area": 77,
+    "bedrooms": null,
+    "bathrooms": null,
+    "neighborhood": null,
+    "url": "https://www.vivareal.com.br/imovel/apartamento-2-quartos-rio-negro-bairros-sao-bento-do-sul-com-garagem-77m2-aluguel-RS2500-id-2893909810/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.vivareal.com/img/vr-listing/4f409b2cc30b893a4c21d829d54be517/apartamento-com-2-quartos-para-alugar-77m-no-rio-negro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-09-09T16:02:40.397761",
+    "is_new": true
+  },
+  {
+    "id": "aed02c9a00f5",
+    "source": "Viva Real",
+    "title": "Imobiliaria Cidade Sbs",
+    "price": 2200,
+    "area": 70,
+    "bedrooms": 2,
+    "bathrooms": null,
+    "neighborhood": null,
+    "url": "https://www.vivareal.com.br/imovel/apartamento-2-quartos-colonial-bairros-sao-bento-do-sul-com-garagem-70m2-aluguel-RS2200-id-2893911073/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.vivareal.com/img/vr-listing/ad0ce3c40f447e15af8cca3f695b5ba9/apartamento-com-2-quartos-para-alugar-70m-no-colonial-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-09-09T16:02:40.407623",
+    "is_new": true
+  },
+  {
+    "id": "e8d175fe5200",
+    "source": "Viva Real",
+    "title": "Imobiliaria Cidade Sbs",
+    "price": 2800,
+    "area": 95,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "neighborhood": null,
+    "url": "https://www.vivareal.com.br/imovel/apartamento-3-quartos-centro-bairros-sao-bento-do-sul-com-garagem-95m2-aluguel-RS2800-id-2898707238/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.vivareal.com/img/vr-listing/5c6506f6792fbe65c0917cdf3c571efe/apartamento-com-3-quartos-para-alugar-95m-no-centro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-09-09T16:02:40.426074",
+    "is_new": true
+  },
+  {
     "id": "95f60e53f61b",
     "source": "ZAP Imóveis",
     "title": "Apartamento para alugar com 85 m², 1 quarto, 2 banheiros, 2 vagas em",
