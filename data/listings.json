@@ -1,5 +1,21 @@
 [
   {
+    "id": "5b244cc5682a",
+    "source": "ZAP Imóveis",
+    "title": "Sala/Conjunto para alugar com 108 m², 1 banheiro, 2 vagas em",
+    "price": 2700,
+    "area": 108,
+    "bedrooms": null,
+    "bathrooms": 1,
+    "neighborhood": null,
+    "url": "https://www.zapimoveis.com.br/imovel/aluguel-conjunto-comercial-sala-cruzeiro-sao-bento-do-sul-sc-108m2-id-2909127817/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.zapimoveis.com.br/img/vr-listing/aa94361ba9f6cb08f867db4d1ab57c04/conjunto-comercial-sala-para-alugar-108m-no-cruzeiro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-09-10T20:29:49.669114",
+    "is_new": true
+  },
+  {
     "id": "2be8f44f5de8",
     "source": "ZAP Imóveis",
     "title": "Apartamento para alugar com 85 m², 1 quarto, 2 banheiros, 2 vagas em",
