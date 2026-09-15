@@ -1,5 +1,19 @@
 [
   {
+    "id": "5dc4bfe61109",
+    "source": "Chaves na Mão",
+    "title": "Casa com 2 quartos para alugar na Rua Maria Liebl, Rio Vermelho Estação, São Bento do Sul",
+    "price": 1300,
+    "area": 50,
+    "bedrooms": 2,
+    "bathrooms": null,
+    "neighborhood": "Rio Vermelho Estação",
+    "url": "https://www.chavesnamao.com.br/imovel/casa-para-alugar-2-quartos-com-garagem-sc-sao-bento-do-sul-rio-vermelho-estacao-50m2-RS1300/id-27788573/",
+    "images": [],
+    "scraped_at": "2026-09-15T16:26:39.968004",
+    "is_new": true
+  },
+  {
     "id": "cd0ca4b45e15",
     "source": "Chaves na Mão",
     "title": "Apartamento com 3 quartos para alugar na Rua Marechal Floriano, 107, Centro, São Bento do Sul",
