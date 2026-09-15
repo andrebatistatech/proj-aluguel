@@ -1,5 +1,21 @@
 [
   {
+    "id": "cd0ca4b45e15",
+    "source": "Chaves na Mão",
+    "title": "Apartamento com 3 quartos para alugar na Rua Marechal Floriano, 107, Centro, São Bento do Sul",
+    "price": 600,
+    "area": 95,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "neighborhood": "Centro",
+    "url": "https://www.chavesnamao.com.br/imovel/apartamento-para-alugar-3-quartos-com-garagem-sc-sao-bento-do-sul-centro-106m2-RS2800/id-45443415/",
+    "images": [
+      "https://www.chavesnamao.com.br/imn/0400X0262/N/60/imoveis/1258465/45443415/sc-sao-bento-do-sul-centro-rua-marechal-floriano-apartamento-para-alugar-3-quartos-6a75265e-1.jpg"
+    ],
+    "scraped_at": "2026-09-15T11:15:58.013043",
+    "is_new": true
+  },
+  {
     "id": "a0e45d67e33b",
     "source": "Chaves na Mão",
     "title": "Casa com 3 quartos para alugar na Rua Francisco Telma Chapiescky, Centenário, São Bento do Sul",
