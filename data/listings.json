@@ -1,5 +1,37 @@
 [
   {
+    "id": "6548c5de238d",
+    "source": "ZAP Imóveis",
+    "title": "Casa para alugar com 85 m², 2 quartos, 3 banheiros, 1 vaga em",
+    "price": 2000,
+    "area": 85,
+    "bedrooms": 2,
+    "bathrooms": 3,
+    "neighborhood": null,
+    "url": "https://www.zapimoveis.com.br/imovel/aluguel-casa-2-quartos-com-churrasqueira-brasilia-sao-bento-do-sul-sc-85m2-id-2911448426/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.zapimoveis.com.br/img/vr-listing/52f97b03f82a4d9fa328751edf715117/casa-com-2-quartos-para-alugar-85m-no-brasilia-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-09-21T21:45:42.578979",
+    "is_new": true
+  },
+  {
+    "id": "12173ea2b90f",
+    "source": "Viva Real",
+    "title": "Casa para alugar com 85 m², 2 quartos, 3 banheiros, 1 vaga em",
+    "price": 2000,
+    "area": 85,
+    "bedrooms": 2,
+    "bathrooms": 3,
+    "neighborhood": null,
+    "url": "https://www.vivareal.com.br/imovel/casa-2-quartos-brasilia-bairros-sao-bento-do-sul-com-garagem-85m2-aluguel-RS2000-id-2911448426/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.vivareal.com/img/vr-listing/52f97b03f82a4d9fa328751edf715117/casa-com-2-quartos-para-alugar-85m-no-brasilia-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-09-21T21:45:50.974327",
+    "is_new": true
+  },
+  {
     "id": "5dc4bfe61109",
     "source": "Chaves na Mão",
     "title": "Casa com 2 quartos para alugar na Rua Maria Liebl, Rio Vermelho Estação, São Bento do Sul",
