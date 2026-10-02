@@ -1,5 +1,21 @@
 [
   {
+    "id": "1e98de3dc5a0",
+    "source": "ZAP Imóveis",
+    "title": "Ponto comercial/Loja/Box para alugar com 104 m², 1 banheiro, 2 vagas em",
+    "price": 2500,
+    "area": 104,
+    "bedrooms": null,
+    "bathrooms": 1,
+    "neighborhood": null,
+    "url": "https://www.zapimoveis.com.br/imovel/aluguel-loja-salao-com-seguranca-interna-cruzeiro-sao-bento-do-sul-sc-104m2-id-2907958374/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.zapimoveis.com.br/img/vr-listing/584818bbd0d57e436df778b960bdae98/loja-salao-ponto-comercial-para-alugar-104m-no-cruzeiro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-10-02T17:48:50.315335",
+    "is_new": true
+  },
+  {
     "id": "6548c5de238d",
     "source": "ZAP Imóveis",
     "title": "Casa para alugar com 85 m², 2 quartos, 3 banheiros, 1 vaga em",
