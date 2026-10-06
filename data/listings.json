@@ -1,5 +1,35 @@
 [
   {
+    "id": "0acba10463e7",
+    "source": "Chaves na Mão",
+    "title": "Visa Imóveis",
+    "price": null,
+    "area": 3000,
+    "bedrooms": null,
+    "bathrooms": null,
+    "neighborhood": "Alpino",
+    "url": "https://www.chavesnamao.com.br/imovel/galpao-para-alugar-sc-sao-bento-do-sul-alpino-3000m2/id-47212902/",
+    "images": [
+      "https://www.chavesnamao.com.br/imn/0400X0262/N/60/imoveis/110539/47212902/sc-sao-bento-do-sul-alpino-estrada-parana-galpao-deposito-para-alugar-6abc1b82-1.jpg"
+    ],
+    "scraped_at": "2026-10-06T05:14:25.477256",
+    "is_new": true
+  },
+  {
+    "id": "09e003addb3f",
+    "source": "Chaves na Mão",
+    "title": "Visa Imóveis",
+    "price": 1600,
+    "area": 2100,
+    "bedrooms": null,
+    "bathrooms": null,
+    "neighborhood": "Brasilia",
+    "url": "https://www.chavesnamao.com.br/imovel/terreno-comercial-para-alugar-sc-sao-bento-do-sul-brasilia-2100m2-RS1600/id-47212892/",
+    "images": [],
+    "scraped_at": "2026-10-06T05:14:25.558060",
+    "is_new": true
+  },
+  {
     "id": "1e98de3dc5a0",
     "source": "ZAP Imóveis",
     "title": "Ponto comercial/Loja/Box para alugar com 104 m², 1 banheiro, 2 vagas em",
