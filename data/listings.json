@@ -1,5 +1,37 @@
 [
   {
+    "id": "816f3082dc8c",
+    "source": "ZAP Imóveis",
+    "title": "Apartamento para alugar com 120 m², 2 quartos, 2 banheiros, 1 vaga em",
+    "price": 2600,
+    "area": 120,
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "neighborhood": null,
+    "url": "https://www.zapimoveis.com.br/imovel/aluguel-apartamento-2-quartos-com-churrasqueira-colonial-sao-bento-do-sul-sc-120m2-id-2909224412/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.zapimoveis.com.br/img/vr-listing/705889356bd79f9254ebdd33b1bd37e2/apartamento-com-2-quartos-para-alugar-120m-no-colonial-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-10-14T16:41:01.683123",
+    "is_new": true
+  },
+  {
+    "id": "085b50ef556d",
+    "source": "Viva Real",
+    "title": "Apartamento para alugar com 120 m², 2 quartos, 2 banheiros, 1 vaga em",
+    "price": 2600,
+    "area": 120,
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "neighborhood": null,
+    "url": "https://www.vivareal.com.br/imovel/apartamento-2-quartos-colonial-bairros-sao-bento-do-sul-com-garagem-120m2-aluguel-RS2600-id-2909224412/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.vivareal.com/img/vr-listing/705889356bd79f9254ebdd33b1bd37e2/apartamento-com-2-quartos-para-alugar-120m-no-colonial-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-10-14T16:41:09.771892",
+    "is_new": true
+  },
+  {
     "id": "a460c0fe1d8e",
     "source": "Chaves na Mão",
     "title": "Casa com 2 quartos para alugar na Rua Thiago Alexander Romalho, Mato Preto, São Bento do Sul",
