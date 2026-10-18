@@ -1,5 +1,21 @@
 [
   {
+    "id": "274b88fe0aeb",
+    "source": "ZAP Imóveis",
+    "title": "",
+    "price": null,
+    "area": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "neighborhood": null,
+    "url": "https://www.zapimoveis.com.br/imovel/aluguel-galpao-deposito-armazem-com-refeitorio-cruzeiro-sao-bento-do-sul-sc-2100m2-id-2804534921/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.zapimoveis.com.br/img/vr-listing/70c0bf1ed0a04dc374d14a400c4300aa/galpao-deposito-armazem-para-alugar-2100m-no-cruzeiro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-10-18T20:11:36.592767",
+    "is_new": true
+  },
+  {
     "id": "816f3082dc8c",
     "source": "ZAP Imóveis",
     "title": "Apartamento para alugar com 120 m², 2 quartos, 2 banheiros, 1 vaga em",
