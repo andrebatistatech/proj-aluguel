@@ -1,5 +1,21 @@
 [
   {
+    "id": "665ee85d7502",
+    "source": "Viva Real",
+    "title": "Casa para alugar com 93 m², 3 quartos, 2 banheiros, 1 vaga em",
+    "price": 2350,
+    "area": 93,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "neighborhood": null,
+    "url": "https://www.vivareal.com.br/imovel/casa-3-quartos-cruzeiro-bairros-sao-bento-do-sul-com-garagem-93m2-aluguel-RS2350-id-2918675260/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.vivareal.com/img/vr-listing/d7e083ded8d1bb0d8ac2d8dfc55754e2/casa-com-3-quartos-para-alugar-93m-no-cruzeiro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-10-22T21:15:52.093241",
+    "is_new": true
+  },
+  {
     "id": "886ecba1a0c2",
     "source": "ZAP Imóveis",
     "title": "Casa para alugar com 93 m², 3 quartos, 2 banheiros, 1 vaga em",
