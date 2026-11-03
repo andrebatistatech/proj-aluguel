@@ -1,5 +1,21 @@
 [
   {
+    "id": "62958c93b460",
+    "source": "Chaves na Mão",
+    "title": "Serra e Mar Negócios Imobiliários",
+    "price": 1450,
+    "area": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "neighborhood": "Centenário",
+    "url": "https://www.chavesnamao.com.br/imovel/casa-para-alugar-3-quartos-com-garagem-sc-sao-bento-do-sul-centenario-RS1450/id-48179206/",
+    "images": [
+      "https://www.chavesnamao.com.br/imn/0400X0262/N/60/imoveis/1468883/48179206/sc-sao-bento-do-sul-centenario-casa-sobrado-para-alugar-3-quartos-6ae0eb05-1.jpg"
+    ],
+    "scraped_at": "2026-11-03T13:45:05.411747",
+    "is_new": true
+  },
+  {
     "id": "665ee85d7502",
     "source": "Viva Real",
     "title": "Casa para alugar com 93 m², 3 quartos, 2 banheiros, 1 vaga em",
