@@ -1,5 +1,21 @@
 [
   {
+    "id": "6ce130d3ae22",
+    "source": "ZAP Imóveis",
+    "title": "Sobrado para alugar com 102 m², 2 quartos, 2 banheiros, 2 vagas em",
+    "price": 2300,
+    "area": 102,
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "neighborhood": null,
+    "url": "https://www.zapimoveis.com.br/imovel/aluguel-sobrados-2-quartos-com-cozinha-progresso-sao-bento-do-sul-sc-102m2-id-2920769029/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.zapimoveis.com.br/img/vr-listing/e7f990cd4a10212e4bd73fbf33d0c295/sobrado-com-2-quartos-para-alugar-102m-no-progresso-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-11-04T13:52:52.001900",
+    "is_new": true
+  },
+  {
     "id": "afdb7ee74804",
     "source": "Viva Real",
     "title": "Sobrado para alugar com 102 m², 2 quartos, 2 banheiros, 2 vagas em",
