@@ -1,5 +1,21 @@
 [
   {
+    "id": "afdb7ee74804",
+    "source": "Viva Real",
+    "title": "Sobrado para alugar com 102 m², 2 quartos, 2 banheiros, 2 vagas em",
+    "price": 2300,
+    "area": 102,
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "neighborhood": null,
+    "url": "https://www.vivareal.com.br/imovel/sobrado-2-quartos-progresso-bairros-sao-bento-do-sul-com-garagem-102m2-aluguel-RS2300-id-2920769029/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.vivareal.com/img/vr-listing/e7f990cd4a10212e4bd73fbf33d0c295/sobrado-com-2-quartos-para-alugar-102m-no-progresso-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-11-04T05:06:41.516282",
+    "is_new": true
+  },
+  {
     "id": "62958c93b460",
     "source": "Chaves na Mão",
     "title": "Serra e Mar Negócios Imobiliários",
