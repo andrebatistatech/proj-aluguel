@@ -1,5 +1,21 @@
 [
   {
+    "id": "4fc549db17ec",
+    "source": "ZAP Imóveis",
+    "title": "Casa para alugar com 93 m², 3 quartos, 2 banheiros, 1 vaga em",
+    "price": 1950,
+    "area": 93,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "neighborhood": null,
+    "url": "https://www.zapimoveis.com.br/imovel/aluguel-casa-3-quartos-com-escada-cruzeiro-sao-bento-do-sul-sc-93m2-id-2918675260/?source=ranking%2Crp",
+    "images": [
+      "https://resizedimgs.zapimoveis.com.br/img/vr-listing/d7e083ded8d1bb0d8ac2d8dfc55754e2/casa-com-3-quartos-para-alugar-93m-no-cruzeiro-sao-bento-do-sul.webp?action=fit-in&dimension=614x297"
+    ],
+    "scraped_at": "2026-11-11T13:41:05.455920",
+    "is_new": true
+  },
+  {
     "id": "cc12eb87bc97",
     "source": "ZAP Imóveis",
     "title": "Sobrado para alugar com 102 m², 2 quartos, 2 banheiros, 2 vagas em",
