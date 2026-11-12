@@ -1,5 +1,19 @@
 [
   {
+    "id": "0befe2f5157f",
+    "source": "Chaves na Mão",
+    "title": "Apartamento com 2 quartos para alugar na Rua Capitão Ernesto Nunes, 849, Centro, São Bento do Sul",
+    "price": 2200,
+    "area": 65,
+    "bedrooms": null,
+    "bathrooms": null,
+    "neighborhood": "Centro",
+    "url": "https://www.chavesnamao.com.br/imovel/apartamento-para-alugar-2-quartos-com-garagem-sc-sao-bento-do-sul-centro-65m2-RS2200/id-46887888/",
+    "images": [],
+    "scraped_at": "2026-11-12T14:45:16.291324",
+    "is_new": true
+  },
+  {
     "id": "4fc549db17ec",
     "source": "ZAP Imóveis",
     "title": "Casa para alugar com 93 m², 3 quartos, 2 banheiros, 1 vaga em",
